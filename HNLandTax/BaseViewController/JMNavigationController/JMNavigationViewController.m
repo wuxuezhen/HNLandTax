@@ -21,8 +21,8 @@
 
 -(instancetype)initWithRootViewController:(UIViewController *)rootViewController{
     if (self = [super initWithRootViewController:rootViewController]) {
-        self.navigationBar.tintColor = [UIColor blackColor];
-        self.navigationBar.barTintColor = [UIColor jm_themeColor];
+//        self.navigationBar.tintColor = [UIColor blackColor];
+//        self.navigationBar.barTintColor = [UIColor jm_themeColor];
     }
     return self;
 }

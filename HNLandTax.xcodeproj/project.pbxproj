@@ -540,8 +540,8 @@
 			isa = PBXGroup;
 			children = (
 				F223505F2074832E0062C828 /* UIViewController+Navigation.m */,
-				F22350602074832E0062C828 /* JMLocationNavigation.m */,
 				F22350612074832E0062C828 /* UIViewController+Navigation.h */,
+				F22350602074832E0062C828 /* JMLocationNavigation.m */,
 				F22350622074832E0062C828 /* JMLocationNavigation.h */,
 			);
 			path = JMNavigation;

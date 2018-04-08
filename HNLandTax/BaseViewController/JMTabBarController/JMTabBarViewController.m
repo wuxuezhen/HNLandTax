@@ -66,21 +66,26 @@
     //导航栏按钮颜色
 //    navBar.tintColor = [UIColor blackColor];
     //导航栏样式
-    navBar.barStyle = UIBarStyleBlack;
+//    navBar.barStyle = UIBarStyleBlack;
+    
+    
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     //导航栏是否透明度
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0f) {
-        navBar.translucent = NO;
+        navBar.translucent = YES;
     }else{
         navBar.translucent = NO;
     }
     //导航栏设置标题文字显示样式
-    navBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
+//    navBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
     
 //    [navBar setBackgroundImage:[[UIImage alloc] init]
 //                forBarPosition:UIBarPositionAny
 //                    barMetrics:UIBarMetricsDefault];
+    
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                                                  forBarMetrics:UIBarMetricsDefault];
     //此处使底部线条颜色为红色
     [navBar setShadowImage:[UIImage new]];
     

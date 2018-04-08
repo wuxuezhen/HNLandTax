@@ -9,16 +9,42 @@
 #import "HomeViewController.h"
 
 @interface HomeViewController ()
-
+@property (nonatomic, strong) UIView *barImageView;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.alpha = 0.3;
+    [self.view addSubview:self.tableView];
+    self.tableView.frame = self.view.bounds;
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, SCREEN_W)];
+    view.backgroundColor = UIColor.redColor;
+    self.tableView.tableHeaderView = view;
+    _barImageView = self.navigationController.navigationBar.subviews.firstObject;
     // Do any additional setup after loading the view.
 }
 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    CGFloat minAlphaOffset = - 64;
+    CGFloat maxAlphaOffset = SCREEN_W;
+    CGFloat offset = scrollView.contentOffset.y;
+    if (offset > 64 && offset < SCREEN_W- 64) {
+        _barImageView.alpha = 0;
+    }else{
+        CGFloat alpha = (offset - minAlphaOffset) / (maxAlphaOffset - minAlphaOffset);
+        _barImageView.alpha = alpha;
+    }
+   
+    
+}
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 120;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
