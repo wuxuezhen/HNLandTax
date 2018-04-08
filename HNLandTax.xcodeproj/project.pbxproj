@@ -1,0 +1,1609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
+		DD145844C403DC630B9A64B5 /* Pods_HNLandTax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */; };
+		F2234FD3207476DB0062C828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD1207476DB0062C828 /* Main.storyboard */; };
+		F2234FD5207476DC0062C828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD4207476DC0062C828 /* Assets.xcassets */; };
+		F2234FD8207476DC0062C828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD6207476DC0062C828 /* LaunchScreen.storyboard */; };
+		F2234FDB207476DC0062C828 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2234FDA207476DC0062C828 /* main.m */; };
+		F2234FE5207476DC0062C828 /* HNLandTaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2234FE4207476DC0062C828 /* HNLandTaxTests.m */; };
+		F2234FF0207476DC0062C828 /* HNLandTaxUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F2234FEF207476DC0062C828 /* HNLandTaxUITests.m */; };
+		F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350002074832E0062C828 /* DismissTransitionAnimated.m */; };
+		F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350022074832E0062C828 /* JMTransitionAnimate.m */; };
+		F22350BD2074832F0062C828 /* JMRefreshnAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350042074832E0062C828 /* JMRefreshnAutoNormalFooter.m */; };
+		F22350BE2074832F0062C828 /* JMRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350052074832E0062C828 /* JMRefreshGifHeader.m */; };
+		F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350062074832E0062C828 /* JMRefreshNormalHeader.m */; };
+		F22350C52074832F0062C828 /* ValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350182074832E0062C828 /* ValuePickerView.m */; };
+		F22350C62074832F0062C828 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350192074832E0062C828 /* DatePickerView.m */; };
+		F22350C72074832F0062C828 /* JMCityPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F223501C2074832E0062C828 /* JMCityPicker.m */; };
+		F22350D22074832F0062C828 /* JMPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350352074832E0062C828 /* JMPermissions.m */; };
+		F22350D32074832F0062C828 /* JMPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350362074832E0062C828 /* JMPhotosPermission.m */; };
+		F22350D92074832F0062C828 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F223503E2074832E0062C828 /* Reachability.m */; };
+		F22350DA2074832F0062C828 /* JMPageNetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350402074832E0062C828 /* JMPageNetModel.m */; };
+		F22350DC2074832F0062C828 /* JMNetWorkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350432074832E0062C828 /* JMNetWorkMonitor.m */; };
+		F22350DE2074832F0062C828 /* APPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350462074832E0062C828 /* APPConstants.m */; };
+		F22350DF2074832F0062C828 /* JMResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350492074832E0062C828 /* JMResponseSerializer.m */; };
+		F22350E22074832F0062C828 /* JMTip.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350512074832E0062C828 /* JMTip.m */; };
+		F22350E32074832F0062C828 /* JMDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350552074832E0062C828 /* JMDateFormat.m */; };
+		F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350562074832E0062C828 /* JMJsonHandle.m */; };
+		F22350E52074832F0062C828 /* JMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350582074832E0062C828 /* JMLocationManager.m */; };
+		F22350E62074832F0062C828 /* JMMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350592074832E0062C828 /* JMMapModel.m */; };
+		F22350E72074832F0062C828 /* CLLocation+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F223505A2074832E0062C828 /* CLLocation+Location.m */; };
+		F22350E82074832F0062C828 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = F223505F2074832E0062C828 /* UIViewController+Navigation.m */; };
+		F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350602074832E0062C828 /* JMLocationNavigation.m */; };
+		F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350652074832E0062C828 /* ICGRulerView.m */; };
+		F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350662074832E0062C828 /* ICGVideoTrimmerView.m */; };
+		F22350EC2074832F0062C828 /* ICGThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350682074832E0062C828 /* ICGThumbView.m */; };
+		F22350EF2074832F0062C828 /* UIImage+ImageExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350732074832E0062C828 /* UIImage+ImageExtent.m */; };
+		F22350F02074832F0062C828 /* UIImage+Save.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350742074832E0062C828 /* UIImage+Save.m */; };
+		F22350F12074832F0062C828 /* UITabBar+CustomerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350772074832E0062C828 /* UITabBar+CustomerTabBar.m */; };
+		F22350F22074832F0062C828 /* UITableViewCell+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = F223507B2074832E0062C828 /* UITableViewCell+Nib.m */; };
+		F22350F32074832F0062C828 /* UICollectionViewCell+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = F223507C2074832E0062C828 /* UICollectionViewCell+Nib.m */; };
+		F22350F42074832F0062C828 /* UIButton+BarValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F223507D2074832E0062C828 /* UIButton+BarValue.m */; };
+		F22350F62074832F0062C828 /* UIViewController+Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350802074832E0062C828 /* UIViewController+Hud.m */; };
+		F22350F72074832F0062C828 /* RootViewController+ChoosePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350812074832E0062C828 /* RootViewController+ChoosePhoto.m */; };
+		F22350FA2074832F0062C828 /* UIViewController+AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F223508A2074832E0062C828 /* UIViewController+AppSettings.m */; };
+		F22350FB2074832F0062C828 /* NSString+ImageURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F223508F2074832E0062C828 /* NSString+ImageURL.m */; };
+		F22350FC2074832F0062C828 /* NSString+NSStringHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350902074832E0062C828 /* NSString+NSStringHandle.m */; };
+		F22350FD2074832F0062C828 /* UICollectionView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350932074832E0062C828 /* UICollectionView+JMRefresh.m */; };
+		F22350FE2074832F0062C828 /* UITableView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350952074832E0062C828 /* UITableView+JMRefresh.m */; };
+		F22350FF2074832F0062C828 /* JMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350992074832E0062C828 /* JMBaseTableViewController.m */; };
+		F22351002074832F0062C828 /* JMUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509B2074832E0062C828 /* JMUI.m */; };
+		F22351012074832F0062C828 /* JMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509C2074832E0062C828 /* JMTool.m */; };
+		F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509E2074832E0062C828 /* JMBaseCollectionViewViewController.m */; };
+		F22351032074832F0062C828 /* JMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350A02074832E0062C828 /* JMLabel.m */; };
+		F22351042074832F0062C828 /* UIColor+JMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350A32074832E0062C828 /* UIColor+JMColor.m */; };
+		F22351052074832F0062C828 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350A62074832E0062C828 /* JMWebViewController.m */; };
+		F22351062074832F0062C828 /* JMKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350AD2074832E0062C828 /* JMKeyManager.m */; };
+		F22351072074832F0062C828 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B12074832E0062C828 /* RootViewController.m */; };
+		F22351082074832F0062C828 /* JMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B52074832E0062C828 /* JMNavigationViewController.m */; };
+		F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B72074832E0062C828 /* UITabBar+RedPoint.m */; };
+		F223510A2074832F0062C828 /* JMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B92074832E0062C828 /* JMTabBarViewController.m */; };
+		F223510E207484620062C828 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F223510D207484620062C828 /* AppDelegate.m */; };
+		F2235118207486230062C828 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235117207486230062C828 /* HomeViewController.m */; };
+		F2235125207486770062C828 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235121207486760062C828 /* FindViewController.m */; };
+		F2235126207486770062C828 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235124207486760062C828 /* MineViewController.m */; };
+		F2735783207490D80029AE78 /* JMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F2735782207490D80029AE78 /* JMAPI.m */; };
+		F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350002074832E0062C828 /* DismissTransitionAnimated.m */; };
+		F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350652074832E0062C828 /* ICGRulerView.m */; };
+		F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350AD2074832E0062C828 /* JMKeyManager.m */; };
+		F273578A207493CE0029AE78 /* UIColor+JMColor.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350A32074832E0062C828 /* UIColor+JMColor.m */; };
+		F273578B207493CE0029AE78 /* JMLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350A02074832E0062C828 /* JMLabel.m */; };
+		F273578C207493CE0029AE78 /* JMResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350492074832E0062C828 /* JMResponseSerializer.m */; };
+		F273578D207493CE0029AE78 /* UIViewController+AppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = F223508A2074832E0062C828 /* UIViewController+AppSettings.m */; };
+		F273578E207493CE0029AE78 /* JMTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509C2074832E0062C828 /* JMTool.m */; };
+		F273578F207493CE0029AE78 /* JMMapModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350592074832E0062C828 /* JMMapModel.m */; };
+		F2735790207493CE0029AE78 /* JMWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350A62074832E0062C828 /* JMWebViewController.m */; };
+		F2735791207493CE0029AE78 /* UICollectionView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350932074832E0062C828 /* UICollectionView+JMRefresh.m */; };
+		F2735792207493CE0029AE78 /* ICGThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350682074832E0062C828 /* ICGThumbView.m */; };
+		F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350662074832E0062C828 /* ICGVideoTrimmerView.m */; };
+		F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350562074832E0062C828 /* JMJsonHandle.m */; };
+		F2735795207493CE0029AE78 /* ValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350182074832E0062C828 /* ValuePickerView.m */; };
+		F2735796207493CE0029AE78 /* JMUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509B2074832E0062C828 /* JMUI.m */; };
+		F2735797207493CE0029AE78 /* NSString+NSStringHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350902074832E0062C828 /* NSString+NSStringHandle.m */; };
+		F2735798207493CE0029AE78 /* APPConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350462074832E0062C828 /* APPConstants.m */; };
+		F2735799207493CE0029AE78 /* UIImage+ImageExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350732074832E0062C828 /* UIImage+ImageExtent.m */; };
+		F273579A207493CE0029AE78 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350192074832E0062C828 /* DatePickerView.m */; };
+		F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350062074832E0062C828 /* JMRefreshNormalHeader.m */; };
+		F273579C207493CE0029AE78 /* JMPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350352074832E0062C828 /* JMPermissions.m */; };
+		F273579D207493CE0029AE78 /* UIImage+Save.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350742074832E0062C828 /* UIImage+Save.m */; };
+		F273579E207493CE0029AE78 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235124207486760062C828 /* MineViewController.m */; };
+		F273579F207493CE0029AE78 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235121207486760062C828 /* FindViewController.m */; };
+		F27357A0207493CE0029AE78 /* JMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F2735782207490D80029AE78 /* JMAPI.m */; };
+		F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509E2074832E0062C828 /* JMBaseCollectionViewViewController.m */; };
+		F27357A2207493CE0029AE78 /* UITabBar+CustomerTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350772074832E0062C828 /* UITabBar+CustomerTabBar.m */; };
+		F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350602074832E0062C828 /* JMLocationNavigation.m */; };
+		F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B72074832E0062C828 /* UITabBar+RedPoint.m */; };
+		F27357A5207493CE0029AE78 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B12074832E0062C828 /* RootViewController.m */; };
+		F27357A6207493CE0029AE78 /* UIViewController+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = F223505F2074832E0062C828 /* UIViewController+Navigation.m */; };
+		F27357A7207493CE0029AE78 /* JMPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350362074832E0062C828 /* JMPhotosPermission.m */; };
+		F27357A8207493CE0029AE78 /* JMCityPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F223501C2074832E0062C828 /* JMCityPicker.m */; };
+		F27357A9207493CE0029AE78 /* JMLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350582074832E0062C828 /* JMLocationManager.m */; };
+		F27357AA207493CE0029AE78 /* JMTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B92074832E0062C828 /* JMTabBarViewController.m */; };
+		F27357AB207493CE0029AE78 /* UITableView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350952074832E0062C828 /* UITableView+JMRefresh.m */; };
+		F27357AC207493CE0029AE78 /* JMRefreshGifHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350052074832E0062C828 /* JMRefreshGifHeader.m */; };
+		F27357AD207493CE0029AE78 /* UIViewController+Hud.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350802074832E0062C828 /* UIViewController+Hud.m */; };
+		F27357AE207493CE0029AE78 /* JMRefreshnAutoNormalFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350042074832E0062C828 /* JMRefreshnAutoNormalFooter.m */; };
+		F27357AF207493CE0029AE78 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F2234FDA207476DC0062C828 /* main.m */; };
+		F27357B0207493CE0029AE78 /* CLLocation+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = F223505A2074832E0062C828 /* CLLocation+Location.m */; };
+		F27357B1207493CE0029AE78 /* JMNetWorkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350432074832E0062C828 /* JMNetWorkMonitor.m */; };
+		F27357B2207493CE0029AE78 /* JMBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350992074832E0062C828 /* JMBaseTableViewController.m */; };
+		F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350022074832E0062C828 /* JMTransitionAnimate.m */; };
+		F27357B4207493CE0029AE78 /* RootViewController+ChoosePhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350812074832E0062C828 /* RootViewController+ChoosePhoto.m */; };
+		F27357B5207493CE0029AE78 /* JMPageNetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350402074832E0062C828 /* JMPageNetModel.m */; };
+		F27357B6207493CE0029AE78 /* JMTip.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350512074832E0062C828 /* JMTip.m */; };
+		F27357B7207493CE0029AE78 /* NSString+ImageURL.m in Sources */ = {isa = PBXBuildFile; fileRef = F223508F2074832E0062C828 /* NSString+ImageURL.m */; };
+		F27357B8207493CE0029AE78 /* UITableViewCell+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = F223507B2074832E0062C828 /* UITableViewCell+Nib.m */; };
+		F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F223510D207484620062C828 /* AppDelegate.m */; };
+		F27357BA207493CE0029AE78 /* UICollectionViewCell+Nib.m in Sources */ = {isa = PBXBuildFile; fileRef = F223507C2074832E0062C828 /* UICollectionViewCell+Nib.m */; };
+		F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350552074832E0062C828 /* JMDateFormat.m */; };
+		F27357BC207493CE0029AE78 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F223503E2074832E0062C828 /* Reachability.m */; };
+		F27357BD207493CE0029AE78 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235117207486230062C828 /* HomeViewController.m */; };
+		F27357BE207493CE0029AE78 /* UIButton+BarValue.m in Sources */ = {isa = PBXBuildFile; fileRef = F223507D2074832E0062C828 /* UIButton+BarValue.m */; };
+		F27357BF207493CE0029AE78 /* JMNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350B52074832E0062C828 /* JMNavigationViewController.m */; };
+		F27357C1207493CE0029AE78 /* Pods_HNLandTax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */; };
+		F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD6207476DC0062C828 /* LaunchScreen.storyboard */; };
+		F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD4207476DC0062C828 /* Assets.xcassets */; };
+		F27357C5207493CE0029AE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD1207476DB0062C828 /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F2234FE1207476DC0062C828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2234FC0207476DB0062C828 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2234FC7207476DB0062C828;
+			remoteInfo = HNLandTax;
+		};
+		F2234FEC207476DC0062C828 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2234FC0207476DB0062C828 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F2234FC7207476DB0062C828;
+			remoteInfo = HNLandTax;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.release.xcconfig"; sourceTree = "<group>"; };
+		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
+		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
+		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF193BDDFC8AD49174162DDF /* Pods-HNLandTaxBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.debug.xcconfig"; sourceTree = "<group>"; };
+		F2234FC8207476DB0062C828 /* HNLandTax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTax.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2234FD2207476DB0062C828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2234FD4207476DC0062C828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2234FD7207476DC0062C828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2234FD9207476DC0062C828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2234FDA207476DC0062C828 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F2234FE0207476DC0062C828 /* HNLandTaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNLandTaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2234FE4207476DC0062C828 /* HNLandTaxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNLandTaxTests.m; sourceTree = "<group>"; };
+		F2234FE6207476DC0062C828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2234FEB207476DC0062C828 /* HNLandTaxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HNLandTaxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2234FEF207476DC0062C828 /* HNLandTaxUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HNLandTaxUITests.m; sourceTree = "<group>"; };
+		F2234FF1207476DC0062C828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2234FFF2074832E0062C828 /* JMTransitionAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTransitionAnimate.h; sourceTree = "<group>"; };
+		F22350002074832E0062C828 /* DismissTransitionAnimated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DismissTransitionAnimated.m; sourceTree = "<group>"; };
+		F22350012074832E0062C828 /* DismissTransitionAnimated.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DismissTransitionAnimated.h; sourceTree = "<group>"; };
+		F22350022074832E0062C828 /* JMTransitionAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTransitionAnimate.m; sourceTree = "<group>"; };
+		F22350042074832E0062C828 /* JMRefreshnAutoNormalFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRefreshnAutoNormalFooter.m; sourceTree = "<group>"; };
+		F22350052074832E0062C828 /* JMRefreshGifHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRefreshGifHeader.m; sourceTree = "<group>"; };
+		F22350062074832E0062C828 /* JMRefreshNormalHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMRefreshNormalHeader.m; sourceTree = "<group>"; };
+		F22350072074832E0062C828 /* JMRefreshnAutoNormalFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRefreshnAutoNormalFooter.h; sourceTree = "<group>"; };
+		F22350082074832E0062C828 /* JMRefreshGifHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRefreshGifHeader.h; sourceTree = "<group>"; };
+		F22350092074832E0062C828 /* JMRefreshNormalHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMRefreshNormalHeader.h; sourceTree = "<group>"; };
+		F22350172074832E0062C828 /* DatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatePickerView.h; sourceTree = "<group>"; };
+		F22350182074832E0062C828 /* ValuePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ValuePickerView.m; sourceTree = "<group>"; };
+		F22350192074832E0062C828 /* DatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatePickerView.m; sourceTree = "<group>"; };
+		F223501A2074832E0062C828 /* ValuePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuePickerView.h; sourceTree = "<group>"; };
+		F223501C2074832E0062C828 /* JMCityPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCityPicker.m; sourceTree = "<group>"; };
+		F223501D2074832E0062C828 /* JMCityPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCityPicker.h; sourceTree = "<group>"; };
+		F22350332074832E0062C828 /* JMPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPermissions.h; sourceTree = "<group>"; };
+		F22350342074832E0062C828 /* JMPhotosPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPhotosPermission.h; sourceTree = "<group>"; };
+		F22350352074832E0062C828 /* JMPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPermissions.m; sourceTree = "<group>"; };
+		F22350362074832E0062C828 /* JMPhotosPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPhotosPermission.m; sourceTree = "<group>"; };
+		F223503E2074832E0062C828 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F22350402074832E0062C828 /* JMPageNetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPageNetModel.m; sourceTree = "<group>"; };
+		F22350412074832E0062C828 /* JMResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMResponseSerializer.h; sourceTree = "<group>"; };
+		F22350432074832E0062C828 /* JMNetWorkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNetWorkMonitor.m; sourceTree = "<group>"; };
+		F22350452074832E0062C828 /* JMAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMAPI.h; sourceTree = "<group>"; };
+		F22350462074832E0062C828 /* APPConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APPConstants.m; sourceTree = "<group>"; };
+		F22350472074832E0062C828 /* JMNetWorkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNetWorkMonitor.h; sourceTree = "<group>"; };
+		F22350492074832E0062C828 /* JMResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMResponseSerializer.m; sourceTree = "<group>"; };
+		F223504A2074832E0062C828 /* JMPageNetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPageNetModel.h; sourceTree = "<group>"; };
+		F223504C2074832E0062C828 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F223504F2074832E0062C828 /* APPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APPConstants.h; sourceTree = "<group>"; };
+		F22350512074832E0062C828 /* JMTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTip.m; sourceTree = "<group>"; };
+		F22350522074832E0062C828 /* JMDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDateFormat.h; sourceTree = "<group>"; };
+		F22350532074832E0062C828 /* JMJsonHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMJsonHandle.h; sourceTree = "<group>"; };
+		F22350542074832E0062C828 /* JMTip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTip.h; sourceTree = "<group>"; };
+		F22350552074832E0062C828 /* JMDateFormat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMDateFormat.m; sourceTree = "<group>"; };
+		F22350562074832E0062C828 /* JMJsonHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMJsonHandle.m; sourceTree = "<group>"; };
+		F22350582074832E0062C828 /* JMLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLocationManager.m; sourceTree = "<group>"; };
+		F22350592074832E0062C828 /* JMMapModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMMapModel.m; sourceTree = "<group>"; };
+		F223505A2074832E0062C828 /* CLLocation+Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CLLocation+Location.m"; sourceTree = "<group>"; };
+		F223505B2074832E0062C828 /* JMMapModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMapModel.h; sourceTree = "<group>"; };
+		F223505C2074832E0062C828 /* JMLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLocationManager.h; sourceTree = "<group>"; };
+		F223505D2074832E0062C828 /* CLLocation+Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+Location.h"; sourceTree = "<group>"; };
+		F223505F2074832E0062C828 /* UIViewController+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Navigation.m"; sourceTree = "<group>"; };
+		F22350602074832E0062C828 /* JMLocationNavigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLocationNavigation.m; sourceTree = "<group>"; };
+		F22350612074832E0062C828 /* UIViewController+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Navigation.h"; sourceTree = "<group>"; };
+		F22350622074832E0062C828 /* JMLocationNavigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLocationNavigation.h; sourceTree = "<group>"; };
+		F22350642074832E0062C828 /* ICGThumbView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGThumbView.h; sourceTree = "<group>"; };
+		F22350652074832E0062C828 /* ICGRulerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGRulerView.m; sourceTree = "<group>"; };
+		F22350662074832E0062C828 /* ICGVideoTrimmerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGVideoTrimmerView.m; sourceTree = "<group>"; };
+		F22350672074832E0062C828 /* ICGVideoTrimmer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGVideoTrimmer.h; sourceTree = "<group>"; };
+		F22350682074832E0062C828 /* ICGThumbView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICGThumbView.m; sourceTree = "<group>"; };
+		F22350692074832E0062C828 /* ICGRulerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGRulerView.h; sourceTree = "<group>"; };
+		F223506A2074832E0062C828 /* ICGVideoTrimmerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICGVideoTrimmerView.h; sourceTree = "<group>"; };
+		F22350732074832E0062C828 /* UIImage+ImageExtent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageExtent.m"; sourceTree = "<group>"; };
+		F22350742074832E0062C828 /* UIImage+Save.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Save.m"; sourceTree = "<group>"; };
+		F22350752074832E0062C828 /* UIImage+ImageExtent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageExtent.h"; sourceTree = "<group>"; };
+		F22350762074832E0062C828 /* UIImage+Save.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Save.h"; sourceTree = "<group>"; };
+		F22350772074832E0062C828 /* UITabBar+CustomerTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+CustomerTabBar.m"; sourceTree = "<group>"; };
+		F22350792074832E0062C828 /* UITableViewCell+Nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Nib.h"; sourceTree = "<group>"; };
+		F223507A2074832E0062C828 /* UICollectionViewCell+Nib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewCell+Nib.h"; sourceTree = "<group>"; };
+		F223507B2074832E0062C828 /* UITableViewCell+Nib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Nib.m"; sourceTree = "<group>"; };
+		F223507C2074832E0062C828 /* UICollectionViewCell+Nib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewCell+Nib.m"; sourceTree = "<group>"; };
+		F223507D2074832E0062C828 /* UIButton+BarValue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BarValue.m"; sourceTree = "<group>"; };
+		F22350802074832E0062C828 /* UIViewController+Hud.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Hud.m"; sourceTree = "<group>"; };
+		F22350812074832E0062C828 /* RootViewController+ChoosePhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RootViewController+ChoosePhoto.m"; sourceTree = "<group>"; };
+		F22350842074832E0062C828 /* UIViewController+AppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AppSettings.h"; sourceTree = "<group>"; };
+		F22350852074832E0062C828 /* UIViewController+Hud.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Hud.h"; sourceTree = "<group>"; };
+		F22350892074832E0062C828 /* RootViewController+ChoosePhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RootViewController+ChoosePhoto.h"; sourceTree = "<group>"; };
+		F223508A2074832E0062C828 /* UIViewController+AppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AppSettings.m"; sourceTree = "<group>"; };
+		F223508B2074832E0062C828 /* UITabBar+CustomerTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+CustomerTabBar.h"; sourceTree = "<group>"; };
+		F223508D2074832E0062C828 /* NSString+ImageURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+ImageURL.h"; sourceTree = "<group>"; };
+		F223508E2074832E0062C828 /* NSString+NSStringHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NSStringHandle.h"; sourceTree = "<group>"; };
+		F223508F2074832E0062C828 /* NSString+ImageURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+ImageURL.m"; sourceTree = "<group>"; };
+		F22350902074832E0062C828 /* NSString+NSStringHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NSStringHandle.m"; sourceTree = "<group>"; };
+		F22350922074832E0062C828 /* UITableView+JMRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JMRefresh.h"; sourceTree = "<group>"; };
+		F22350932074832E0062C828 /* UICollectionView+JMRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+JMRefresh.m"; sourceTree = "<group>"; };
+		F22350942074832E0062C828 /* UICollectionView+JMRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionView+JMRefresh.h"; sourceTree = "<group>"; };
+		F22350952074832E0062C828 /* UITableView+JMRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JMRefresh.m"; sourceTree = "<group>"; };
+		F22350962074832E0062C828 /* UIButton+BarValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+BarValue.h"; sourceTree = "<group>"; };
+		F22350982074832E0062C828 /* JMBaseCollectionViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMBaseCollectionViewViewController.h; sourceTree = "<group>"; };
+		F22350992074832E0062C828 /* JMBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMBaseTableViewController.m; sourceTree = "<group>"; };
+		F223509A2074832E0062C828 /* JMLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMLabel.h; sourceTree = "<group>"; };
+		F223509B2074832E0062C828 /* JMUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMUI.m; sourceTree = "<group>"; };
+		F223509C2074832E0062C828 /* JMTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTool.m; sourceTree = "<group>"; };
+		F223509D2074832E0062C828 /* JMBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMBaseTableViewController.h; sourceTree = "<group>"; };
+		F223509E2074832E0062C828 /* JMBaseCollectionViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMBaseCollectionViewViewController.m; sourceTree = "<group>"; };
+		F223509F2074832E0062C828 /* JMUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMUI.h; sourceTree = "<group>"; };
+		F22350A02074832E0062C828 /* JMLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMLabel.m; sourceTree = "<group>"; };
+		F22350A12074832E0062C828 /* JMTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTool.h; sourceTree = "<group>"; };
+		F22350A32074832E0062C828 /* UIColor+JMColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+JMColor.m"; sourceTree = "<group>"; };
+		F22350A42074832E0062C828 /* UIColor+JMColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+JMColor.h"; sourceTree = "<group>"; };
+		F22350A62074832E0062C828 /* JMWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMWebViewController.m; sourceTree = "<group>"; };
+		F22350A72074832E0062C828 /* JMWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWebViewController.h; sourceTree = "<group>"; };
+		F22350A92074832E0062C828 /* JMKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMKeyManager.h; sourceTree = "<group>"; };
+		F22350AA2074832E0062C828 /* PushType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushType.h; sourceTree = "<group>"; };
+		F22350AB2074832E0062C828 /* JMCheckMocro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCheckMocro.h; sourceTree = "<group>"; };
+		F22350AC2074832E0062C828 /* AppFieldType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppFieldType.h; sourceTree = "<group>"; };
+		F22350AD2074832E0062C828 /* JMKeyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMKeyManager.m; sourceTree = "<group>"; };
+		F22350AE2074832E0062C828 /* JMWeiDu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMWeiDu.h; sourceTree = "<group>"; };
+		F22350AF2074832E0062C828 /* JMMocro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMMocro.h; sourceTree = "<group>"; };
+		F22350B12074832E0062C828 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		F22350B22074832E0062C828 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		F22350B42074832E0062C828 /* JMNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMNavigationViewController.h; sourceTree = "<group>"; };
+		F22350B52074832E0062C828 /* JMNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMNavigationViewController.m; sourceTree = "<group>"; };
+		F22350B72074832E0062C828 /* UITabBar+RedPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+RedPoint.m"; sourceTree = "<group>"; };
+		F22350B82074832E0062C828 /* JMTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMTabBarViewController.h; sourceTree = "<group>"; };
+		F22350B92074832E0062C828 /* JMTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTabBarViewController.m; sourceTree = "<group>"; };
+		F22350BA2074832E0062C828 /* UITabBar+RedPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+RedPoint.h"; sourceTree = "<group>"; };
+		F223510C207484620062C828 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F223510D207484620062C828 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F2235116207486230062C828 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		F2235117207486230062C828 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		F2235120207486760062C828 /* FindViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindViewController.h; sourceTree = "<group>"; };
+		F2235121207486760062C828 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
+		F2235123207486760062C828 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
+		F2235124207486760062C828 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F2735782207490D80029AE78 /* JMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAPI.m; sourceTree = "<group>"; };
+		F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTaxBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F27357CC207493CF0029AE78 /* HNLandTaxBeta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HNLandTaxBeta-Info.plist"; path = "/Users/wuzhenzhen/Desktop/HNLandTax/HNLandTaxBeta-Info.plist"; sourceTree = "<absolute>"; };
+		FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2234FC5207476DB0062C828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD145844C403DC630B9A64B5 /* Pods_HNLandTax.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2234FDD207476DC0062C828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2234FE8207476DC0062C828 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27357C0207493CE0029AE78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27357C1207493CE0029AE78 /* Pods_HNLandTax.framework in Frameworks */,
+				A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		362372F69FC00AB6B2D0124E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */,
+				2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */,
+				CF193BDDFC8AD49174162DDF /* Pods-HNLandTaxBeta.debug.xcconfig */,
+				25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D04E6B178C532DA3AC148CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */,
+				7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2234FBF207476DB0062C828 = {
+			isa = PBXGroup;
+			children = (
+				F2234FCA207476DB0062C828 /* HNLandTax */,
+				F2234FE3207476DC0062C828 /* HNLandTaxTests */,
+				F2234FEE207476DC0062C828 /* HNLandTaxUITests */,
+				F2234FC9207476DB0062C828 /* Products */,
+				362372F69FC00AB6B2D0124E /* Pods */,
+				8D04E6B178C532DA3AC148CA /* Frameworks */,
+				F27357CC207493CF0029AE78 /* HNLandTaxBeta-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		F2234FC9207476DB0062C828 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2234FC8207476DB0062C828 /* HNLandTax.app */,
+				F2234FE0207476DC0062C828 /* HNLandTaxTests.xctest */,
+				F2234FEB207476DC0062C828 /* HNLandTaxUITests.xctest */,
+				F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2234FCA207476DB0062C828 /* HNLandTax */ = {
+			isa = PBXGroup;
+			children = (
+				F223510B207484620062C828 /* AppDelegate */,
+				F22350B02074832E0062C828 /* BaseViewController */,
+				F2235111207485EB0062C828 /* Models */,
+				F2235110207485EB0062C828 /* Views */,
+				F2235112207485EB0062C828 /* Controller */,
+				F2234FFD2074832E0062C828 /* Common */,
+				F223510F207485210062C828 /* Config */,
+				F2234FD4207476DC0062C828 /* Assets.xcassets */,
+				F2234FD9207476DC0062C828 /* Info.plist */,
+			);
+			path = HNLandTax;
+			sourceTree = "<group>";
+		};
+		F2234FE3207476DC0062C828 /* HNLandTaxTests */ = {
+			isa = PBXGroup;
+			children = (
+				F2234FE4207476DC0062C828 /* HNLandTaxTests.m */,
+				F2234FE6207476DC0062C828 /* Info.plist */,
+			);
+			path = HNLandTaxTests;
+			sourceTree = "<group>";
+		};
+		F2234FEE207476DC0062C828 /* HNLandTaxUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F2234FEF207476DC0062C828 /* HNLandTaxUITests.m */,
+				F2234FF1207476DC0062C828 /* Info.plist */,
+			);
+			path = HNLandTaxUITests;
+			sourceTree = "<group>";
+		};
+		F2234FFD2074832E0062C828 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F223503D2074832E0062C828 /* NetWorking */,
+				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
+				F22350032074832E0062C828 /* JMRefresh */,
+				F223500A2074832E0062C828 /* JMToolManager */,
+				F22350502074832E0062C828 /* JMExtend */,
+				F22350572074832E0062C828 /* JMLocationManager */,
+				F223505E2074832E0062C828 /* JMNavigation */,
+				F22350632074832E0062C828 /* JMVedioClip */,
+				F22350712074832E0062C828 /* JMCategory */,
+				F22350972074832E0062C828 /* JMUIManager */,
+				F22350A22074832E0062C828 /* JMColorManager */,
+				F22350A52074832E0062C828 /* JMWebManager */,
+				F22350A82074832E0062C828 /* JMKeyManager */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		F2234FFE2074832E0062C828 /* JMTransitionAnimated */ = {
+			isa = PBXGroup;
+			children = (
+				F2234FFF2074832E0062C828 /* JMTransitionAnimate.h */,
+				F22350022074832E0062C828 /* JMTransitionAnimate.m */,
+				F22350012074832E0062C828 /* DismissTransitionAnimated.h */,
+				F22350002074832E0062C828 /* DismissTransitionAnimated.m */,
+			);
+			path = JMTransitionAnimated;
+			sourceTree = "<group>";
+		};
+		F22350032074832E0062C828 /* JMRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				F22350072074832E0062C828 /* JMRefreshnAutoNormalFooter.h */,
+				F22350042074832E0062C828 /* JMRefreshnAutoNormalFooter.m */,
+				F22350052074832E0062C828 /* JMRefreshGifHeader.m */,
+				F22350082074832E0062C828 /* JMRefreshGifHeader.h */,
+				F22350092074832E0062C828 /* JMRefreshNormalHeader.h */,
+				F22350062074832E0062C828 /* JMRefreshNormalHeader.m */,
+			);
+			path = JMRefresh;
+			sourceTree = "<group>";
+		};
+		F223500A2074832E0062C828 /* JMToolManager */ = {
+			isa = PBXGroup;
+			children = (
+				F22350162074832E0062C828 /* Picker */,
+				F223501B2074832E0062C828 /* CityList */,
+				F22350322074832E0062C828 /* Permission */,
+			);
+			path = JMToolManager;
+			sourceTree = "<group>";
+		};
+		F22350162074832E0062C828 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+				F22350172074832E0062C828 /* DatePickerView.h */,
+				F22350192074832E0062C828 /* DatePickerView.m */,
+				F223501A2074832E0062C828 /* ValuePickerView.h */,
+				F22350182074832E0062C828 /* ValuePickerView.m */,
+			);
+			path = Picker;
+			sourceTree = "<group>";
+		};
+		F223501B2074832E0062C828 /* CityList */ = {
+			isa = PBXGroup;
+			children = (
+				F223501C2074832E0062C828 /* JMCityPicker.m */,
+				F223501D2074832E0062C828 /* JMCityPicker.h */,
+			);
+			path = CityList;
+			sourceTree = "<group>";
+		};
+		F22350322074832E0062C828 /* Permission */ = {
+			isa = PBXGroup;
+			children = (
+				F22350332074832E0062C828 /* JMPermissions.h */,
+				F22350342074832E0062C828 /* JMPhotosPermission.h */,
+				F22350352074832E0062C828 /* JMPermissions.m */,
+				F22350362074832E0062C828 /* JMPhotosPermission.m */,
+			);
+			path = Permission;
+			sourceTree = "<group>";
+		};
+		F223503D2074832E0062C828 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				F223504F2074832E0062C828 /* APPConstants.h */,
+				F22350462074832E0062C828 /* APPConstants.m */,
+				F22350452074832E0062C828 /* JMAPI.h */,
+				F2735782207490D80029AE78 /* JMAPI.m */,
+				F22350472074832E0062C828 /* JMNetWorkMonitor.h */,
+				F22350432074832E0062C828 /* JMNetWorkMonitor.m */,
+				F223504C2074832E0062C828 /* Reachability.h */,
+				F223503E2074832E0062C828 /* Reachability.m */,
+				F22350412074832E0062C828 /* JMResponseSerializer.h */,
+				F22350492074832E0062C828 /* JMResponseSerializer.m */,
+				F223504A2074832E0062C828 /* JMPageNetModel.h */,
+				F22350402074832E0062C828 /* JMPageNetModel.m */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		F22350502074832E0062C828 /* JMExtend */ = {
+			isa = PBXGroup;
+			children = (
+				F22350542074832E0062C828 /* JMTip.h */,
+				F22350512074832E0062C828 /* JMTip.m */,
+				F22350522074832E0062C828 /* JMDateFormat.h */,
+				F22350552074832E0062C828 /* JMDateFormat.m */,
+				F22350532074832E0062C828 /* JMJsonHandle.h */,
+				F22350562074832E0062C828 /* JMJsonHandle.m */,
+			);
+			path = JMExtend;
+			sourceTree = "<group>";
+		};
+		F22350572074832E0062C828 /* JMLocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				F22350592074832E0062C828 /* JMMapModel.m */,
+				F223505B2074832E0062C828 /* JMMapModel.h */,
+				F223505C2074832E0062C828 /* JMLocationManager.h */,
+				F22350582074832E0062C828 /* JMLocationManager.m */,
+				F223505D2074832E0062C828 /* CLLocation+Location.h */,
+				F223505A2074832E0062C828 /* CLLocation+Location.m */,
+			);
+			path = JMLocationManager;
+			sourceTree = "<group>";
+		};
+		F223505E2074832E0062C828 /* JMNavigation */ = {
+			isa = PBXGroup;
+			children = (
+				F223505F2074832E0062C828 /* UIViewController+Navigation.m */,
+				F22350602074832E0062C828 /* JMLocationNavigation.m */,
+				F22350612074832E0062C828 /* UIViewController+Navigation.h */,
+				F22350622074832E0062C828 /* JMLocationNavigation.h */,
+			);
+			path = JMNavigation;
+			sourceTree = "<group>";
+		};
+		F22350632074832E0062C828 /* JMVedioClip */ = {
+			isa = PBXGroup;
+			children = (
+				F22350642074832E0062C828 /* ICGThumbView.h */,
+				F22350652074832E0062C828 /* ICGRulerView.m */,
+				F22350662074832E0062C828 /* ICGVideoTrimmerView.m */,
+				F22350672074832E0062C828 /* ICGVideoTrimmer.h */,
+				F22350682074832E0062C828 /* ICGThumbView.m */,
+				F22350692074832E0062C828 /* ICGRulerView.h */,
+				F223506A2074832E0062C828 /* ICGVideoTrimmerView.h */,
+			);
+			path = JMVedioClip;
+			sourceTree = "<group>";
+		};
+		F22350712074832E0062C828 /* JMCategory */ = {
+			isa = PBXGroup;
+			children = (
+				F22350722074832E0062C828 /* UIImage */,
+				F22350782074832E0062C828 /* UINib */,
+				F223507E2074832E0062C828 /* UIController */,
+				F223508C2074832E0062C828 /* NSString */,
+				F22350912074832E0062C828 /* UITableView */,
+				F22350962074832E0062C828 /* UIButton+BarValue.h */,
+				F223507D2074832E0062C828 /* UIButton+BarValue.m */,
+				F223508B2074832E0062C828 /* UITabBar+CustomerTabBar.h */,
+				F22350772074832E0062C828 /* UITabBar+CustomerTabBar.m */,
+			);
+			path = JMCategory;
+			sourceTree = "<group>";
+		};
+		F22350722074832E0062C828 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				F22350732074832E0062C828 /* UIImage+ImageExtent.m */,
+				F22350752074832E0062C828 /* UIImage+ImageExtent.h */,
+				F22350762074832E0062C828 /* UIImage+Save.h */,
+				F22350742074832E0062C828 /* UIImage+Save.m */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
+		F22350782074832E0062C828 /* UINib */ = {
+			isa = PBXGroup;
+			children = (
+				F22350792074832E0062C828 /* UITableViewCell+Nib.h */,
+				F223507B2074832E0062C828 /* UITableViewCell+Nib.m */,
+				F223507A2074832E0062C828 /* UICollectionViewCell+Nib.h */,
+				F223507C2074832E0062C828 /* UICollectionViewCell+Nib.m */,
+			);
+			path = UINib;
+			sourceTree = "<group>";
+		};
+		F223507E2074832E0062C828 /* UIController */ = {
+			isa = PBXGroup;
+			children = (
+				F22350892074832E0062C828 /* RootViewController+ChoosePhoto.h */,
+				F22350812074832E0062C828 /* RootViewController+ChoosePhoto.m */,
+				F22350842074832E0062C828 /* UIViewController+AppSettings.h */,
+				F223508A2074832E0062C828 /* UIViewController+AppSettings.m */,
+				F22350852074832E0062C828 /* UIViewController+Hud.h */,
+				F22350802074832E0062C828 /* UIViewController+Hud.m */,
+			);
+			path = UIController;
+			sourceTree = "<group>";
+		};
+		F223508C2074832E0062C828 /* NSString */ = {
+			isa = PBXGroup;
+			children = (
+				F223508D2074832E0062C828 /* NSString+ImageURL.h */,
+				F223508E2074832E0062C828 /* NSString+NSStringHandle.h */,
+				F223508F2074832E0062C828 /* NSString+ImageURL.m */,
+				F22350902074832E0062C828 /* NSString+NSStringHandle.m */,
+			);
+			path = NSString;
+			sourceTree = "<group>";
+		};
+		F22350912074832E0062C828 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				F22350922074832E0062C828 /* UITableView+JMRefresh.h */,
+				F22350932074832E0062C828 /* UICollectionView+JMRefresh.m */,
+				F22350942074832E0062C828 /* UICollectionView+JMRefresh.h */,
+				F22350952074832E0062C828 /* UITableView+JMRefresh.m */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		F22350972074832E0062C828 /* JMUIManager */ = {
+			isa = PBXGroup;
+			children = (
+				F223509D2074832E0062C828 /* JMBaseTableViewController.h */,
+				F22350992074832E0062C828 /* JMBaseTableViewController.m */,
+				F22350982074832E0062C828 /* JMBaseCollectionViewViewController.h */,
+				F223509E2074832E0062C828 /* JMBaseCollectionViewViewController.m */,
+				F223509A2074832E0062C828 /* JMLabel.h */,
+				F22350A02074832E0062C828 /* JMLabel.m */,
+				F223509F2074832E0062C828 /* JMUI.h */,
+				F223509B2074832E0062C828 /* JMUI.m */,
+				F22350A12074832E0062C828 /* JMTool.h */,
+				F223509C2074832E0062C828 /* JMTool.m */,
+			);
+			path = JMUIManager;
+			sourceTree = "<group>";
+		};
+		F22350A22074832E0062C828 /* JMColorManager */ = {
+			isa = PBXGroup;
+			children = (
+				F22350A32074832E0062C828 /* UIColor+JMColor.m */,
+				F22350A42074832E0062C828 /* UIColor+JMColor.h */,
+			);
+			path = JMColorManager;
+			sourceTree = "<group>";
+		};
+		F22350A52074832E0062C828 /* JMWebManager */ = {
+			isa = PBXGroup;
+			children = (
+				F22350A62074832E0062C828 /* JMWebViewController.m */,
+				F22350A72074832E0062C828 /* JMWebViewController.h */,
+			);
+			path = JMWebManager;
+			sourceTree = "<group>";
+		};
+		F22350A82074832E0062C828 /* JMKeyManager */ = {
+			isa = PBXGroup;
+			children = (
+				F22350A92074832E0062C828 /* JMKeyManager.h */,
+				F22350AD2074832E0062C828 /* JMKeyManager.m */,
+				F22350AB2074832E0062C828 /* JMCheckMocro.h */,
+				F22350AC2074832E0062C828 /* AppFieldType.h */,
+				F22350AA2074832E0062C828 /* PushType.h */,
+				F22350AE2074832E0062C828 /* JMWeiDu.h */,
+				F22350AF2074832E0062C828 /* JMMocro.h */,
+			);
+			path = JMKeyManager;
+			sourceTree = "<group>";
+		};
+		F22350B02074832E0062C828 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F22350B12074832E0062C828 /* RootViewController.m */,
+				F22350B22074832E0062C828 /* RootViewController.h */,
+				F22350B32074832E0062C828 /* JMNavigationController */,
+				F22350B62074832E0062C828 /* JMTabBarController */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		F22350B32074832E0062C828 /* JMNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				F22350B42074832E0062C828 /* JMNavigationViewController.h */,
+				F22350B52074832E0062C828 /* JMNavigationViewController.m */,
+			);
+			path = JMNavigationController;
+			sourceTree = "<group>";
+		};
+		F22350B62074832E0062C828 /* JMTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				F22350B82074832E0062C828 /* JMTabBarViewController.h */,
+				F22350B92074832E0062C828 /* JMTabBarViewController.m */,
+				F22350BA2074832E0062C828 /* UITabBar+RedPoint.h */,
+				F22350B72074832E0062C828 /* UITabBar+RedPoint.m */,
+			);
+			path = JMTabBarController;
+			sourceTree = "<group>";
+		};
+		F223510B207484620062C828 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				F223510C207484620062C828 /* AppDelegate.h */,
+				F223510D207484620062C828 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		F223510F207485210062C828 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				F2234FDA207476DC0062C828 /* main.m */,
+				F2234FD6207476DC0062C828 /* LaunchScreen.storyboard */,
+				F2234FD1207476DB0062C828 /* Main.storyboard */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F2235110207485EB0062C828 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F2235111207485EB0062C828 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F2235112207485EB0062C828 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2235113207485EB0062C828 /* Home */,
+				F223511F207486760062C828 /* Find */,
+				F2235122207486760062C828 /* Mine */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F2235113207485EB0062C828 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				F2235116207486230062C828 /* HomeViewController.h */,
+				F2235117207486230062C828 /* HomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F223511F207486760062C828 /* Find */ = {
+			isa = PBXGroup;
+			children = (
+				F2235120207486760062C828 /* FindViewController.h */,
+				F2235121207486760062C828 /* FindViewController.m */,
+			);
+			path = Find;
+			sourceTree = "<group>";
+		};
+		F2235122207486760062C828 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				F2235123207486760062C828 /* MineViewController.h */,
+				F2235124207486760062C828 /* MineViewController.m */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2234FC7207476DB0062C828 /* HNLandTax */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2234FF4207476DC0062C828 /* Build configuration list for PBXNativeTarget "HNLandTax" */;
+			buildPhases = (
+				4A86AE1C2CC715589FB25387 /* [CP] Check Pods Manifest.lock */,
+				F2234FC4207476DB0062C828 /* Sources */,
+				F2234FC5207476DB0062C828 /* Frameworks */,
+				F2234FC6207476DB0062C828 /* Resources */,
+				C61E1CDADA421048C24B8E20 /* [CP] Embed Pods Frameworks */,
+				4D1E4C56D137292F69ADF321 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HNLandTax;
+			productName = HNLandTax;
+			productReference = F2234FC8207476DB0062C828 /* HNLandTax.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F2234FDF207476DC0062C828 /* HNLandTaxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2234FF7207476DC0062C828 /* Build configuration list for PBXNativeTarget "HNLandTaxTests" */;
+			buildPhases = (
+				F2234FDC207476DC0062C828 /* Sources */,
+				F2234FDD207476DC0062C828 /* Frameworks */,
+				F2234FDE207476DC0062C828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2234FE2207476DC0062C828 /* PBXTargetDependency */,
+			);
+			name = HNLandTaxTests;
+			productName = HNLandTaxTests;
+			productReference = F2234FE0207476DC0062C828 /* HNLandTaxTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F2234FEA207476DC0062C828 /* HNLandTaxUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2234FFA207476DC0062C828 /* Build configuration list for PBXNativeTarget "HNLandTaxUITests" */;
+			buildPhases = (
+				F2234FE7207476DC0062C828 /* Sources */,
+				F2234FE8207476DC0062C828 /* Frameworks */,
+				F2234FE9207476DC0062C828 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2234FED207476DC0062C828 /* PBXTargetDependency */,
+			);
+			name = HNLandTaxUITests;
+			productName = HNLandTaxUITests;
+			productReference = F2234FEB207476DC0062C828 /* HNLandTaxUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F2735784207493CE0029AE78 /* HNLandTaxBeta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F27357C8207493CE0029AE78 /* Build configuration list for PBXNativeTarget "HNLandTaxBeta" */;
+			buildPhases = (
+				F2735785207493CE0029AE78 /* [CP] Check Pods Manifest.lock */,
+				F2735786207493CE0029AE78 /* Sources */,
+				F27357C0207493CE0029AE78 /* Frameworks */,
+				F27357C2207493CE0029AE78 /* Resources */,
+				F27357C6207493CE0029AE78 /* [CP] Embed Pods Frameworks */,
+				F27357C7207493CE0029AE78 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HNLandTaxBeta;
+			productName = HNLandTax;
+			productReference = F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2234FC0207476DB0062C828 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = WYW;
+				TargetAttributes = {
+					F2234FC7207476DB0062C828 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					F2234FDF207476DC0062C828 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F2234FC7207476DB0062C828;
+					};
+					F2234FEA207476DC0062C828 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = F2234FC7207476DB0062C828;
+					};
+				};
+			};
+			buildConfigurationList = F2234FC3207476DB0062C828 /* Build configuration list for PBXProject "HNLandTax" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2234FBF207476DB0062C828;
+			productRefGroup = F2234FC9207476DB0062C828 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2234FC7207476DB0062C828 /* HNLandTax */,
+				F2735784207493CE0029AE78 /* HNLandTaxBeta */,
+				F2234FDF207476DC0062C828 /* HNLandTaxTests */,
+				F2234FEA207476DC0062C828 /* HNLandTaxUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2234FC6207476DB0062C828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2234FD8207476DC0062C828 /* LaunchScreen.storyboard in Resources */,
+				F2234FD5207476DC0062C828 /* Assets.xcassets in Resources */,
+				F2234FD3207476DB0062C828 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2234FDE207476DC0062C828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2234FE9207476DC0062C828 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F27357C2207493CE0029AE78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */,
+				F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */,
+				F27357C5207493CE0029AE78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A86AE1C2CC715589FB25387 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HNLandTax-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D1E4C56D137292F69ADF321 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax-resources.sh",
+				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterKitResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterShareExtensionUIResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C61E1CDADA421048C24B8E20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2735785207493CE0029AE78 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HNLandTaxBeta-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F27357C6207493CE0029AE78 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F27357C7207493CE0029AE78 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta-resources.sh",
+				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterKitResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterShareExtensionUIResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2234FC4207476DB0062C828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
+				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
+				F22351062074832F0062C828 /* JMKeyManager.m in Sources */,
+				F22351042074832F0062C828 /* UIColor+JMColor.m in Sources */,
+				F22351032074832F0062C828 /* JMLabel.m in Sources */,
+				F22350DF2074832F0062C828 /* JMResponseSerializer.m in Sources */,
+				F22350FA2074832F0062C828 /* UIViewController+AppSettings.m in Sources */,
+				F22351012074832F0062C828 /* JMTool.m in Sources */,
+				F22350E62074832F0062C828 /* JMMapModel.m in Sources */,
+				F22351052074832F0062C828 /* JMWebViewController.m in Sources */,
+				F22350FD2074832F0062C828 /* UICollectionView+JMRefresh.m in Sources */,
+				F22350EC2074832F0062C828 /* ICGThumbView.m in Sources */,
+				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
+				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
+				F22350C52074832F0062C828 /* ValuePickerView.m in Sources */,
+				F22351002074832F0062C828 /* JMUI.m in Sources */,
+				F22350FC2074832F0062C828 /* NSString+NSStringHandle.m in Sources */,
+				F22350DE2074832F0062C828 /* APPConstants.m in Sources */,
+				F22350EF2074832F0062C828 /* UIImage+ImageExtent.m in Sources */,
+				F22350C62074832F0062C828 /* DatePickerView.m in Sources */,
+				F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */,
+				F22350D22074832F0062C828 /* JMPermissions.m in Sources */,
+				F22350F02074832F0062C828 /* UIImage+Save.m in Sources */,
+				F2235126207486770062C828 /* MineViewController.m in Sources */,
+				F2235125207486770062C828 /* FindViewController.m in Sources */,
+				F2735783207490D80029AE78 /* JMAPI.m in Sources */,
+				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
+				F22350F12074832F0062C828 /* UITabBar+CustomerTabBar.m in Sources */,
+				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
+				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
+				F22351072074832F0062C828 /* RootViewController.m in Sources */,
+				F22350E82074832F0062C828 /* UIViewController+Navigation.m in Sources */,
+				F22350D32074832F0062C828 /* JMPhotosPermission.m in Sources */,
+				F22350C72074832F0062C828 /* JMCityPicker.m in Sources */,
+				F22350E52074832F0062C828 /* JMLocationManager.m in Sources */,
+				F223510A2074832F0062C828 /* JMTabBarViewController.m in Sources */,
+				F22350FE2074832F0062C828 /* UITableView+JMRefresh.m in Sources */,
+				F22350BE2074832F0062C828 /* JMRefreshGifHeader.m in Sources */,
+				F22350F62074832F0062C828 /* UIViewController+Hud.m in Sources */,
+				F22350BD2074832F0062C828 /* JMRefreshnAutoNormalFooter.m in Sources */,
+				F2234FDB207476DC0062C828 /* main.m in Sources */,
+				F22350E72074832F0062C828 /* CLLocation+Location.m in Sources */,
+				F22350DC2074832F0062C828 /* JMNetWorkMonitor.m in Sources */,
+				F22350FF2074832F0062C828 /* JMBaseTableViewController.m in Sources */,
+				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
+				F22350F72074832F0062C828 /* RootViewController+ChoosePhoto.m in Sources */,
+				F22350DA2074832F0062C828 /* JMPageNetModel.m in Sources */,
+				F22350E22074832F0062C828 /* JMTip.m in Sources */,
+				F22350FB2074832F0062C828 /* NSString+ImageURL.m in Sources */,
+				F22350F22074832F0062C828 /* UITableViewCell+Nib.m in Sources */,
+				F223510E207484620062C828 /* AppDelegate.m in Sources */,
+				F22350F32074832F0062C828 /* UICollectionViewCell+Nib.m in Sources */,
+				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
+				F22350D92074832F0062C828 /* Reachability.m in Sources */,
+				F2235118207486230062C828 /* HomeViewController.m in Sources */,
+				F22350F42074832F0062C828 /* UIButton+BarValue.m in Sources */,
+				F22351082074832F0062C828 /* JMNavigationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2234FDC207476DC0062C828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2234FE5207476DC0062C828 /* HNLandTaxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2234FE7207476DC0062C828 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2234FF0207476DC0062C828 /* HNLandTaxUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F2735786207493CE0029AE78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
+				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
+				F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */,
+				F273578A207493CE0029AE78 /* UIColor+JMColor.m in Sources */,
+				F273578B207493CE0029AE78 /* JMLabel.m in Sources */,
+				F273578C207493CE0029AE78 /* JMResponseSerializer.m in Sources */,
+				F273578D207493CE0029AE78 /* UIViewController+AppSettings.m in Sources */,
+				F273578E207493CE0029AE78 /* JMTool.m in Sources */,
+				F273578F207493CE0029AE78 /* JMMapModel.m in Sources */,
+				F2735790207493CE0029AE78 /* JMWebViewController.m in Sources */,
+				F2735791207493CE0029AE78 /* UICollectionView+JMRefresh.m in Sources */,
+				F2735792207493CE0029AE78 /* ICGThumbView.m in Sources */,
+				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
+				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
+				F2735795207493CE0029AE78 /* ValuePickerView.m in Sources */,
+				F2735796207493CE0029AE78 /* JMUI.m in Sources */,
+				F2735797207493CE0029AE78 /* NSString+NSStringHandle.m in Sources */,
+				F2735798207493CE0029AE78 /* APPConstants.m in Sources */,
+				F2735799207493CE0029AE78 /* UIImage+ImageExtent.m in Sources */,
+				F273579A207493CE0029AE78 /* DatePickerView.m in Sources */,
+				F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */,
+				F273579C207493CE0029AE78 /* JMPermissions.m in Sources */,
+				F273579D207493CE0029AE78 /* UIImage+Save.m in Sources */,
+				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
+				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
+				F27357A0207493CE0029AE78 /* JMAPI.m in Sources */,
+				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
+				F27357A2207493CE0029AE78 /* UITabBar+CustomerTabBar.m in Sources */,
+				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
+				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
+				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
+				F27357A6207493CE0029AE78 /* UIViewController+Navigation.m in Sources */,
+				F27357A7207493CE0029AE78 /* JMPhotosPermission.m in Sources */,
+				F27357A8207493CE0029AE78 /* JMCityPicker.m in Sources */,
+				F27357A9207493CE0029AE78 /* JMLocationManager.m in Sources */,
+				F27357AA207493CE0029AE78 /* JMTabBarViewController.m in Sources */,
+				F27357AB207493CE0029AE78 /* UITableView+JMRefresh.m in Sources */,
+				F27357AC207493CE0029AE78 /* JMRefreshGifHeader.m in Sources */,
+				F27357AD207493CE0029AE78 /* UIViewController+Hud.m in Sources */,
+				F27357AE207493CE0029AE78 /* JMRefreshnAutoNormalFooter.m in Sources */,
+				F27357AF207493CE0029AE78 /* main.m in Sources */,
+				F27357B0207493CE0029AE78 /* CLLocation+Location.m in Sources */,
+				F27357B1207493CE0029AE78 /* JMNetWorkMonitor.m in Sources */,
+				F27357B2207493CE0029AE78 /* JMBaseTableViewController.m in Sources */,
+				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
+				F27357B4207493CE0029AE78 /* RootViewController+ChoosePhoto.m in Sources */,
+				F27357B5207493CE0029AE78 /* JMPageNetModel.m in Sources */,
+				F27357B6207493CE0029AE78 /* JMTip.m in Sources */,
+				F27357B7207493CE0029AE78 /* NSString+ImageURL.m in Sources */,
+				F27357B8207493CE0029AE78 /* UITableViewCell+Nib.m in Sources */,
+				F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */,
+				F27357BA207493CE0029AE78 /* UICollectionViewCell+Nib.m in Sources */,
+				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
+				F27357BC207493CE0029AE78 /* Reachability.m in Sources */,
+				F27357BD207493CE0029AE78 /* HomeViewController.m in Sources */,
+				F27357BE207493CE0029AE78 /* UIButton+BarValue.m in Sources */,
+				F27357BF207493CE0029AE78 /* JMNavigationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F2234FE2207476DC0062C828 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2234FC7207476DB0062C828 /* HNLandTax */;
+			targetProxy = F2234FE1207476DC0062C828 /* PBXContainerItemProxy */;
+		};
+		F2234FED207476DC0062C828 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F2234FC7207476DB0062C828 /* HNLandTax */;
+			targetProxy = F2234FEC207476DC0062C828 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F2234FD1207476DB0062C828 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2234FD2207476DB0062C828 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2234FD6207476DC0062C828 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2234FD7207476DC0062C828 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2234FF2207476DC0062C828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F2234FF3207476DC0062C828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2234FF5207476DC0062C828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				INFOPLIST_FILE = HNLandTax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F2234FF6207476DC0062C828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				INFOPLIST_FILE = HNLandTax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		F2234FF8207476DC0062C828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				INFOPLIST_FILE = HNLandTaxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HNLandTax.app/HNLandTax";
+			};
+			name = Debug;
+		};
+		F2234FF9207476DC0062C828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				INFOPLIST_FILE = HNLandTaxTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTaxTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HNLandTax.app/HNLandTax";
+			};
+			name = Release;
+		};
+		F2234FFB207476DC0062C828 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				INFOPLIST_FILE = HNLandTaxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTaxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HNLandTax;
+			};
+			name = Debug;
+		};
+		F2234FFC207476DC0062C828 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				INFOPLIST_FILE = HNLandTaxUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTaxUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HNLandTax;
+			};
+			name = Release;
+		};
+		F27357C9207493CE0029AE78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF193BDDFC8AD49174162DDF /* Pods-HNLandTaxBeta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"BETA=1",
+				);
+				INFOPLIST_FILE = "HNLandTaxBeta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		F27357CA207493CE0029AE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U9LB4M6238;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"BETA=1",
+				);
+				INFOPLIST_FILE = "HNLandTaxBeta-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTax;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2234FC3207476DB0062C828 /* Build configuration list for PBXProject "HNLandTax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2234FF2207476DC0062C828 /* Debug */,
+				F2234FF3207476DC0062C828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2234FF4207476DC0062C828 /* Build configuration list for PBXNativeTarget "HNLandTax" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2234FF5207476DC0062C828 /* Debug */,
+				F2234FF6207476DC0062C828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2234FF7207476DC0062C828 /* Build configuration list for PBXNativeTarget "HNLandTaxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2234FF8207476DC0062C828 /* Debug */,
+				F2234FF9207476DC0062C828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2234FFA207476DC0062C828 /* Build configuration list for PBXNativeTarget "HNLandTaxUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2234FFB207476DC0062C828 /* Debug */,
+				F2234FFC207476DC0062C828 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F27357C8207493CE0029AE78 /* Build configuration list for PBXNativeTarget "HNLandTaxBeta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F27357C9207493CE0029AE78 /* Debug */,
+				F27357CA207493CE0029AE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2234FC0207476DB0062C828 /* Project object */;
+}

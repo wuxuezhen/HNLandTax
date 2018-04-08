@@ -1,0 +1,193 @@
+PODS:
+  - AFNetworking (3.2.0):
+    - AFNetworking/NSURLSession (= 3.2.0)
+    - AFNetworking/Reachability (= 3.2.0)
+    - AFNetworking/Security (= 3.2.0)
+    - AFNetworking/Serialization (= 3.2.0)
+    - AFNetworking/UIKit (= 3.2.0)
+  - AFNetworking/NSURLSession (3.2.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.0)
+  - AFNetworking/Security (3.2.0)
+  - AFNetworking/Serialization (3.2.0)
+  - AFNetworking/UIKit (3.2.0):
+    - AFNetworking/NSURLSession
+  - AMap3DMap-NO-IDFA (6.1.0):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapFoundation-NO-IDFA (1.4.3)
+  - AMapLocation-NO-IDFA (2.4.0):
+    - AMapFoundation-NO-IDFA (~> 1.4)
+  - AMapSearch-NO-IDFA (5.3.0):
+    - AMapFoundation-NO-IDFA (~> 1.2)
+  - FMDB (2.7.2):
+    - FMDB/standard (= 2.7.2)
+  - FMDB/standard (2.7.2)
+  - JCore (1.1.7)
+  - JPush (3.0.6):
+    - JCore (~> 1.1.1)
+  - JSONModel (1.7.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.1.15.3)
+  - SDWebImage (4.3.3):
+    - SDWebImage/Core (= 4.3.3)
+  - SDWebImage/Core (4.3.3)
+  - UITextView+Placeholder (1.2.0)
+  - UMengAnalytics (4.1.10)
+  - UMengUShare (6.4.8.2):
+    - UMengUShare/Core (= 6.4.8.2)
+    - UMengUShare/Network (= 6.4.8.2)
+    - UMengUShare/Plugin (= 6.4.8.2)
+    - UMengUShare/Social (= 6.4.8.2)
+    - UMengUShare/UI (= 6.4.8.2)
+  - UMengUShare/Core (6.4.8.2):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.4.8.2)
+  - UMengUShare/Plugin (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Plugin/IDFA (= 6.4.8.2)
+  - UMengUShare/Plugin/IDFA (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/AlipayShare (= 6.4.8.2)
+    - UMengUShare/Social/DingDing (= 6.4.8.2)
+    - UMengUShare/Social/Douban (= 6.4.8.2)
+    - UMengUShare/Social/DropBox (= 6.4.8.2)
+    - UMengUShare/Social/Email (= 6.4.8.2)
+    - UMengUShare/Social/EverNote (= 6.4.8.2)
+    - UMengUShare/Social/Facebook (= 6.4.8.2)
+    - UMengUShare/Social/FaceBookMessenger (= 6.4.8.2)
+    - UMengUShare/Social/Flickr (= 6.4.8.2)
+    - UMengUShare/Social/GooglePlus (= 6.4.8.2)
+    - UMengUShare/Social/Instagram (= 6.4.8.2)
+    - UMengUShare/Social/Kakao (= 6.4.8.2)
+    - UMengUShare/Social/LaiWang (= 6.4.8.2)
+    - UMengUShare/Social/Line (= 6.4.8.2)
+    - UMengUShare/Social/Linkedin (= 6.4.8.2)
+    - UMengUShare/Social/Pinterest (= 6.4.8.2)
+    - UMengUShare/Social/Pocket (= 6.4.8.2)
+    - UMengUShare/Social/QQ (= 6.4.8.2)
+    - UMengUShare/Social/ReducedQQ (= 6.4.8.2)
+    - UMengUShare/Social/ReducedSina (= 6.4.8.2)
+    - UMengUShare/Social/ReducedWeChat (= 6.4.8.2)
+    - UMengUShare/Social/Renren (= 6.4.8.2)
+    - UMengUShare/Social/Sina (= 6.4.8.2)
+    - UMengUShare/Social/SMS (= 6.4.8.2)
+    - UMengUShare/Social/TencentWeibo (= 6.4.8.2)
+    - UMengUShare/Social/Tumblr (= 6.4.8.2)
+    - UMengUShare/Social/Twitter (= 6.4.8.2)
+    - UMengUShare/Social/VKontakte (= 6.4.8.2)
+    - UMengUShare/Social/WeChat (= 6.4.8.2)
+    - UMengUShare/Social/WhatsApp (= 6.4.8.2)
+    - UMengUShare/Social/YiXin (= 6.4.8.2)
+    - UMengUShare/Social/YouDao (= 6.4.8.2)
+  - UMengUShare/Social/AlipayShare (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/DingDing (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Douban (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/DropBox (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Email (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/EverNote (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Facebook (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/FaceBookMessenger (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Flickr (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/GooglePlus (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Instagram (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Kakao (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/LaiWang (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Line (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Linkedin (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Pinterest (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Pocket (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/QQ (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedQQ
+  - UMengUShare/Social/ReducedQQ (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedSina (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/ReducedWeChat (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Renren (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Sina (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedSina
+  - UMengUShare/Social/SMS (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/TencentWeibo (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Tumblr (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/Twitter (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/VKontakte (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/WeChat (6.4.8.2):
+    - UMengUShare/Core
+    - UMengUShare/Social/ReducedWeChat
+  - UMengUShare/Social/WhatsApp (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/YiXin (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/Social/YouDao (6.4.8.2):
+    - UMengUShare/Core
+  - UMengUShare/UI (6.4.8.2):
+    - UMengUShare/Core
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - AMap3DMap-NO-IDFA
+  - AMapLocation-NO-IDFA (~> 2.4.0)
+  - AMapSearch-NO-IDFA (~> 5.3.0)
+  - FMDB
+  - JPush
+  - JSONModel
+  - Masonry
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh
+  - SDWebImage
+  - UITextView+Placeholder
+  - UMengAnalytics (~> 4.1.2)
+  - UMengUShare (~> 6.4.6)
+
+SPEC CHECKSUMS:
+  AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
+  AMap3DMap-NO-IDFA: bd90d37497d86ec4e6001327e9913af3d86af6c4
+  AMapFoundation-NO-IDFA: b6cbefab250ae8ab2e31aa9bb3dbbb98137cd76f
+  AMapLocation-NO-IDFA: 9493012d3241a7d551942c7c1e1069b51f295083
+  AMapSearch-NO-IDFA: eb0f9b424e6c3cdcb0e8c656e9622e8d0ee54238
+  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
+  JCore: f7459c81c135281a874a6beafdd321666adcc834
+  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  UMengAnalytics: 40585031b7eb085534c68a951b394731e7166257
+  UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
+
+PODFILE CHECKSUM: e0e5053c7fc6c5a1c86cb72306ddbd4c46cfc92c
+
+COCOAPODS: 1.4.0
