@@ -70,6 +70,7 @@
 		F2235118207486230062C828 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235117207486230062C828 /* HomeViewController.m */; };
 		F2235125207486770062C828 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235121207486760062C828 /* FindViewController.m */; };
 		F2235126207486770062C828 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235124207486760062C828 /* MineViewController.m */; };
+		F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */; };
 		F2735783207490D80029AE78 /* JMAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = F2735782207490D80029AE78 /* JMAPI.m */; };
 		F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350002074832E0062C828 /* DismissTransitionAnimated.m */; };
 		F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350652074832E0062C828 /* ICGRulerView.m */; };
@@ -286,9 +287,9 @@
 		F2235121207486760062C828 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		F2235123207486760062C828 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		F2235124207486760062C828 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HNLandTaxBeta-Info.plist"; sourceTree = "<group>"; };
 		F2735782207490D80029AE78 /* JMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAPI.m; sourceTree = "<group>"; };
 		F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTaxBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F27357CC207493CF0029AE78 /* HNLandTaxBeta-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "HNLandTaxBeta-Info.plist"; path = "/Users/wuzhenzhen/Desktop/HNLandTax/HNLandTaxBeta-Info.plist"; sourceTree = "<absolute>"; };
 		FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -356,7 +357,7 @@
 				F2234FC9207476DB0062C828 /* Products */,
 				362372F69FC00AB6B2D0124E /* Pods */,
 				8D04E6B178C532DA3AC148CA /* Frameworks */,
-				F27357CC207493CF0029AE78 /* HNLandTaxBeta-Info.plist */,
+				F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -935,6 +936,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */,
+				F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */,
 				F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */,
 				F27357C5207493CE0029AE78 /* Main.storyboard in Resources */,
 			);
