@@ -16,11 +16,8 @@ target 'HNLandTax' do
     pod 'JSONModel'
     pod 'JPush'
     pod 'UITextView+Placeholder'
-    pod 'UMengAnalytics', '~> 4.1.2'
-    pod 'UMengUShare', '~> 6.4.6'
-    pod 'AMap3DMap-NO-IDFA'
-    pod 'AMapSearch-NO-IDFA', '~> 5.3.0'
-    pod 'AMapLocation-NO-IDFA', '~> 2.4.0'
+    pod 'AMap3DMap'
+    pod 'AMapLocation'
 
 end
 
@@ -39,10 +36,7 @@ target 'HNLandTaxBeta' do
     pod 'JSONModel'
     pod 'JPush'
     pod 'UITextView+Placeholder'
-    pod 'UMengAnalytics', '~> 4.1.2'
-    pod 'UMengUShare', '~> 6.4.6'
-    pod 'AMap3DMap-NO-IDFA'
-    pod 'AMapSearch-NO-IDFA', '~> 5.3.0'
-    pod 'AMapLocation-NO-IDFA', '~> 2.4.0'
+    pod 'AMap3DMap'
+    pod 'AMapLocation'
     
 end

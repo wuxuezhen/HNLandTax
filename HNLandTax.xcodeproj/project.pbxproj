@@ -8,6 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
+		AEA258A82134FE360040F733 /* FITAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258982134FE360040F733 /* FITAPI.m */; };
+		AEA258A92134FE360040F733 /* FITAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258982134FE360040F733 /* FITAPI.m */; };
+		AEA258AA2134FE360040F733 /* FITConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2589A2134FE360040F733 /* FITConstants.m */; };
+		AEA258AB2134FE360040F733 /* FITConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2589A2134FE360040F733 /* FITConstants.m */; };
+		AEA258AC2134FE360040F733 /* FITNetWorkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2589C2134FE360040F733 /* FITNetWorkMonitor.m */; };
+		AEA258AD2134FE360040F733 /* FITNetWorkMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2589C2134FE360040F733 /* FITNetWorkMonitor.m */; };
+		AEA258AE2134FE360040F733 /* FITPageNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2589E2134FE360040F733 /* FITPageNetwork.m */; };
+		AEA258AF2134FE360040F733 /* FITPageNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA2589E2134FE360040F733 /* FITPageNetwork.m */; };
+		AEA258B02134FE360040F733 /* FITResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A02134FE360040F733 /* FITResponseSerializer.m */; };
+		AEA258B12134FE360040F733 /* FITResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A02134FE360040F733 /* FITResponseSerializer.m */; };
+		AEA258B22134FE360040F733 /* FITNetAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A32134FE360040F733 /* FITNetAPI.m */; };
+		AEA258B32134FE360040F733 /* FITNetAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A32134FE360040F733 /* FITNetAPI.m */; };
+		AEA258B42134FE360040F733 /* FITNetRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A52134FE360040F733 /* FITNetRequst.m */; };
+		AEA258B52134FE360040F733 /* FITNetRequst.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A52134FE360040F733 /* FITNetRequst.m */; };
+		AEA258B62134FE360040F733 /* FITResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A72134FE360040F733 /* FITResponseModel.m */; };
+		AEA258B72134FE360040F733 /* FITResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AEA258A72134FE360040F733 /* FITResponseModel.m */; };
 		DD145844C403DC630B9A64B5 /* Pods_HNLandTax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */; };
 		F2234FD3207476DB0062C828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD1207476DB0062C828 /* Main.storyboard */; };
 		F2234FD5207476DC0062C828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD4207476DC0062C828 /* Assets.xcassets */; };
@@ -157,6 +173,22 @@
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
 		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA258972134FE360040F733 /* FITAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITAPI.h; sourceTree = "<group>"; };
+		AEA258982134FE360040F733 /* FITAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITAPI.m; sourceTree = "<group>"; };
+		AEA258992134FE360040F733 /* FITConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITConstants.h; sourceTree = "<group>"; };
+		AEA2589A2134FE360040F733 /* FITConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITConstants.m; sourceTree = "<group>"; };
+		AEA2589B2134FE360040F733 /* FITNetWorkMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITNetWorkMonitor.h; sourceTree = "<group>"; };
+		AEA2589C2134FE360040F733 /* FITNetWorkMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNetWorkMonitor.m; sourceTree = "<group>"; };
+		AEA2589D2134FE360040F733 /* FITPageNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITPageNetwork.h; sourceTree = "<group>"; };
+		AEA2589E2134FE360040F733 /* FITPageNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITPageNetwork.m; sourceTree = "<group>"; };
+		AEA2589F2134FE360040F733 /* FITResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITResponseSerializer.h; sourceTree = "<group>"; };
+		AEA258A02134FE360040F733 /* FITResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITResponseSerializer.m; sourceTree = "<group>"; };
+		AEA258A22134FE360040F733 /* FITNetAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITNetAPI.h; sourceTree = "<group>"; };
+		AEA258A32134FE360040F733 /* FITNetAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNetAPI.m; sourceTree = "<group>"; };
+		AEA258A42134FE360040F733 /* FITNetRequst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITNetRequst.h; sourceTree = "<group>"; };
+		AEA258A52134FE360040F733 /* FITNetRequst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITNetRequst.m; sourceTree = "<group>"; };
+		AEA258A62134FE360040F733 /* FITResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITResponseModel.h; sourceTree = "<group>"; };
+		AEA258A72134FE360040F733 /* FITResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITResponseModel.m; sourceTree = "<group>"; };
 		CF193BDDFC8AD49174162DDF /* Pods-HNLandTaxBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.debug.xcconfig"; sourceTree = "<group>"; };
 		F2234FC8207476DB0062C828 /* HNLandTax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2234FD2207476DB0062C828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -348,6 +380,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AEA258962134FE360040F733 /* FitNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				AEA258972134FE360040F733 /* FITAPI.h */,
+				AEA258982134FE360040F733 /* FITAPI.m */,
+				AEA258992134FE360040F733 /* FITConstants.h */,
+				AEA2589A2134FE360040F733 /* FITConstants.m */,
+				AEA2589B2134FE360040F733 /* FITNetWorkMonitor.h */,
+				AEA2589C2134FE360040F733 /* FITNetWorkMonitor.m */,
+				AEA2589D2134FE360040F733 /* FITPageNetwork.h */,
+				AEA2589E2134FE360040F733 /* FITPageNetwork.m */,
+				AEA2589F2134FE360040F733 /* FITResponseSerializer.h */,
+				AEA258A02134FE360040F733 /* FITResponseSerializer.m */,
+				AEA258A12134FE360040F733 /* RequestApi */,
+			);
+			path = FitNetwork;
+			sourceTree = "<group>";
+		};
+		AEA258A12134FE360040F733 /* RequestApi */ = {
+			isa = PBXGroup;
+			children = (
+				AEA258A22134FE360040F733 /* FITNetAPI.h */,
+				AEA258A32134FE360040F733 /* FITNetAPI.m */,
+				AEA258A42134FE360040F733 /* FITNetRequst.h */,
+				AEA258A52134FE360040F733 /* FITNetRequst.m */,
+				AEA258A62134FE360040F733 /* FITResponseModel.h */,
+				AEA258A72134FE360040F733 /* FITResponseModel.m */,
+			);
+			path = RequestApi;
+			sourceTree = "<group>";
+		};
 		F2234FBF207476DB0062C828 = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +472,7 @@
 		F2234FFD2074832E0062C828 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AEA258962134FE360040F733 /* FitNetwork */,
 				F223503D2074832E0062C828 /* NetWorking */,
 				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
 				F22350032074832E0062C828 /* JMRefresh */,
@@ -970,23 +1034,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax-resources.sh",
-				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterKitResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterShareExtensionUIResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1082,23 +1134,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta-resources.sh",
-				"${PODS_ROOT}/AMap3DMap-NO-IDFA/MAMapKit.framework/AMap.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterKitResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterShareExtensionUIResources.bundle",
-				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1126,6 +1166,7 @@
 				F22350EC2074832F0062C828 /* ICGThumbView.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
+				AEA258B02134FE360040F733 /* FITResponseSerializer.m in Sources */,
 				F22350C52074832F0062C828 /* ValuePickerView.m in Sources */,
 				F22351002074832F0062C828 /* JMUI.m in Sources */,
 				F22350FC2074832F0062C828 /* NSString+NSStringHandle.m in Sources */,
@@ -1136,6 +1177,7 @@
 				F22350D22074832F0062C828 /* JMPermissions.m in Sources */,
 				F22350F02074832F0062C828 /* UIImage+Save.m in Sources */,
 				F2235126207486770062C828 /* MineViewController.m in Sources */,
+				AEA258B62134FE360040F733 /* FITResponseModel.m in Sources */,
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F2735783207490D80029AE78 /* JMAPI.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
@@ -1145,7 +1187,9 @@
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
 				F22350E82074832F0062C828 /* UIViewController+Navigation.m in Sources */,
 				F22350D32074832F0062C828 /* JMPhotosPermission.m in Sources */,
+				AEA258AE2134FE360040F733 /* FITPageNetwork.m in Sources */,
 				F22350C72074832F0062C828 /* JMCityPicker.m in Sources */,
+				AEA258B22134FE360040F733 /* FITNetAPI.m in Sources */,
 				F22350E52074832F0062C828 /* JMLocationManager.m in Sources */,
 				F223510A2074832F0062C828 /* JMTabBarViewController.m in Sources */,
 				F22350FE2074832F0062C828 /* UITableView+JMRefresh.m in Sources */,
@@ -1159,9 +1203,12 @@
 				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
 				F22350F72074832F0062C828 /* RootViewController+ChoosePhoto.m in Sources */,
 				F22350DA2074832F0062C828 /* JMPageNetModel.m in Sources */,
+				AEA258AC2134FE360040F733 /* FITNetWorkMonitor.m in Sources */,
 				F22350E22074832F0062C828 /* JMTip.m in Sources */,
+				AEA258A82134FE360040F733 /* FITAPI.m in Sources */,
 				F22350FB2074832F0062C828 /* NSString+ImageURL.m in Sources */,
 				F22350F22074832F0062C828 /* UITableViewCell+Nib.m in Sources */,
+				AEA258B42134FE360040F733 /* FITNetRequst.m in Sources */,
 				F223510E207484620062C828 /* AppDelegate.m in Sources */,
 				F22350F32074832F0062C828 /* UICollectionViewCell+Nib.m in Sources */,
 				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
@@ -1169,6 +1216,7 @@
 				F2235118207486230062C828 /* HomeViewController.m in Sources */,
 				F22350F42074832F0062C828 /* UIButton+BarValue.m in Sources */,
 				F22351082074832F0062C828 /* JMNavigationViewController.m in Sources */,
+				AEA258AA2134FE360040F733 /* FITConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1206,6 +1254,7 @@
 				F2735792207493CE0029AE78 /* ICGThumbView.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
+				AEA258B12134FE360040F733 /* FITResponseSerializer.m in Sources */,
 				F2735795207493CE0029AE78 /* ValuePickerView.m in Sources */,
 				F2735796207493CE0029AE78 /* JMUI.m in Sources */,
 				F2735797207493CE0029AE78 /* NSString+NSStringHandle.m in Sources */,
@@ -1216,6 +1265,7 @@
 				F273579C207493CE0029AE78 /* JMPermissions.m in Sources */,
 				F273579D207493CE0029AE78 /* UIImage+Save.m in Sources */,
 				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
+				AEA258B72134FE360040F733 /* FITResponseModel.m in Sources */,
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A0207493CE0029AE78 /* JMAPI.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
@@ -1225,7 +1275,9 @@
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
 				F27357A6207493CE0029AE78 /* UIViewController+Navigation.m in Sources */,
 				F27357A7207493CE0029AE78 /* JMPhotosPermission.m in Sources */,
+				AEA258AF2134FE360040F733 /* FITPageNetwork.m in Sources */,
 				F27357A8207493CE0029AE78 /* JMCityPicker.m in Sources */,
+				AEA258B32134FE360040F733 /* FITNetAPI.m in Sources */,
 				F27357A9207493CE0029AE78 /* JMLocationManager.m in Sources */,
 				F27357AA207493CE0029AE78 /* JMTabBarViewController.m in Sources */,
 				F27357AB207493CE0029AE78 /* UITableView+JMRefresh.m in Sources */,
@@ -1239,9 +1291,12 @@
 				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
 				F27357B4207493CE0029AE78 /* RootViewController+ChoosePhoto.m in Sources */,
 				F27357B5207493CE0029AE78 /* JMPageNetModel.m in Sources */,
+				AEA258AD2134FE360040F733 /* FITNetWorkMonitor.m in Sources */,
 				F27357B6207493CE0029AE78 /* JMTip.m in Sources */,
+				AEA258A92134FE360040F733 /* FITAPI.m in Sources */,
 				F27357B7207493CE0029AE78 /* NSString+ImageURL.m in Sources */,
 				F27357B8207493CE0029AE78 /* UITableViewCell+Nib.m in Sources */,
+				AEA258B52134FE360040F733 /* FITNetRequst.m in Sources */,
 				F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */,
 				F27357BA207493CE0029AE78 /* UICollectionViewCell+Nib.m in Sources */,
 				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
@@ -1249,6 +1304,7 @@
 				F27357BD207493CE0029AE78 /* HomeViewController.m in Sources */,
 				F27357BE207493CE0029AE78 /* UIButton+BarValue.m in Sources */,
 				F27357BF207493CE0029AE78 /* JMNavigationViewController.m in Sources */,
+				AEA258AB2134FE360040F733 /* FITConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
