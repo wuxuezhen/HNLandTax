@@ -149,6 +149,8 @@
 		F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD6207476DC0062C828 /* LaunchScreen.storyboard */; };
 		F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD4207476DC0062C828 /* Assets.xcassets */; };
 		F27357C5207493CE0029AE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD1207476DB0062C828 /* Main.storyboard */; };
+		F2C0F70021399C66009BF74A /* DownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F6FF21399C66009BF74A /* DownloadTool.m */; };
+		F2C0F70121399C66009BF74A /* DownloadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F6FF21399C66009BF74A /* DownloadTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +324,8 @@
 		F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HNLandTaxBeta-Info.plist"; sourceTree = "<group>"; };
 		F2735782207490D80029AE78 /* JMAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMAPI.m; sourceTree = "<group>"; };
 		F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTaxBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2C0F6FE21399C66009BF74A /* DownloadTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadTool.h; sourceTree = "<group>"; };
+		F2C0F6FF21399C66009BF74A /* DownloadTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadTool.m; sourceTree = "<group>"; };
 		FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -826,6 +830,8 @@
 			children = (
 				F2235116207486230062C828 /* HomeViewController.h */,
 				F2235117207486230062C828 /* HomeViewController.m */,
+				F2C0F6FE21399C66009BF74A /* DownloadTool.h */,
+				F2C0F6FF21399C66009BF74A /* DownloadTool.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1155,6 +1161,7 @@
 				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
 				F22351062074832F0062C828 /* JMKeyManager.m in Sources */,
+				F2C0F70021399C66009BF74A /* DownloadTool.m in Sources */,
 				F22351042074832F0062C828 /* UIColor+JMColor.m in Sources */,
 				F22351032074832F0062C828 /* JMLabel.m in Sources */,
 				F22350DF2074832F0062C828 /* JMResponseSerializer.m in Sources */,
@@ -1243,6 +1250,7 @@
 				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
 				F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */,
+				F2C0F70121399C66009BF74A /* DownloadTool.m in Sources */,
 				F273578A207493CE0029AE78 /* UIColor+JMColor.m in Sources */,
 				F273578B207493CE0029AE78 /* JMLabel.m in Sources */,
 				F273578C207493CE0029AE78 /* JMResponseSerializer.m in Sources */,

@@ -7,7 +7,7 @@ target 'HNLandTax' do
     
     # Pods for HNLandTax
 
-    pod 'AFNetworking', '~> 3.0'
+    pod 'AFNetworking',
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'FMDB'
     pod 'MJRefresh'
@@ -27,7 +27,7 @@ target 'HNLandTaxBeta' do
     
     # Pods for HNLandTax
     
-    pod 'AFNetworking', '~> 3.0'
+    pod 'AFNetworking'
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'FMDB'
     pod 'MJRefresh'

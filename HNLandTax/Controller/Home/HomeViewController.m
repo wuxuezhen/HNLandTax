@@ -7,18 +7,37 @@
 //
 
 #import "HomeViewController.h"
-
+#import "DownloadTool.h"
 @interface HomeViewController ()
-
+@property (nonatomic, strong) DownloadTool *tool;
+@property (nonatomic, copy) NSString *path;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"下载" style:UIBarButtonItemStylePlain target:self action:@selector(sss)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"打开" style:UIBarButtonItemStylePlain target:self action:@selector(sss)];
 }
 
+
+-(void)sss{
+    [self.tool downLoadWithDownloadUrl:_tool.downloadUrl success:^(NSString *fliePath) {
+        self.path = fliePath;
+    } progress:^(double progress) {
+        NSLog(@"progress = %@",@(progress).stringValue);
+    }];
+}
+
+-(DownloadTool *)tool{
+    if (!_tool) {
+        _tool = [[DownloadTool alloc]init];
+        _tool.downloadUrl = @"http://oojvynd5j.bkt.clouddn.com/record5b8963dc27deb1535730652.pdf";
+    }
+    return _tool;
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
