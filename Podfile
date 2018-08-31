@@ -7,7 +7,7 @@ target 'HNLandTax' do
     
     # Pods for HNLandTax
 
-    pod 'AFNetworking',
+    pod 'AFNetworking'
     pod 'MBProgressHUD', '~> 1.0.0'
     pod 'FMDB'
     pod 'MJRefresh'
@@ -17,7 +17,7 @@ target 'HNLandTax' do
     pod 'JPush'
     pod 'UITextView+Placeholder'
     pod 'AMap3DMap'
-    pod 'AMapLocation'
+    pod 'AMapLocation', '~> 2.6.1'
 
 end
 
@@ -37,6 +37,6 @@ target 'HNLandTaxBeta' do
     pod 'JPush'
     pod 'UITextView+Placeholder'
     pod 'AMap3DMap'
-    pod 'AMapLocation'
+    pod 'AMapLocation', '~> 2.6.1'
     
 end
