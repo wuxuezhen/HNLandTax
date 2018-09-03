@@ -26,14 +26,33 @@ typedef NS_ENUM(NSInteger, FITParseMethod) {
                responseModel:(Class)responsModel;
 
 
+/**
+ 接口路径
+ */
 @property (nonatomic, copy) NSString *path;
 
+
+/**
+ 请求方式
+ */
 @property (nonatomic, assign) FITAPIMethod requestMethod;
 
+
+/**
+ 解析方式
+ */
 @property (nonatomic, assign) FITParseMethod parseMethod;
 
+
+/**
+ 参数
+ */
 @property (nonatomic, strong) id parameters;
 
+
+/**
+ 解析结果 类
+ */
 @property (nonatomic, strong) Class  responseModel;
 
 @end
