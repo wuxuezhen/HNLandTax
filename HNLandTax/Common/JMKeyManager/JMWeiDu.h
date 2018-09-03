@@ -23,9 +23,12 @@
 #import <SDWebImage/UIButton+WebCache.h>
 #import "NSString+ImageURL.h"
 
-#import "UIViewController+Hud.h"
+#import "UIView+FITHud.h"
+#import "UIViewController+Alert.h"
+
 #import "UITableViewCell+Nib.h"
 #import "UICollectionViewCell+Nib.h"
+
 #import "UITableView+JMRefresh.h"
 #import "UICollectionView+JMRefresh.h"
 

@@ -1,42 +1,58 @@
 //
-//  UIViewController+AppSettings.m
-//  TuoDian
+//  UIViewController+FITAppSettings.m
+//  FitBody
 //
-//  Created by Mac Pro on 2017/10/13.
-//  Copyright © 2017年 wxz. All rights reserved.
+//  Created by caiyi on 2018/8/22.
+//  Copyright © 2018年 caiyi. All rights reserved.
 //
 
-#import "UIViewController+AppSettings.h"
+#import "UIViewController+FITAppSettings.h"
 
-@implementation UIViewController (AppSettings)
-- (void)jm_openAppSettings {
+@implementation UIViewController (FITAppSettings)
+
+
+/**
+ 打开设置
+ */
+- (void)fit_openAppSettings {
     NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
     if( [[[UIDevice currentDevice] systemVersion] floatValue] <= 10.0 && [[UIApplication sharedApplication] canOpenURL:url] ) {
         [[UIApplication sharedApplication] openURL:url];
     }else{
         if ([[UIApplication sharedApplication] respondsToSelector:@selector(openURL:options:completionHandler:)]) {
             [[UIApplication sharedApplication] openURL:url
-                                              options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES}
-                                    completionHandler:^(BOOL success) {
-                                        
-                                    }];
+                                               options:@{UIApplicationOpenURLOptionsSourceApplicationKey : @YES}
+                                     completionHandler:^(BOOL success) {
+                                         
+                                     }];
         }
     }
 }
 
 
--(void)jm_callPhone:(NSString *)phone{
+
+/**
+ 拨打电话
+
+ @param phone 手机号码
+ */
+-(void)fit_callPhone:(NSString *)phone{
     if (!phone || phone.length == 0) {
         return;
     }
     NSString *url = [NSString stringWithFormat:@"tel:%@",phone];
-    [self openURL:url];
+    [self fit_openURL:url];
 }
 
 
 
--(void)openURL:(NSString *)url{
-    if ([self canOpenURL:url]) {
+/**
+ 打开链接
+
+ @param url 链接
+ */
+-(void)fit_openURL:(NSString *)url{
+    if ([self fit_canOpenURL:url]) {
         if ([[[UIDevice currentDevice] systemVersion] floatValue] < 10.0) {
             [[UIApplication sharedApplication] openURL:[NSURL URLWithString:url]];
         }else{
@@ -51,7 +67,15 @@
         
     }
 }
--(BOOL)canOpenURL:(NSString *)url{
+
+
+/**
+ 是否能打开链接
+
+ @param url 链接
+ @return yes/no
+ */
+-(BOOL)fit_canOpenURL:(NSString *)url{
     if (url && url.length > 0) {
         return [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:url]];
     }else{

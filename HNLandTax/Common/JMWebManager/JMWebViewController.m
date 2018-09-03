@@ -7,7 +7,7 @@
 //
 
 #import "JMWebViewController.h"
-#import "UIViewController+Hud.h"
+#import "UIView+FITHud.h"
 #import "JMTip.h"
 #import <WebKit/WebKit.h>
 #import "JMWeiDu.h"
@@ -145,7 +145,7 @@ static NSString *leftImage = @"WD_NavgationBack_Normal1";
 
 #pragma mark - 捕获弹窗
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler{
-    [self jm_showAlertWithTitle:@"提示"
+    [self fit_showAlertWithTitle:@"提示"
                         message:message?:@""
                     actionTitle:@"好的"
                   confirmAction:^{
@@ -156,7 +156,7 @@ static NSString *leftImage = @"WD_NavgationBack_Normal1";
 
 - (void)webView:(WKWebView *)webView runJavaScriptConfirmPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(BOOL))completionHandler{
     
-    [self jm_showAlertWithTitle:@"提示"
+    [self fit_showAlertWithTitle:@"提示"
                         message:message?:@""
          destructiveActionTitle:@"确认"
               cancelActionTitle:@"取消"
