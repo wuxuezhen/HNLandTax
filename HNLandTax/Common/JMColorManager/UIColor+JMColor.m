@@ -20,7 +20,7 @@
 }
 
 +(UIColor *)jm_themeColor{
-    return JM_RGB_HEX(0xFFCA00);
+    return JM_RGB_HEX(0x00a99d);
 }
 
 +(UIColor *)jm_themeViewColor{

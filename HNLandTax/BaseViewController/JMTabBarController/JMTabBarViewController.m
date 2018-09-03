@@ -59,15 +59,18 @@
                                              forState:UIControlStateSelected];
     
     
+    
+    
+    
     UINavigationBar *navBar = [UINavigationBar appearance];
     navBar.shadowImage = [UIImage new];
     //导航栏颜色
-//    navBar.barTintColor = [UIColor jm_themeColor];
+    navBar.barTintColor = [UIColor jm_themeColor];
     //导航栏按钮颜色
-//    navBar.tintColor = [UIColor blackColor];
+    navBar.tintColor = [UIColor whiteColor];
     //导航栏样式
-    navBar.barStyle = UIBarStyleBlack;
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
+//    navBar.barStyle = UIBarStyleBlack;
+//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     //导航栏是否透明度
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0f) {
@@ -76,13 +79,11 @@
         navBar.translucent = NO;
     }
     //导航栏设置标题文字显示样式
-    navBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
+    navBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
     
 //    [navBar setBackgroundImage:[[UIImage alloc] init]
 //                forBarPosition:UIBarPositionAny
 //                    barMetrics:UIBarMetricsDefault];
-    //此处使底部线条颜色为红色
-    [navBar setShadowImage:[UIImage new]];
     
 }
 
