@@ -279,7 +279,7 @@ static NSString *kCancel = @"cancelled";
  @return
  */
 -(NSString *)getFilePath{
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     if (self.identifier) {
         return [path stringByAppendingPathComponent:self.identifier];
     }else{

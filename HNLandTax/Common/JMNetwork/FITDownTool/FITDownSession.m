@@ -158,7 +158,7 @@
     // 创建文件句柄
     self.fileHandle = [NSFileHandle fileHandleForWritingAtPath:path];
     
-    self.response.downloadSaveFileUrl = [NSURL URLWithString:path];
+    self.response.downloadSaveFileUrl = [NSURL fileURLWithPath:path];
     
     completionHandler(NSURLSessionResponseAllow);
 }
@@ -272,7 +272,7 @@
  @return
  */
 -(NSString *)getFilePath{
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     if (self.identifier) {
         return [path stringByAppendingPathComponent:self.identifier];
     }else{

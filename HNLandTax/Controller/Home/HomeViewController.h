@@ -6,8 +6,8 @@
 //  Copyright © 2018年 WYW. All rights reserved.
 //
 
-#import "RootViewController.h"
+#import "JMBaseTableViewController.h"
 
-@interface HomeViewController : RootViewController
+@interface HomeViewController : JMBaseTableViewController
 
 @end

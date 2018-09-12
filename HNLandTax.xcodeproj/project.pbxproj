@@ -120,6 +120,18 @@
 		F2235118207486230062C828 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235117207486230062C828 /* HomeViewController.m */; };
 		F2235125207486770062C828 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235121207486760062C828 /* FindViewController.m */; };
 		F2235126207486770062C828 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235124207486760062C828 /* MineViewController.m */; };
+		F231DA832145602500891331 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA822145602400891331 /* AVFoundation.framework */; };
+		F231DA852145602B00891331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA842145602A00891331 /* AVKit.framework */; };
+		F231DA872145603700891331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA862145603600891331 /* SystemConfiguration.framework */; };
+		F231DA892145603E00891331 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA882145603E00891331 /* Photos.framework */; };
+		F231DA8C214560BF00891331 /* HAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA8B214560BF00891331 /* HAVPlayerViewController.m */; };
+		F231DA8D214560BF00891331 /* HAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA8B214560BF00891331 /* HAVPlayerViewController.m */; };
+		F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA9221457C6A00891331 /* HDetailViewController.m */; };
+		F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA9221457C6A00891331 /* HDetailViewController.m */; };
+		F231DA9621457C6A00891331 /* HDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F231DA9321457C6A00891331 /* HDetailViewController.xib */; };
+		F231DA9721457C6A00891331 /* HDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F231DA9321457C6A00891331 /* HDetailViewController.xib */; };
+		F231DA9A2146A93900891331 /* HZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA992146A93900891331 /* HZPlayerViewController.m */; };
+		F231DA9B2146A93900891331 /* HZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA992146A93900891331 /* HZPlayerViewController.m */; };
 		F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */; };
 		F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350002074832E0062C828 /* DismissTransitionAnimated.m */; };
 		F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350652074832E0062C828 /* ICGRulerView.m */; };
@@ -163,6 +175,10 @@
 		F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD6207476DC0062C828 /* LaunchScreen.storyboard */; };
 		F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD4207476DC0062C828 /* Assets.xcassets */; };
 		F27357C5207493CE0029AE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD1207476DB0062C828 /* Main.storyboard */; };
+		F2B91AB8214803AE003311A1 /* JMCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AB7214803AE003311A1 /* JMCacheManager.m */; };
+		F2B91AB9214803AE003311A1 /* JMCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AB7214803AE003311A1 /* JMCacheManager.m */; };
+		F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ABB214806F6003311A1 /* APPDevice.m */; };
+		F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ABB214806F6003311A1 /* APPDevice.m */; };
 		F2C0F7042139B757009BF74A /* LDWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F7032139B757009BF74A /* LDWebViewViewController.m */; };
 		F2C0F7052139B757009BF74A /* LDWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F7032139B757009BF74A /* LDWebViewViewController.m */; };
 /* End PBXBuildFile section */
@@ -350,8 +366,23 @@
 		F2235121207486760062C828 /* FindViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindViewController.m; sourceTree = "<group>"; };
 		F2235123207486760062C828 /* MineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MineViewController.h; sourceTree = "<group>"; };
 		F2235124207486760062C828 /* MineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MineViewController.m; sourceTree = "<group>"; };
+		F231DA822145602400891331 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F231DA842145602A00891331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		F231DA862145603600891331 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F231DA882145603E00891331 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		F231DA8A214560BF00891331 /* HAVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAVPlayerViewController.h; sourceTree = "<group>"; };
+		F231DA8B214560BF00891331 /* HAVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HAVPlayerViewController.m; sourceTree = "<group>"; };
+		F231DA9121457C6A00891331 /* HDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDetailViewController.h; sourceTree = "<group>"; };
+		F231DA9221457C6A00891331 /* HDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDetailViewController.m; sourceTree = "<group>"; };
+		F231DA9321457C6A00891331 /* HDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDetailViewController.xib; sourceTree = "<group>"; };
+		F231DA982146A93900891331 /* HZPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZPlayerViewController.h; sourceTree = "<group>"; };
+		F231DA992146A93900891331 /* HZPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZPlayerViewController.m; sourceTree = "<group>"; };
 		F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HNLandTaxBeta-Info.plist"; sourceTree = "<group>"; };
 		F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTaxBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2B91AB6214803AD003311A1 /* JMCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCacheManager.h; sourceTree = "<group>"; };
+		F2B91AB7214803AE003311A1 /* JMCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCacheManager.m; sourceTree = "<group>"; };
+		F2B91ABA214806F6003311A1 /* APPDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPDevice.h; sourceTree = "<group>"; };
+		F2B91ABB214806F6003311A1 /* APPDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPDevice.m; sourceTree = "<group>"; };
 		F2C0F7022139B757009BF74A /* LDWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDWebViewViewController.h; sourceTree = "<group>"; };
 		F2C0F7032139B757009BF74A /* LDWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDWebViewViewController.m; sourceTree = "<group>"; };
 		FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -362,6 +393,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F231DA892145603E00891331 /* Photos.framework in Frameworks */,
+				F231DA872145603700891331 /* SystemConfiguration.framework in Frameworks */,
+				F231DA852145602B00891331 /* AVKit.framework in Frameworks */,
+				F231DA832145602500891331 /* AVFoundation.framework in Frameworks */,
 				DD145844C403DC630B9A64B5 /* Pods_HNLandTax.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +441,10 @@
 		8D04E6B178C532DA3AC148CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F231DA882145603E00891331 /* Photos.framework */,
+				F231DA862145603600891331 /* SystemConfiguration.framework */,
+				F231DA842145602A00891331 /* AVKit.framework */,
+				F231DA822145602400891331 /* AVFoundation.framework */,
 				FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */,
 				7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */,
 			);
@@ -834,6 +873,10 @@
 		F22350B02074832E0062C828 /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
+				F2B91AB6214803AD003311A1 /* JMCacheManager.h */,
+				F2B91AB7214803AE003311A1 /* JMCacheManager.m */,
+				F2B91ABA214806F6003311A1 /* APPDevice.h */,
+				F2B91ABB214806F6003311A1 /* APPDevice.m */,
 				F22350B12074832E0062C828 /* RootViewController.m */,
 				F22350B22074832E0062C828 /* RootViewController.h */,
 				F22350B32074832E0062C828 /* JMNavigationController */,
@@ -898,6 +941,13 @@
 				F2C0F7032139B757009BF74A /* LDWebViewViewController.m */,
 				F2235116207486230062C828 /* HomeViewController.h */,
 				F2235117207486230062C828 /* HomeViewController.m */,
+				F231DA9121457C6A00891331 /* HDetailViewController.h */,
+				F231DA9221457C6A00891331 /* HDetailViewController.m */,
+				F231DA9321457C6A00891331 /* HDetailViewController.xib */,
+				F231DA8A214560BF00891331 /* HAVPlayerViewController.h */,
+				F231DA8B214560BF00891331 /* HAVPlayerViewController.m */,
+				F231DA982146A93900891331 /* HZPlayerViewController.h */,
+				F231DA992146A93900891331 /* HZPlayerViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1047,6 +1097,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F231DA9621457C6A00891331 /* HDetailViewController.xib in Resources */,
 				F2234FD8207476DC0062C828 /* LaunchScreen.storyboard in Resources */,
 				F2234FD5207476DC0062C828 /* Assets.xcassets in Resources */,
 				F2234FD3207476DB0062C828 /* Main.storyboard in Resources */,
@@ -1071,6 +1122,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F231DA9721457C6A00891331 /* HDetailViewController.xib in Resources */,
 				F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */,
 				F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */,
 				F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */,
@@ -1132,6 +1184,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1143,6 +1196,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1182,6 +1236,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1193,6 +1248,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1225,6 +1281,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
+				F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
 				AEABC201213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F22351062074832F0062C828 /* JMKeyManager.m in Sources */,
@@ -1241,6 +1298,7 @@
 				AEABC1E5213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
 				AE86226C213CC31D00C93C9E /* FITResponseSerializer.m in Sources */,
+				F231DA9A2146A93900891331 /* HZPlayerViewController.m in Sources */,
 				F22350C52074832F0062C828 /* ValuePickerView.m in Sources */,
 				F22351002074832F0062C828 /* JMUI.m in Sources */,
 				AE862262213CC31D00C93C9E /* FITDownSession.m in Sources */,
@@ -1258,8 +1316,10 @@
 				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F7213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225E213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
+				F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */,
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
 				AE862274213CC31D00C93C9E /* APPConstants.m in Sources */,
+				F2B91AB8214803AE003311A1 /* JMCacheManager.m in Sources */,
 				F22350E82074832F0062C828 /* UIViewController+Navigation.m in Sources */,
 				F22350D32074832F0062C828 /* JMPhotosPermission.m in Sources */,
 				AE862276213CC31D00C93C9E /* JMAPI.m in Sources */,
@@ -1271,6 +1331,7 @@
 				AE86227C213CC31D00C93C9E /* JMResponseSerializer.m in Sources */,
 				F22350E52074832F0062C828 /* JMLocationManager.m in Sources */,
 				F223510A2074832F0062C828 /* JMTabBarViewController.m in Sources */,
+				F231DA8C214560BF00891331 /* HAVPlayerViewController.m in Sources */,
 				F22350BE2074832F0062C828 /* JMRefreshGifHeader.m in Sources */,
 				AEABC1FF213CD0D2009D099E /* FITArcView.m in Sources */,
 				AE86227E213CC31D00C93C9E /* Reachability.m in Sources */,
@@ -1321,6 +1382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
+				F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
 				AEABC202213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */,
@@ -1337,6 +1399,7 @@
 				AEABC1E6213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
 				AE86226D213CC31D00C93C9E /* FITResponseSerializer.m in Sources */,
+				F231DA9B2146A93900891331 /* HZPlayerViewController.m in Sources */,
 				F2735795207493CE0029AE78 /* ValuePickerView.m in Sources */,
 				F2735796207493CE0029AE78 /* JMUI.m in Sources */,
 				AE862263213CC31D00C93C9E /* FITDownSession.m in Sources */,
@@ -1354,8 +1417,10 @@
 				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F8213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225F213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
+				F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */,
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
 				AE862275213CC31D00C93C9E /* APPConstants.m in Sources */,
+				F2B91AB9214803AE003311A1 /* JMCacheManager.m in Sources */,
 				F27357A6207493CE0029AE78 /* UIViewController+Navigation.m in Sources */,
 				F27357A7207493CE0029AE78 /* JMPhotosPermission.m in Sources */,
 				AE862277213CC31D00C93C9E /* JMAPI.m in Sources */,
@@ -1367,6 +1432,7 @@
 				AE86227D213CC31D00C93C9E /* JMResponseSerializer.m in Sources */,
 				F27357A9207493CE0029AE78 /* JMLocationManager.m in Sources */,
 				F27357AA207493CE0029AE78 /* JMTabBarViewController.m in Sources */,
+				F231DA8D214560BF00891331 /* HAVPlayerViewController.m in Sources */,
 				F27357AC207493CE0029AE78 /* JMRefreshGifHeader.m in Sources */,
 				AEABC200213CD0D2009D099E /* FITArcView.m in Sources */,
 				AE86227F213CC31D00C93C9E /* Reachability.m in Sources */,
@@ -1547,7 +1613,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9LB4M6238;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1566,7 +1632,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9LB4M6238;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

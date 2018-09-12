@@ -18,6 +18,9 @@ target 'HNLandTax' do
     pod 'UITextView+Placeholder'
     pod 'AMap3DMap'
     pod 'AMapLocation', '~> 2.6.1'
+    pod 'ZFPlayer', '~> 3.0'
+    pod 'ZFPlayer/ControlView', '~> 3.0'
+    pod 'ZFPlayer/AVPlayer', '~> 3.0'
 
 end
 
@@ -38,5 +41,8 @@ target 'HNLandTaxBeta' do
     pod 'UITextView+Placeholder'
     pod 'AMap3DMap'
     pod 'AMapLocation', '~> 2.6.1'
+    pod 'ZFPlayer', '~> 3.0'
+    pod 'ZFPlayer/ControlView', '~> 3.0'
+    pod 'ZFPlayer/AVPlayer', '~> 3.0'
     
 end

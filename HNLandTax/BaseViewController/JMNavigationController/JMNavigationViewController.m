@@ -30,11 +30,11 @@
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
    if (self.childViewControllers.count > 0){
        viewController.hidesBottomBarWhenPushed = YES;
-       UIImage *image = [UIImage imageNamed:@"WD_NavgationBack_Normal1"];
-       viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image
-                                                                                         style:UIBarButtonItemStylePlain
-                                                                                        target:self
-                                                                                        action:@selector(jm_back)];
+//       UIImage *image = [UIImage imageNamed:@"WD_NavgationBack_Normal1"];
+//       viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image
+//                                                                                         style:UIBarButtonItemStylePlain
+//                                                                                        target:self
+//                                                                                        action:@selector(jm_back)];
    }
     [super pushViewController:viewController animated:animated];
 }

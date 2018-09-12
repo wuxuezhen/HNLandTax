@@ -74,9 +74,9 @@
     //导航栏是否透明度
     
     if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0f) {
-        navBar.translucent = NO;
+        navBar.translucent = YES;
     }else{
-        navBar.translucent = NO;
+        navBar.translucent = YES;
     }
     //导航栏设置标题文字显示样式
     navBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};

@@ -7,69 +7,92 @@
 //
 
 #import "HomeViewController.h"
-#import <AFNetworking/AFNetworking.h>
-#import "LDWebViewViewController.h"
+#import "HDetailViewController.h"
 @interface HomeViewController ()
-@property (nonatomic, copy) NSString *path;
+@property (nonatomic, strong) UITextField *text;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"下载" style:UIBarButtonItemStylePlain target:self action:@selector(ddd)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"打开" style:UIBarButtonItemStylePlain target:self action:@selector(sss)];
-  
-}
-
--(void)sss{
-    LDWebViewViewController *webViewVC = [[LDWebViewViewController alloc] init];
-    webViewVC.stringURL = [self getPath].path;
     
-    [self.navigationController pushViewController:webViewVC animated:YES];
-}
-
--(void)ddd{
-    NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
-    // 1. 创建会话管理者
-    AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"video"];
+    if (arr && arr.count > 0) {
+        [self.dataArray addObjectsFromArray:arr];
+    }
     
-    // 2. 创建下载路径和请求对象
-    NSURL *URL = [NSURL URLWithString:@"http://oojvynd5j.bkt.clouddn.com/record5b8963dc27deb1535730652.pdf"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    NSArray *urls = @[@"https://mp4.238yy.com/javbox-mp4/n1273.mp4",
+                      @"https://mp4.238yy.com/javbox-mp4/TP-23410.mp4",
+                      @"https://mp4.238yy.com/javbox-mp4/121917_619-1pon.mp4",
+                      @"https://mp4.238yy.com/javbox-mp4/121917_189-paco.mp4",
+                      @"https://mp4.238yy.com/javbox-mp4/121917_01-10mu.mp4"];
+    for (NSString *url in urls) {
+        if (![self.dataArray containsObject:url]) {
+            [self.dataArray addObject:url];
+        }
+    }
    
-    __weak typeof(self) weakSelf = self;
-    NSURLSessionDownloadTask *downloadTask = [manager downloadTaskWithRequest:request progress:^(NSProgress *downloadProgress) {
-        
-        NSOperationQueue* mainQueue = [NSOperationQueue mainQueue];
-        [mainQueue addOperationWithBlock:^{
-            double progress = 1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount;
-            NSLog(@"progress = %@",@(progress).stringValue);
-            
-        }];
+    [self jm_createRightBarButtonItemWithTitle:@"添加"];
+    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 50)];
+    view.backgroundColor = JM_RGB_HEX(0xf1f1f1);
+    [view addSubview:self.text];
+    self.tableView.tableHeaderView = view;
+    [self jm_tableViewDefaut];
+}
 
-    } destination:^NSURL *(NSURL *targetPath, NSURLResponse *response) {
-        return [weakSelf getPath];
-        
-    } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
-        
-        NSLog(@"File downloaded to: %@", filePath);
-        weakSelf.path = filePath.path;
-    }];
+-(void)jm_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
+    if (self.text.text.length > 0) {
+        [self.dataArray addObject:self.text.text];
+        [[NSUserDefaults standardUserDefaults] setObject:self.dataArray forKey:@"video"];
+        [self.tableView reloadData];
+        self.text.text = nil;
+    }
     
-    // 4. 开启下载任务
-    [downloadTask resume];
+}
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
 }
 
--(NSURL *)getPath{
-    NSURL *path = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-    return [path URLByAppendingPathComponent:@"60652.pdf"];
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    
+    NSString *path = self.dataArray[indexPath.row];
+    NSString *string = path.lastPathComponent;
+    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:string];
+    cell.textLabel.text = path.lastPathComponent;
+    if (url) {
+        cell.detailTextLabel.text = @"已下载";
+    }else{
+        cell.detailTextLabel.text = @"未下载";
+    }
+    return cell;
 }
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    HDetailViewController *h = [[HDetailViewController alloc]init];
+    h.url = self.dataArray[indexPath.row];
+    [self.navigationController pushViewController:h animated:YES];
+}
+
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+-(UITextField *)text{
+    if (!_text) {
+        _text = [[UITextField alloc]initWithFrame:CGRectMake(15, 8, SCREEN_W-30, 34)];
+        _text.borderStyle = UITextBorderStyleRoundedRect;
+        _text.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _text.textColor = [UIColor blackColor];
+        _text.tintColor = [UIColor blackColor];
+        _text.font = [UIFont systemFontOfSize:14];
+    }
+    return _text;
+}
+
 
 /*
 #pragma mark - Navigation

@@ -7,7 +7,7 @@
 //
 
 #import "FITDownApi.h"
-#import "AFNetworking.h"
+#import <AFNetworking/AFNetworking.h>
 
 @implementation FITDownApi
 
