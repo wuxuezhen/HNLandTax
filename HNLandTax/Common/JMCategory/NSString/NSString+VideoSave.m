@@ -1,16 +1,17 @@
 //
-//  UIImage+Save.m
-//  AZURestWeidu3
+//  NSString+VideoSave.m
+//  HNLandTax
 //
-//  Created by 吴振振 on 2017/12/7.
-//  Copyright © 2017年 coreface. All rights reserved.
+//  Created by caiyi on 2018/9/12.
+//  Copyright © 2018年 WYW. All rights reserved.
 //
 
-#import "UIImage+Save.h"
+#import "NSString+VideoSave.h"
+#import <Photos/Photos.h>
 #import "JMTip.h"
-@implementation UIImage (Save)
--(void)jm_saveToAlbums{
-   
+@implementation NSString (VideoSave)
+-(void)jm_saveVideoToAlbums{
+    
     // 1.获取用户授权状态,状态有四种
     // 1) PHAuthorizationStatusNotDetermined  不确定
     // 2) PHAuthorizationStatusRestricted, 家长控制,拒绝
@@ -59,21 +60,21 @@
         }
         
         // 2.保存你需要保存的图片到系统相册
-        UIImage *image = (UIImage *)self;
-        PHAssetChangeRequest *assetChangeRequest = [PHAssetChangeRequest creationRequestForAssetFromImage:image];
+        NSURL *url = [NSURL fileURLWithPath:self];
+        PHAssetChangeRequest *assetChangeRequest = [PHAssetChangeRequest creationRequestForAssetFromVideoAtFileURL:url];
         
         // 3.把创建好图片添加到自己相册
         PHObjectPlaceholder *placeholder = [assetChangeRequest placeholderForCreatedAsset];
         [assetCollectionChangeRequest addAssets:@[placeholder]];
         
     } completionHandler:^(BOOL success, NSError * _Nullable error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    if (error) {
-                        [JMTip showCenterWithText:@"保存失败"];
-                    } else {
-                        [JMTip showCenterWithText:@"保存成功"];
-                    }
-                });
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (error) {
+                [JMTip showCenterWithText:@"保存失败"];
+            } else {
+                [JMTip showCenterWithText:@"保存成功"];
+            }
+        });
         
     }];
     
