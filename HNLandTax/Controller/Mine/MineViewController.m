@@ -11,11 +11,13 @@
 #import "JMWeiDu.h"
 @interface MineViewController ()<MAMapViewDelegate>
 @property (nonatomic, strong) MAMapView *mapView;
+@property (nonatomic, strong) UIButton *button;
 @property (nonatomic, strong) CLLocation *lastLocation;
 @property (nonatomic, strong) MAPointAnnotation *centerPoint;
 @property (nonatomic, strong) NSMutableArray *locations;
 @property (nonatomic, strong) MAPolyline *polyline;
 @property (nonatomic, strong) UILabel *label;
+@property (nonatomic, assign) NSInteger totalDistance;
 @end
 
 @implementation MineViewController
@@ -26,13 +28,15 @@
     self.locations = [NSMutableArray arrayWithCapacity:0];
     self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.mapView];
-    self.mapView .delegate = self;
-    self.mapView .showsCompass = YES;
-    self.mapView .showsScale = YES;
-    self.mapView .mapType = MAMapTypeStandard;
+    self.mapView.distanceFilter = 8;
+    self.mapView.desiredAccuracy = kCLLocationAccuracyBest;
+    self.mapView.delegate = self;
+    self.mapView.showsCompass = YES;
+    self.mapView.showsScale = YES;
+    self.mapView.mapType = MAMapTypeStandard;
     [self.mapView setZoomLevel:15 animated:YES];
     self.mapView.showsUserLocation = YES;
-    self.mapView.userTrackingMode = MAUserTrackingModeFollowWithHeading;
+    self.mapView.userTrackingMode = MAUserTrackingModeFollow;
     
     MAUserLocationRepresentation *represent = [[MAUserLocationRepresentation alloc] init];
     represent.showsAccuracyRing = NO;
@@ -48,14 +52,22 @@
     self.label.textColor = [UIColor blackColor];
     self.label.font = [UIFont systemFontOfSize:16];
     [self.view addSubview:self.label];
+    
+    self.button = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.button.backgroundColor = [UIColor colorWithRed:0 green:0.5 blue:0.5 alpha:0.5];
+    self.button.layer.cornerRadius = 15;
+    [self.button addTarget:self action:@selector(returnMyLocation) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.button];
+    [self.button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.bottom.trailing.equalTo(self.view).offset(-15);
+        make.size.mas_equalTo(CGSizeMake(30, 30));
+    }];
     // Do any additional setup after loading the view.
 }
-
-- (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation{
-    
-    return nil;
+-(void)returnMyLocation{
+    self.mapView.showsUserLocation = YES;
+    self.mapView.userTrackingMode = MAUserTrackingModeFollow;
 }
-
 
 - (void)mapView:(MAMapView *)mapView didUpdateUserLocation:(MAUserLocation *)userLocation updatingLocation:(BOOL)updatingLocation {
     if (self.centerPoint == nil) {
@@ -65,15 +77,18 @@
     if (self.lastLocation) {
         CLLocation *location = userLocation.location;
         CLLocationDistance distance = [location distanceFromLocation:self.lastLocation];
-        if (distance > 3) {
-            self.label.text =  @((NSInteger)distance).stringValue;
-            [self.locations addObject:location];
-            self.lastLocation = userLocation.location;
-            [self addLayer:self.locations];
-        }
-    }else{
+        
+        self.totalDistance = self.totalDistance + (NSInteger)distance;
+        self.label.text =  @(self.totalDistance).stringValue;
+        [self.locations addObject:location];
         self.lastLocation = userLocation.location;
-        [self.locations addObject:self.lastLocation];
+        [self addLayer:self.locations];
+    }else{
+        self.totalDistance = 0;
+        self.lastLocation = userLocation.location;
+        if (self.lastLocation) {
+           [self.locations addObject:self.lastLocation];
+        }
     }
 
     
@@ -105,7 +120,7 @@
     if ([overlay isKindOfClass:[MAPolyline class]]){
         MAPolylineRenderer *polylineRenderer = [[MAPolylineRenderer alloc] initWithPolyline:overlay];
         
-        polylineRenderer.lineWidth    = 2.f;
+        polylineRenderer.lineWidth    = 4.f;
         polylineRenderer.strokeColor  = [UIColor colorWithRed:0 green:0.5 blue:0.5 alpha:0.5];
         polylineRenderer.lineJoinType = kMALineJoinRound;
         polylineRenderer.lineCapType  = kMALineCapRound;

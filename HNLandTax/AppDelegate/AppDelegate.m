@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "HUserManager.h"
 #import "JMTabBarViewController.h"
-
+#import "JMLocationManager.h"
 #define LOCAL_CACHE_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/cacheImage"]
 
 
@@ -22,7 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-
+    [JMLocationManager shareManager];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[JMTabBarViewController alloc]init];

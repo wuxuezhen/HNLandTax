@@ -20,7 +20,7 @@
     static JMLocationManager *manager = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [AMapServices sharedServices].apiKey = @"6c9162ec3f6dbdca0cf33c58ac9dfd73";
+        [AMapServices sharedServices].apiKey = @"ff76a04a86db721770d1f22433d76265";
         [[AMapServices sharedServices] setEnableHTTPS:YES];
         manager = [[JMLocationManager alloc]init];
     });
