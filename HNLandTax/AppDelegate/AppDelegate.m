@@ -12,6 +12,7 @@
 #define LOCAL_CACHE_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/cacheImage"]
 #import "FITLocationManager.h"
 
+
 @interface AppDelegate ()
 
 @end

@@ -22,6 +22,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.locations = [NSMutableArray arrayWithCapacity:0];
     self.mapView = [[MAMapView alloc] initWithFrame:self.view.bounds];
     [self.view addSubview:self.mapView];
