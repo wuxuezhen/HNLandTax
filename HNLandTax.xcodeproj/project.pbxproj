@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
+		AE31ABA3214CF5EC00E44753 /* FITLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE31ABA2214CF5EC00E44753 /* FITLocationManager.m */; };
+		AE31ABA4214CF5EC00E44753 /* FITLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE31ABA2214CF5EC00E44753 /* FITLocationManager.m */; };
+		AE3D4322214B48B600FCD306 /* HeathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3D4321214B48B600FCD306 /* HeathManager.m */; };
+		AE3D4323214B48B600FCD306 /* HeathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AE3D4321214B48B600FCD306 /* HeathManager.m */; };
 		AE52929421491E1000FFF08A /* NSString+VideoSave.m in Sources */ = {isa = PBXBuildFile; fileRef = AE52929321491E1000FFF08A /* NSString+VideoSave.m */; };
 		AE52929521491E1000FFF08A /* NSString+VideoSave.m in Sources */ = {isa = PBXBuildFile; fileRef = AE52929321491E1000FFF08A /* NSString+VideoSave.m */; };
 		AE86225A213CC31D00C93C9E /* FITDownApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AE862232213CC31D00C93C9E /* FITDownApi.m */; };
@@ -191,6 +195,10 @@
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
 		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE31ABA1214CF5EC00E44753 /* FITLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITLocationManager.h; sourceTree = "<group>"; };
+		AE31ABA2214CF5EC00E44753 /* FITLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FITLocationManager.m; sourceTree = "<group>"; };
+		AE3D4320214B48B600FCD306 /* HeathManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeathManager.h; sourceTree = "<group>"; };
+		AE3D4321214B48B600FCD306 /* HeathManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeathManager.m; sourceTree = "<group>"; };
 		AE52929221491E1000FFF08A /* NSString+VideoSave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+VideoSave.h"; sourceTree = "<group>"; };
 		AE52929321491E1000FFF08A /* NSString+VideoSave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+VideoSave.m"; sourceTree = "<group>"; };
 		AE862231213CC31D00C93C9E /* FITDownApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDownApi.h; sourceTree = "<group>"; };
@@ -414,6 +422,15 @@
 				7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE3D431F214B488600FCD306 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				AE3D4320214B48B600FCD306 /* HeathManager.h */,
+				AE3D4321214B48B600FCD306 /* HeathManager.m */,
+			);
+			path = HealthKit;
 			sourceTree = "<group>";
 		};
 		AE86222F213CC31D00C93C9E /* JMNetwork */ = {
@@ -655,6 +672,7 @@
 		F2234FFD2074832E0062C828 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				AE3D431F214B488600FCD306 /* HealthKit */,
 				AEABC1BA213CD0D2009D099E /* JMCategory */,
 				AE86222F213CC31D00C93C9E /* JMNetwork */,
 				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
@@ -755,6 +773,8 @@
 			children = (
 				F22350592074832E0062C828 /* JMMapModel.m */,
 				F223505B2074832E0062C828 /* JMMapModel.h */,
+				AE31ABA1214CF5EC00E44753 /* FITLocationManager.h */,
+				AE31ABA2214CF5EC00E44753 /* FITLocationManager.m */,
 				F223505C2074832E0062C828 /* JMLocationManager.h */,
 				F22350582074832E0062C828 /* JMLocationManager.m */,
 				F223505D2074832E0062C828 /* CLLocation+Location.h */,
@@ -766,10 +786,10 @@
 		F223505E2074832E0062C828 /* JMNavigation */ = {
 			isa = PBXGroup;
 			children = (
-				F223505F2074832E0062C828 /* UIViewController+Navigation.m */,
-				F22350602074832E0062C828 /* JMLocationNavigation.m */,
 				F22350612074832E0062C828 /* UIViewController+Navigation.h */,
+				F223505F2074832E0062C828 /* UIViewController+Navigation.m */,
 				F22350622074832E0062C828 /* JMLocationNavigation.h */,
+				F22350602074832E0062C828 /* JMLocationNavigation.m */,
 			);
 			path = JMNavigation;
 			sourceTree = "<group>";
@@ -1011,8 +1031,9 @@
 		F2234FC0207476DB0062C828 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WZ;
 				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = WYW;
+				ORGANIZATIONNAME = WZZ;
 				TargetAttributes = {
 					F2234FC7207476DB0062C828 = {
 						CreatedOnToolsVersion = 9.3;
@@ -1230,6 +1251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3D4322214B48B600FCD306 /* HeathManager.m in Sources */,
 				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
 				AEABC201213CD0D2009D099E /* UIView+FITHud.m in Sources */,
@@ -1275,6 +1297,7 @@
 				AE862260213CC31D00C93C9E /* FITDownManager.m in Sources */,
 				AEABC1E7213CD0D2009D099E /* UIButton+BarValue.m in Sources */,
 				AE86227C213CC31D00C93C9E /* JMResponseSerializer.m in Sources */,
+				AE31ABA3214CF5EC00E44753 /* FITLocationManager.m in Sources */,
 				F22350E52074832F0062C828 /* JMLocationManager.m in Sources */,
 				F223510A2074832F0062C828 /* JMTabBarViewController.m in Sources */,
 				F22350BE2074832F0062C828 /* JMRefreshGifHeader.m in Sources */,
@@ -1327,6 +1350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE3D4323214B48B600FCD306 /* HeathManager.m in Sources */,
 				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
 				AEABC202213CD0D2009D099E /* UIView+FITHud.m in Sources */,
@@ -1372,6 +1396,7 @@
 				AE862261213CC31D00C93C9E /* FITDownManager.m in Sources */,
 				AEABC1E8213CD0D2009D099E /* UIButton+BarValue.m in Sources */,
 				AE86227D213CC31D00C93C9E /* JMResponseSerializer.m in Sources */,
+				AE31ABA4214CF5EC00E44753 /* FITLocationManager.m in Sources */,
 				F27357A9207493CE0029AE78 /* JMLocationManager.m in Sources */,
 				F27357AA207493CE0029AE78 /* JMTabBarViewController.m in Sources */,
 				F27357AC207493CE0029AE78 /* JMRefreshGifHeader.m in Sources */,
@@ -1555,7 +1580,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9LB4M6238;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1574,7 +1599,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9LB4M6238;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
