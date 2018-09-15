@@ -7,7 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "HUserManager.h"
 #import "JMTabBarViewController.h"
+#define LOCAL_CACHE_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/cacheImage"]
 @interface AppDelegate ()
 
 @end
@@ -34,6 +36,8 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    HUserManager *manager =  [HUserManager manager];
+    [NSKeyedArchiver archiveRootObject:manager toFile:LOCAL_CACHE_PATH];
 }
 
 
@@ -49,6 +53,8 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    HUserManager *manager =  [HUserManager manager];
+    [NSKeyedArchiver archiveRootObject:manager toFile:LOCAL_CACHE_PATH];
 }
 
 

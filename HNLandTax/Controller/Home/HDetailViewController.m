@@ -11,6 +11,7 @@
 #import "HAVPlayerViewController.h"
 #import "HZPlayerViewController.h"
 #import "JMCacheManager.h"
+#import "NSString+VideoSave.h"
 #import "APPDevice.h"
 #import "JMWeiDu.h"
 @interface HDetailViewController ()
@@ -29,7 +30,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self jm_createRightBarButtonItemWithTitle:@"删除"];
+    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithTitle:@"删除"
+                                                             style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:@selector(deleteVideo)];
+    UIBarButtonItem *item2 = [[UIBarButtonItem alloc]initWithTitle:@"分享"
+                                                             style:UIBarButtonItemStylePlain
+                                                            target:self
+                                                            action:@selector(shareVideo)];
+    self.navigationItem.rightBarButtonItems = @[item1,item2];
     self.key = self.url.lastPathComponent;
     self.localPath = [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
     self.isDown = self.localPath && self.localPath.length > 0 ? YES :NO;
@@ -46,13 +55,51 @@
     self.nameLabel.text = self.url;
     
 }
--(void)jm_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
+-(void)deleteVideo{
     [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
     [[NSFileManager defaultManager] removeItemAtPath:self.localPath error:nil];
+    self.stateLabel.text = @"未下载";
+    self.isDown = NO;
 }
+-(void)shareVideo{
+    NSURL *URL;
+    if (self.isDown) {
+        URL = self.localUrl;
+    }else{
+        URL = [NSURL URLWithString:self.url];
+    }
+    NSArray *activityItems = @[URL];
+    
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems
+                                                                                         applicationActivities:nil];
+    
+    [activityViewController setCompletionWithItemsHandler:^(UIActivityType activityType, BOOL completed, NSArray *returnedItems, NSError *activityError){
+        if (completed) {
+            [JMTip showCenterWithText:@"分享成功"];
+        }
+    }];
+    
+    [self presentViewController:activityViewController animated:YES completion:nil];
+}
+
+-(void)save:(NSURL *)url forkey:(NSString *)key{
+    self.localUrl = url;
+    [[NSUserDefaults standardUserDefaults] setObject:url.path forKey:key];
+    self.isDown = YES ;
+    self.stateLabel.text = @"已下载";
+}
+
+-(void)playVideo:(NSURL *)videoURL{
+    HAVPlayerViewController * afterVC = [[HAVPlayerViewController alloc]init];
+    AVPlayer * player = [AVPlayer playerWithURL:videoURL];
+    afterVC.player = player;
+    [self presentViewController:afterVC animated:YES completion:nil];
+}
+
 - (IBAction)down:(id)sender {
     [self.session fit_downloadResume];
 }
+
 - (IBAction)play:(id)sender {
     if (self.isDown) {
         [self playVideo:self.localUrl];
@@ -60,15 +107,17 @@
         [self playVideo:[NSURL URLWithString:self.url]];
     }
 }
+
 - (IBAction)zfPlay:(id)sender {
     HZPlayerViewController *play = [[HZPlayerViewController alloc]init];
     if (self.isDown) {
-          play.url = self.localUrl;
+        play.url = self.localUrl;
     }else{
-         play.url = [NSURL URLWithString:self.url];
+        play.url = [NSURL URLWithString:self.url];
     }
     [self.navigationController pushViewController:play animated:YES];
 }
+
 - (IBAction)cache:(id)sender {
     NSInteger size = [JMCacheManager jm_cacheSize];
     double diskspace = [APPDevice getFreeDiskspace] / 1024 / 1024 / 1024 ;
@@ -79,7 +128,18 @@
                    confirmAction:nil];
     
 }
+- (IBAction)saveToLocal:(id)sender {
+    if (self.isDown) {
+        [self.localUrl.path jm_saveVideoToAlbums];
+    }else{
+        [JMTip showCenterWithText:@"本地找不到文件"];
+    }
+    
+}
 
+
+
+#pragma mark ---
 -(NSString *)getFilePath{
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
@@ -101,19 +161,6 @@
     return _session;
 }
 
--(void)save:(NSURL *)url forkey:(NSString *)key{
-    self.localUrl = url;
-    [[NSUserDefaults standardUserDefaults] setObject:url.path forKey:key];
-    self.isDown = YES ;
-    self.stateLabel.text = @"已下载";
-}
-
--(void)playVideo:(NSURL *)videoURL{
-    HAVPlayerViewController * afterVC = [[HAVPlayerViewController alloc]init];
-    AVPlayer * player = [AVPlayer playerWithURL:videoURL];
-    afterVC.player = player;
-    [self presentViewController:afterVC animated:YES completion:nil];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -121,13 +168,13 @@
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 @end

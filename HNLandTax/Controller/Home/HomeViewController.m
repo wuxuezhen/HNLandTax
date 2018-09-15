@@ -8,6 +8,8 @@
 
 #import "HomeViewController.h"
 #import "HDetailViewController.h"
+#import "HomeTableViewCell.h"
+#import "JMWeiDu.h"
 @interface HomeViewController ()
 @property (nonatomic, strong) UITextField *text;
 @end
@@ -38,6 +40,8 @@
     view.backgroundColor = JM_RGB_HEX(0xf1f1f1);
     [view addSubview:self.text];
     self.tableView.tableHeaderView = view;
+    [self.tableView registerNib:[HomeTableViewCell nib]
+         forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
 }
 
@@ -51,21 +55,12 @@
     
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 50;
+    return 100;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
-    
-    NSString *path = self.dataArray[indexPath.row];
-    NSString *string = path.lastPathComponent;
-    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:string];
-    cell.textLabel.text = path.lastPathComponent;
-    if (url) {
-        cell.detailTextLabel.text = @"已下载";
-    }else{
-        cell.detailTextLabel.text = @"未下载";
-    }
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[HomeTableViewCell reuseIdentifier]];
+    cell.path = self.dataArray[indexPath.row];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{

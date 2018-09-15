@@ -126,14 +126,10 @@
 		F231DA852145602B00891331 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA842145602A00891331 /* AVKit.framework */; };
 		F231DA872145603700891331 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA862145603600891331 /* SystemConfiguration.framework */; };
 		F231DA892145603E00891331 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F231DA882145603E00891331 /* Photos.framework */; };
-		F231DA8C214560BF00891331 /* HAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA8B214560BF00891331 /* HAVPlayerViewController.m */; };
-		F231DA8D214560BF00891331 /* HAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA8B214560BF00891331 /* HAVPlayerViewController.m */; };
 		F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA9221457C6A00891331 /* HDetailViewController.m */; };
 		F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA9221457C6A00891331 /* HDetailViewController.m */; };
 		F231DA9621457C6A00891331 /* HDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F231DA9321457C6A00891331 /* HDetailViewController.xib */; };
 		F231DA9721457C6A00891331 /* HDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F231DA9321457C6A00891331 /* HDetailViewController.xib */; };
-		F231DA9A2146A93900891331 /* HZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA992146A93900891331 /* HZPlayerViewController.m */; };
-		F231DA9B2146A93900891331 /* HZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F231DA992146A93900891331 /* HZPlayerViewController.m */; };
 		F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */; };
 		F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350002074832E0062C828 /* DismissTransitionAnimated.m */; };
 		F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350652074832E0062C828 /* ICGRulerView.m */; };
@@ -181,8 +177,16 @@
 		F2B91AB9214803AE003311A1 /* JMCacheManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AB7214803AE003311A1 /* JMCacheManager.m */; };
 		F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ABB214806F6003311A1 /* APPDevice.m */; };
 		F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ABB214806F6003311A1 /* APPDevice.m */; };
-		F2C0F7042139B757009BF74A /* LDWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F7032139B757009BF74A /* LDWebViewViewController.m */; };
-		F2C0F7052139B757009BF74A /* LDWebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2C0F7032139B757009BF74A /* LDWebViewViewController.m */; };
+		F2B91AC321494ADC003311A1 /* HAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ABF21494ADC003311A1 /* HAVPlayerViewController.m */; };
+		F2B91AC421494ADC003311A1 /* HAVPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ABF21494ADC003311A1 /* HAVPlayerViewController.m */; };
+		F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AC221494ADC003311A1 /* HZPlayerViewController.m */; };
+		F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AC221494ADC003311A1 /* HZPlayerViewController.m */; };
+		F2B91ACA21494E14003311A1 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AC821494E14003311A1 /* HomeTableViewCell.m */; };
+		F2B91ACB21494E14003311A1 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91AC821494E14003311A1 /* HomeTableViewCell.m */; };
+		F2B91ACC21494E14003311A1 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */; };
+		F2B91ACD21494E14003311A1 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */; };
+		F2B91AD021495371003311A1 /* HUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ACF21495371003311A1 /* HUserManager.m */; };
+		F2B91AD121495371003311A1 /* HUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ACF21495371003311A1 /* HUserManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -374,21 +378,24 @@
 		F231DA842145602A00891331 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		F231DA862145603600891331 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F231DA882145603E00891331 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
-		F231DA8A214560BF00891331 /* HAVPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HAVPlayerViewController.h; sourceTree = "<group>"; };
-		F231DA8B214560BF00891331 /* HAVPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HAVPlayerViewController.m; sourceTree = "<group>"; };
 		F231DA9121457C6A00891331 /* HDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HDetailViewController.h; sourceTree = "<group>"; };
 		F231DA9221457C6A00891331 /* HDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HDetailViewController.m; sourceTree = "<group>"; };
 		F231DA9321457C6A00891331 /* HDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HDetailViewController.xib; sourceTree = "<group>"; };
-		F231DA982146A93900891331 /* HZPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZPlayerViewController.h; sourceTree = "<group>"; };
-		F231DA992146A93900891331 /* HZPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZPlayerViewController.m; sourceTree = "<group>"; };
 		F26B86702079B1F700B11F21 /* HNLandTaxBeta-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HNLandTaxBeta-Info.plist"; sourceTree = "<group>"; };
 		F27357CB207493CE0029AE78 /* HNLandTaxBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTaxBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2B91AB6214803AD003311A1 /* JMCacheManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCacheManager.h; sourceTree = "<group>"; };
 		F2B91AB7214803AE003311A1 /* JMCacheManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCacheManager.m; sourceTree = "<group>"; };
 		F2B91ABA214806F6003311A1 /* APPDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APPDevice.h; sourceTree = "<group>"; };
 		F2B91ABB214806F6003311A1 /* APPDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APPDevice.m; sourceTree = "<group>"; };
-		F2C0F7022139B757009BF74A /* LDWebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LDWebViewViewController.h; sourceTree = "<group>"; };
-		F2C0F7032139B757009BF74A /* LDWebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LDWebViewViewController.m; sourceTree = "<group>"; };
+		F2B91ABF21494ADC003311A1 /* HAVPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HAVPlayerViewController.m; sourceTree = "<group>"; };
+		F2B91AC021494ADC003311A1 /* HZPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HZPlayerViewController.h; sourceTree = "<group>"; };
+		F2B91AC121494ADC003311A1 /* HAVPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HAVPlayerViewController.h; sourceTree = "<group>"; };
+		F2B91AC221494ADC003311A1 /* HZPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HZPlayerViewController.m; sourceTree = "<group>"; };
+		F2B91AC721494E14003311A1 /* HomeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		F2B91AC821494E14003311A1 /* HomeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		F2B91ACE21495371003311A1 /* HUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUserManager.h; sourceTree = "<group>"; };
+		F2B91ACF21495371003311A1 /* HUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUserManager.m; sourceTree = "<group>"; };
 		FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -943,17 +950,17 @@
 		F2235113207485EB0062C828 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				F2C0F7022139B757009BF74A /* LDWebViewViewController.h */,
-				F2C0F7032139B757009BF74A /* LDWebViewViewController.m */,
+				F2B91ABE21494ADC003311A1 /* VideoPlay */,
 				F2235116207486230062C828 /* HomeViewController.h */,
 				F2235117207486230062C828 /* HomeViewController.m */,
+				F2B91AC721494E14003311A1 /* HomeTableViewCell.h */,
+				F2B91AC821494E14003311A1 /* HomeTableViewCell.m */,
+				F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */,
 				F231DA9121457C6A00891331 /* HDetailViewController.h */,
 				F231DA9221457C6A00891331 /* HDetailViewController.m */,
 				F231DA9321457C6A00891331 /* HDetailViewController.xib */,
-				F231DA8A214560BF00891331 /* HAVPlayerViewController.h */,
-				F231DA8B214560BF00891331 /* HAVPlayerViewController.m */,
-				F231DA982146A93900891331 /* HZPlayerViewController.h */,
-				F231DA992146A93900891331 /* HZPlayerViewController.m */,
+				F2B91ACE21495371003311A1 /* HUserManager.h */,
+				F2B91ACF21495371003311A1 /* HUserManager.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -974,6 +981,17 @@
 				F2235124207486760062C828 /* MineViewController.m */,
 			);
 			path = Mine;
+			sourceTree = "<group>";
+		};
+		F2B91ABE21494ADC003311A1 /* VideoPlay */ = {
+			isa = PBXGroup;
+			children = (
+				F2B91AC021494ADC003311A1 /* HZPlayerViewController.h */,
+				F2B91AC221494ADC003311A1 /* HZPlayerViewController.m */,
+				F2B91ABF21494ADC003311A1 /* HAVPlayerViewController.m */,
+				F2B91AC121494ADC003311A1 /* HAVPlayerViewController.h */,
+			);
+			path = VideoPlay;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1106,6 +1124,7 @@
 				F231DA9621457C6A00891331 /* HDetailViewController.xib in Resources */,
 				F2234FD8207476DC0062C828 /* LaunchScreen.storyboard in Resources */,
 				F2234FD5207476DC0062C828 /* Assets.xcassets in Resources */,
+				F2B91ACC21494E14003311A1 /* HomeTableViewCell.xib in Resources */,
 				F2234FD3207476DB0062C828 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1132,6 +1151,7 @@
 				F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */,
 				F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */,
 				F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */,
+				F2B91ACD21494E14003311A1 /* HomeTableViewCell.xib in Resources */,
 				F27357C5207493CE0029AE78 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1301,10 +1321,10 @@
 				AEABC1E9213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225C213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
+				F2B91ACA21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E5213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
 				AE86226C213CC31D00C93C9E /* FITResponseSerializer.m in Sources */,
-				F231DA9A2146A93900891331 /* HZPlayerViewController.m in Sources */,
 				F22350C52074832F0062C828 /* ValuePickerView.m in Sources */,
 				F22351002074832F0062C828 /* JMUI.m in Sources */,
 				AE862262213CC31D00C93C9E /* FITDownSession.m in Sources */,
@@ -1313,6 +1333,7 @@
 				F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */,
 				F22350D22074832F0062C828 /* JMPermissions.m in Sources */,
 				F2235126207486770062C828 /* MineViewController.m in Sources */,
+				F2B91AD021495371003311A1 /* HUserManager.m in Sources */,
 				AE862272213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
@@ -1322,8 +1343,10 @@
 				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F7213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225E213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
+				F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */,
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
+				F2B91AC321494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862274213CC31D00C93C9E /* APPConstants.m in Sources */,
 				F2B91AB8214803AE003311A1 /* JMCacheManager.m in Sources */,
 				F22350E82074832F0062C828 /* UIViewController+Navigation.m in Sources */,
@@ -1337,13 +1360,11 @@
 				AE86227C213CC31D00C93C9E /* JMResponseSerializer.m in Sources */,
 				F22350E52074832F0062C828 /* JMLocationManager.m in Sources */,
 				F223510A2074832F0062C828 /* JMTabBarViewController.m in Sources */,
-				F231DA8C214560BF00891331 /* HAVPlayerViewController.m in Sources */,
 				F22350BE2074832F0062C828 /* JMRefreshGifHeader.m in Sources */,
 				AEABC1FF213CD0D2009D099E /* FITArcView.m in Sources */,
 				AE86227E213CC31D00C93C9E /* Reachability.m in Sources */,
 				AE86225A213CC31D00C93C9E /* FITDownApi.m in Sources */,
 				F22350BD2074832F0062C828 /* JMRefreshnAutoNormalFooter.m in Sources */,
-				F2C0F7042139B757009BF74A /* LDWebViewViewController.m in Sources */,
 				F2234FDB207476DC0062C828 /* main.m in Sources */,
 				F22350E72074832F0062C828 /* CLLocation+Location.m in Sources */,
 				AEABC1ED213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
@@ -1403,10 +1424,10 @@
 				AEABC1EA213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225D213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
+				F2B91ACB21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E6213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
 				AE86226D213CC31D00C93C9E /* FITResponseSerializer.m in Sources */,
-				F231DA9B2146A93900891331 /* HZPlayerViewController.m in Sources */,
 				F2735795207493CE0029AE78 /* ValuePickerView.m in Sources */,
 				F2735796207493CE0029AE78 /* JMUI.m in Sources */,
 				AE862263213CC31D00C93C9E /* FITDownSession.m in Sources */,
@@ -1415,6 +1436,7 @@
 				F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */,
 				F273579C207493CE0029AE78 /* JMPermissions.m in Sources */,
 				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
+				F2B91AD121495371003311A1 /* HUserManager.m in Sources */,
 				AE862273213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
@@ -1424,8 +1446,10 @@
 				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F8213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225F213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
+				F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */,
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
+				F2B91AC421494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862275213CC31D00C93C9E /* APPConstants.m in Sources */,
 				F2B91AB9214803AE003311A1 /* JMCacheManager.m in Sources */,
 				F27357A6207493CE0029AE78 /* UIViewController+Navigation.m in Sources */,
@@ -1439,13 +1463,11 @@
 				AE86227D213CC31D00C93C9E /* JMResponseSerializer.m in Sources */,
 				F27357A9207493CE0029AE78 /* JMLocationManager.m in Sources */,
 				F27357AA207493CE0029AE78 /* JMTabBarViewController.m in Sources */,
-				F231DA8D214560BF00891331 /* HAVPlayerViewController.m in Sources */,
 				F27357AC207493CE0029AE78 /* JMRefreshGifHeader.m in Sources */,
 				AEABC200213CD0D2009D099E /* FITArcView.m in Sources */,
 				AE86227F213CC31D00C93C9E /* Reachability.m in Sources */,
 				AE86225B213CC31D00C93C9E /* FITDownApi.m in Sources */,
 				F27357AE207493CE0029AE78 /* JMRefreshnAutoNormalFooter.m in Sources */,
-				F2C0F7052139B757009BF74A /* LDWebViewViewController.m in Sources */,
 				F27357AF207493CE0029AE78 /* main.m in Sources */,
 				F27357B0207493CE0029AE78 /* CLLocation+Location.m in Sources */,
 				AEABC1EE213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
