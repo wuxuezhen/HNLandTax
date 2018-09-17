@@ -21,7 +21,6 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (nonatomic, strong) NSURL *localUrl;
-@property (nonatomic, copy) NSString *localPath;
 @property (nonatomic, copy) NSString *key;
 @property (nonatomic, assign) BOOL isDown;
 @end
@@ -40,10 +39,10 @@
                                                             action:@selector(shareVideo)];
     self.navigationItem.rightBarButtonItems = @[item1,item2];
     self.key = self.url.lastPathComponent;
-    self.localPath = [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
-    self.isDown = self.localPath && self.localPath.length > 0 ? YES :NO;
+    NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
+    self.isDown = path && path.length > 0;
+    
     if (self.isDown ) {
-        self.localUrl = [NSURL fileURLWithPath:self.localPath];
         self.stateLabel.text = @"已下载";
         self.progressView.progress = 1;
         self.progressLabel.text = @"100%";
@@ -56,10 +55,13 @@
     
 }
 -(void)deleteVideo{
-    [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
-    [[NSFileManager defaultManager] removeItemAtPath:self.localPath error:nil];
-    self.stateLabel.text = @"未下载";
-    self.isDown = NO;
+    if (self.isDown) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
+        [[NSFileManager defaultManager] removeItemAtPath:self.localUrl.path error:nil];
+        self.stateLabel.text = @"未下载";
+        self.progressView.progress = 0;
+        self.isDown = NO;
+    }
 }
 -(void)shareVideo{
     NSURL *URL;
@@ -161,6 +163,14 @@
     return _session;
 }
 
+-(NSURL *)localUrl{
+    if (!_localUrl) {
+        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+        NSString *url  = [path stringByAppendingPathComponent:self.key];
+        _localUrl = [NSURL fileURLWithPath:url];
+    }
+    return _localUrl;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

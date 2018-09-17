@@ -10,6 +10,7 @@
 #import "HDetailViewController.h"
 #import "HomeTableViewCell.h"
 #import "JMWeiDu.h"
+#define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
 @interface HomeViewController ()
 @property (nonatomic, strong) UITextField *text;
 @end
@@ -18,24 +19,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self jm_createRightBarButtonItemWithTitle:@"添加"];
     
     NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"video"];
     if (arr && arr.count > 0) {
         [self.dataArray addObjectsFromArray:arr];
     }
-    
-    NSArray *urls = @[@"https://mp4.238yy.com/javbox-mp4/n1273.mp4",
-                      @"https://mp4.238yy.com/javbox-mp4/TP-23410.mp4",
-                      @"https://mp4.238yy.com/javbox-mp4/121917_619-1pon.mp4",
-                      @"https://mp4.238yy.com/javbox-mp4/121917_189-paco.mp4",
-                      @"https://mp4.238yy.com/javbox-mp4/121917_01-10mu.mp4"];
+    NSArray *urls = [self jsontoArray:@"video"];
     for (NSString *url in urls) {
         if (![self.dataArray containsObject:url]) {
             [self.dataArray addObject:url];
         }
     }
-   
-    [self jm_createRightBarButtonItemWithTitle:@"添加"];
+
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 50)];
     view.backgroundColor = JM_RGB_HEX(0xf1f1f1);
     [view addSubview:self.text];
@@ -47,7 +43,7 @@
 
 -(void)jm_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
     if (self.text.text.length > 0) {
-        [self.dataArray addObject:self.text.text];
+        [self.dataArray insertObject:self.text.text atIndex:0];
         [[NSUserDefaults standardUserDefaults] setObject:self.dataArray forKey:@"video"];
         [self.tableView reloadData];
         self.text.text = nil;
@@ -69,17 +65,18 @@
     [self.navigationController pushViewController:h animated:YES];
 }
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(NSArray *)jsontoArray:(NSString *)string{
+    NSString *path = [[NSBundle mainBundle] pathForResource:string ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:path];
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+    return array;
 }
+
 -(UITextField *)text{
     if (!_text) {
         _text = [[UITextField alloc]initWithFrame:CGRectMake(15, 8, SCREEN_W-30, 34)];
         _text.borderStyle = UITextBorderStyleRoundedRect;
+        _text.placeholder = @"请输入视频URL,添加到列表";
         _text.clearButtonMode = UITextFieldViewModeWhileEditing;
         _text.textColor = [UIColor blackColor];
         _text.tintColor = [UIColor blackColor];
@@ -87,6 +84,7 @@
     }
     return _text;
 }
+
 
 
 /*

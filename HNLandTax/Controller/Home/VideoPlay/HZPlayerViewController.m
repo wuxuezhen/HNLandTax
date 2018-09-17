@@ -30,7 +30,17 @@
     [super viewDidLoad];
     
     [self.view addSubview:self.containerView];
+    [self.containerView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.equalTo(self.view);
+        make.top.equalTo(self.mas_topLayoutGuide);
+        make.height.equalTo(self.view.mas_width).multipliedBy(0.8);
+    }];
+    
     [self.containerView addSubview:self.imageView];
+    [self.imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.leading.trailing.bottom.equalTo(self.containerView);
+    }];
+    
     [self.containerView addSubview:self.playBtn];
     [self.playBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(self.containerView);
@@ -134,16 +144,14 @@
 
 - (UIView *)containerView {
     if (!_containerView) {
-        _containerView = [[UIView alloc]initWithFrame:self.view.bounds];
+        _containerView = [[UIView alloc]init];
     }
     return _containerView;
 }
 
 - (UIImageView *)imageView {
     if (!_imageView) {
-        _imageView = [[UIImageView alloc]initWithFrame:self.view.bounds];
-        _imageView.backgroundColor = [UIColor blackColor];
-        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView = [[UIImageView alloc]init];
     }
     return _imageView;
 }
