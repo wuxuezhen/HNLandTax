@@ -8,6 +8,7 @@
 
 #import "MineViewController.h"
 #import <MAMapKit/MAMapKit.h>
+#import <MAMapKit/MATraceManager.h>
 #import "JMWeiDu.h"
 @interface MineViewController ()<MAMapViewDelegate>
 @property (nonatomic, strong) MAMapView *mapView;
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) MAPolyline *polyline;
 @property (nonatomic, strong) UILabel *label;
 @property (nonatomic, assign) NSInteger totalDistance;
+@property (nonatomic, strong) MATraceManager *manager;
 @end
 
 @implementation MineViewController
@@ -76,18 +78,23 @@
     
     if (self.lastLocation) {
         CLLocation *location = userLocation.location;
-        CLLocationDistance distance = [location distanceFromLocation:self.lastLocation];
         
-        self.totalDistance = self.totalDistance + (NSInteger)distance;
-        self.label.text =  @(self.totalDistance).stringValue;
-        [self.locations addObject:location];
-        self.lastLocation = userLocation.location;
-        [self addLayer:self.locations];
+        double distance = [self distanceWithUserLocation:location lastLocation:self.lastLocation];
+//        CLLocationDistance distance = [location distanceFromLocation:self.lastLocation];
+        //传感器活动状态
+        if (distance > 3 && [self isRecordWithLocation:location]) {
+            self.totalDistance = self.totalDistance + (NSInteger)distance;
+            self.label.text =  @(self.totalDistance).stringValue;
+            [self.locations addObject:location];
+            self.lastLocation = userLocation.location;
+            [self queryTraceWithLocations:self.locations];
+        }
+
     }else{
         self.totalDistance = 0;
-        self.lastLocation = userLocation.location;
-        if (self.lastLocation) {
-           [self.locations addObject:self.lastLocation];
+        if (userLocation.location && [self isRecordWithLocation:userLocation.location]) {
+            self.lastLocation = userLocation.location;
+            [self.locations addObject:self.lastLocation];
         }
     }
 
@@ -100,20 +107,80 @@
 //        }];
 //    }
 }
--(void)addLayer:(NSArray *)arr{
-    CLLocationCoordinate2D coords[arr.count];
-    for (NSInteger i = 0; i < arr.count; i ++ ) {
-        CLLocation *location = arr[i];
-        coords[i].latitude = location.coordinate.latitude;
-        coords[i].longitude = location.coordinate.longitude;
-    }
-    if (self.polyline) {
-        [self.polyline setPolylineWithCoordinates:coords count:arr.count];
+-(BOOL)isRecordWithLocation:(CLLocation *)location{
+    if (location.horizontalAccuracy < 40 && location.horizontalAccuracy > 0){
+        return YES;
     }else{
-        self.polyline = [MAPolyline polylineWithCoordinates:coords count:arr.count];
+        return NO;
+    }
+}
+
+-(double)distanceWithUserLocation:(CLLocation *)userLocation lastLocation:(CLLocation *)lastLocation{
+    MAMapPoint point1 = MAMapPointForCoordinate(userLocation.coordinate);
+    MAMapPoint point2 = MAMapPointForCoordinate(lastLocation.coordinate);
+    CLLocationDistance distance = MAMetersBetweenMapPoints(point1,point2);
+    return distance;
+}
+
+#pragma mark -------------------- 轨迹纠偏 --------------------
+- (void)queryTraceWithLocations:(NSArray<CLLocation *> *)locations{
+    NSMutableArray *mArr = [NSMutableArray array];
+    for(CLLocation *loc in locations){
+        MATraceLocation *tLoc = [[MATraceLocation alloc] init];
+        tLoc.loc = loc.coordinate;
+        tLoc.speed = loc.speed * 3.6; //m/s  转 km/h
+        tLoc.time = [loc.timestamp timeIntervalSince1970] * 1000;
+        tLoc.angle = loc.course;
+        [mArr addObject:tLoc];
+    }
+    __weak typeof(self) weakSelf = self;
+    __unused NSOperation *op = [self.manager queryProcessedTraceWith:mArr
+                                                                type:-1
+                                                  processingCallback:nil
+                                                      finishCallback:^(NSArray<MATracePoint *> *points, double distance) {
+                                                          [weakSelf makePolylineWith:points];
+                                                      } failedCallback:^(int errorCode, NSString *errorDesc) {
+                                                          NSLog(@"Error: %@", errorDesc);
+                                                      }];
+    
+}
+
+
+
+- (void)makePolylineWith:(NSArray<MATracePoint*> *)tracePoints{
+    if(tracePoints.count < 2){
+        return ;
+    }
+    CLLocationCoordinate2D *pCoords = malloc(sizeof(CLLocationCoordinate2D) * tracePoints.count);
+    if(!pCoords) {
+        return ;
+    }
+    
+//    CLLocationCoordinate2D coords[tracePoints.count];
+//    for (NSInteger i = 0; i < tracePoints.count; i ++ ) {
+//        MATracePoint *p = tracePoints[i];
+//        coords[i].latitude = p.latitude;
+//        coords[i].longitude = p.longitude;
+//    }
+//
+    for(int i = 0; i < tracePoints.count; ++i) {
+        MATracePoint *p = [tracePoints objectAtIndex:i];
+        CLLocationCoordinate2D *pCur = pCoords + i;
+        pCur->latitude = p.latitude;
+        pCur->longitude = p.longitude;
+    }
+    
+    if (self.polyline) {
+        [self.polyline setPolylineWithCoordinates:pCoords count:tracePoints.count];
+    }else{
+        self.polyline = [MAPolyline polylineWithCoordinates:pCoords count:tracePoints.count];
+        [self.mapView setVisibleMapRect:[self.polyline boundingMapRect]];
         [self.mapView addOverlay: self.polyline];
     }
- 
+    
+    if(pCoords){
+        free(pCoords);
+    }
 }
 
 - (MAOverlayRenderer *)mapView:(MAMapView *)mapView rendererForOverlay:(id <MAOverlay>)overlay{
@@ -128,6 +195,13 @@
         return polylineRenderer;
     }
     return nil;
+}
+
+-(MATraceManager *)manager{
+    if (!_manager) {
+        _manager = [MATraceManager sharedInstance];
+    }
+    return _manager;
 }
 
 - (void)didReceiveMemoryWarning {
