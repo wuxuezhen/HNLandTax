@@ -32,7 +32,7 @@ PODS:
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
   - SDWebImage/Core (4.3.3)
-  - "UITextView+Placeholder (1.2.0)"
+  - UITextView+Placeholder (1.2.0)
   - ZFPlayer (3.1.5):
     - ZFPlayer/Core (= 3.1.5)
   - ZFPlayer/AVPlayer (3.1.5):
@@ -52,27 +52,10 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh
   - SDWebImage
-  - "UITextView+Placeholder"
+  - UITextView+Placeholder
   - ZFPlayer (~> 3.0)
   - ZFPlayer/AVPlayer (~> 3.0)
   - ZFPlayer/ControlView (~> 3.0)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - AMap3DMap
-    - AMapFoundation
-    - AMapLocation
-    - FMDB
-    - JCore
-    - JPush
-    - JSONModel
-    - Masonry
-    - MBProgressHUD
-    - MJRefresh
-    - SDWebImage
-    - "UITextView+Placeholder"
-    - ZFPlayer
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
@@ -87,9 +70,9 @@ SPEC CHECKSUMS:
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  "UITextView+Placeholder": 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
   ZFPlayer: 8273a62fcc76f451db043ce640434d5f8799c09a
 
-PODFILE CHECKSUM: 83ce4e44f61c542a4b1bfef10c746ce6608177fb
+PODFILE CHECKSUM: 53a091c85c4189d938cca2b1b2d5b13a1bd643c6
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.4.0

@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self jm_createRightBarButtonItemWithTitle:@"添加"];
-    
+    [self jm_createLeftBarButtonItemWithTitle:@"编辑"];
     NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"video"];
     if (arr && arr.count > 0) {
         [self.dataArray addObjectsFromArray:arr];
@@ -40,6 +40,10 @@
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
 }
+-(void)jm_leftBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
+    self.tableView.editing = !self.tableView.editing;
+    barButtonItem.title = self.tableView.editing ? @"取消" : @"编辑";
+}
 
 -(void)jm_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
     if (self.text.text.length > 0) {
@@ -48,7 +52,36 @@
         [self.tableView reloadData];
         self.text.text = nil;
     }
-    
+}
+
+-(NSURL *)localUrl:(NSString *)key{
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    NSString *url  = [path stringByAppendingPathComponent:key];
+    return [NSURL fileURLWithPath:url];
+}
+
+-(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
+    [self.dataArray exchangeObjectAtIndex:sourceIndexPath.row
+                        withObjectAtIndex:destinationIndexPath.row];
+    [tableView moveRowAtIndexPath:sourceIndexPath
+                      toIndexPath:destinationIndexPath];
+}
+-(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return @"删除";
+}
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
+    NSString *url = self.dataArray[indexPath.row];
+    NSString *key = url.lastPathComponent;
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:key]) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:key];
+    }
+    NSString *path = [self localUrl:key].path;
+    if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+    }
+    [self.dataArray removeObjectAtIndex:indexPath.row];
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [[NSUserDefaults standardUserDefaults] setObject:self.dataArray forKey:@"video"];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;

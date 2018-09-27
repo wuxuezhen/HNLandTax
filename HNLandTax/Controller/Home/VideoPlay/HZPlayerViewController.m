@@ -64,7 +64,7 @@
     self.player.playerDidToEnd = ^(id  _Nonnull asset) {
         @strongify(self)
         [self.player.currentPlayerManager replay];
-        [self.navigationController popViewControllerAnimated:YES];
+        [self.player enterPortraitFullScreen:NO animated:YES];
     };
     
     [[[NSOperationQueue alloc]init] addOperationWithBlock:^{

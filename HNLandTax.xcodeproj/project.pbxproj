@@ -992,8 +992,8 @@
 				F214D4A6214E58BA0043690C /* video.json */,
 				F2B91AC021494ADC003311A1 /* HZPlayerViewController.h */,
 				F2B91AC221494ADC003311A1 /* HZPlayerViewController.m */,
-				F2B91ABF21494ADC003311A1 /* HAVPlayerViewController.m */,
 				F2B91AC121494ADC003311A1 /* HAVPlayerViewController.h */,
+				F2B91ABF21494ADC003311A1 /* HAVPlayerViewController.m */,
 			);
 			path = VideoPlay;
 			sourceTree = "<group>";
@@ -1648,17 +1648,19 @@
 			baseConfigurationReference = 485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1667,17 +1669,19 @@
 			baseConfigurationReference = 2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = HN.HNLandTax;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1686,7 +1690,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9LB4M6238;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTaxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1705,7 +1709,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = U9LB4M6238;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTaxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
