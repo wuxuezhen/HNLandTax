@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
+		AE222479215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
+		AE22247A215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
 		AE52929421491E1000FFF08A /* NSString+VideoSave.m in Sources */ = {isa = PBXBuildFile; fileRef = AE52929321491E1000FFF08A /* NSString+VideoSave.m */; };
 		AE52929521491E1000FFF08A /* NSString+VideoSave.m in Sources */ = {isa = PBXBuildFile; fileRef = AE52929321491E1000FFF08A /* NSString+VideoSave.m */; };
 		AE86225A213CC31D00C93C9E /* FITDownApi.m in Sources */ = {isa = PBXBuildFile; fileRef = AE862232213CC31D00C93C9E /* FITDownApi.m */; };
@@ -213,6 +215,8 @@
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
 		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FITCornerRadiu.m"; sourceTree = "<group>"; };
+		AE222478215FA70600B82BBD /* UIView+FITCornerRadiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FITCornerRadiu.h"; sourceTree = "<group>"; };
 		AE52929221491E1000FFF08A /* NSString+VideoSave.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+VideoSave.h"; sourceTree = "<group>"; };
 		AE52929321491E1000FFF08A /* NSString+VideoSave.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+VideoSave.m"; sourceTree = "<group>"; };
 		AE862231213CC31D00C93C9E /* FITDownApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FITDownApi.h; sourceTree = "<group>"; };
@@ -973,6 +977,8 @@
 			children = (
 				F2235120207486760062C828 /* FindViewController.h */,
 				F2235121207486760062C828 /* FindViewController.m */,
+				AE222478215FA70600B82BBD /* UIView+FITCornerRadiu.h */,
+				AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */,
 			);
 			path = Find;
 			sourceTree = "<group>";
@@ -1378,6 +1384,7 @@
 				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
 				AEABC1F9213CD0D2009D099E /* UITableViewCell+Nib.m in Sources */,
 				AEABC1F5213CD0D2009D099E /* UIImage+Save.m in Sources */,
+				AE222479215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */,
 				AE862268213CC31D00C93C9E /* FITNetWorkMonitor.m in Sources */,
 				AE862264213CC31D00C93C9E /* FITAPI.m in Sources */,
 				F22350E22074832F0062C828 /* JMTip.m in Sources */,
@@ -1481,6 +1488,7 @@
 				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
 				AEABC1FA213CD0D2009D099E /* UITableViewCell+Nib.m in Sources */,
 				AEABC1F6213CD0D2009D099E /* UIImage+Save.m in Sources */,
+				AE22247A215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */,
 				AE862269213CC31D00C93C9E /* FITNetWorkMonitor.m in Sources */,
 				AE862265213CC31D00C93C9E /* FITAPI.m in Sources */,
 				F27357B6207493CE0029AE78 /* JMTip.m in Sources */,
