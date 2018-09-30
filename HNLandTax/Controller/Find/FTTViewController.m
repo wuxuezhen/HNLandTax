@@ -16,9 +16,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    for (int i = 0; i < 100; i ++) {
+        [self.dataArray addObject:@"11ddd"];
+    }
+    [self jm_tableViewDefaut];
+   
     // Do any additional setup after loading the view.
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 50;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    cell.textLabel.text = @"我是cell";
+    return cell;
+}
 /*
 #pragma mark - Navigation
 
