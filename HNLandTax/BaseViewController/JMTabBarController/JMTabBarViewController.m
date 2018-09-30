@@ -99,7 +99,7 @@
     for (NSInteger i = 0; i<titles.count; i++) {
         //使用数组中存放类创建的对象
         
-        UIViewController *vc= [[classes[i] alloc]init];
+        UIViewController *vc = [[classes[i] alloc]init];
         vc.title = titles[i];
         JMNavigationViewController *nav = [[JMNavigationViewController alloc]initWithRootViewController:vc];
         //未选中图片

@@ -80,6 +80,8 @@
 		AEABC209213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AEABC205213CD258009D099E /* UICollectionView+JMRefresh.m */; };
 		AEABC20A213CD258009D099E /* UITableView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AEABC207213CD258009D099E /* UITableView+JMRefresh.m */; };
 		AEABC20B213CD258009D099E /* UITableView+JMRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = AEABC207213CD258009D099E /* UITableView+JMRefresh.m */; };
+		AEE6A9382160969F0015C9EF /* FTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6A9372160969F0015C9EF /* FTTViewController.m */; };
+		AEE6A9392160969F0015C9EF /* FTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6A9372160969F0015C9EF /* FTTViewController.m */; };
 		DD145844C403DC630B9A64B5 /* Pods_HNLandTax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */; };
 		F214D4A7214E58BA0043690C /* video.json in Resources */ = {isa = PBXBuildFile; fileRef = F214D4A6214E58BA0043690C /* video.json */; };
 		F214D4A8214E58BA0043690C /* video.json in Resources */ = {isa = PBXBuildFile; fileRef = F214D4A6214E58BA0043690C /* video.json */; };
@@ -287,6 +289,8 @@
 		AEABC205213CD258009D099E /* UICollectionView+JMRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionView+JMRefresh.m"; sourceTree = "<group>"; };
 		AEABC206213CD258009D099E /* UITableView+JMRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+JMRefresh.h"; sourceTree = "<group>"; };
 		AEABC207213CD258009D099E /* UITableView+JMRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+JMRefresh.m"; sourceTree = "<group>"; };
+		AEE6A9362160969F0015C9EF /* FTTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTViewController.h; sourceTree = "<group>"; };
+		AEE6A9372160969F0015C9EF /* FTTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTViewController.m; sourceTree = "<group>"; };
 		CF193BDDFC8AD49174162DDF /* Pods-HNLandTaxBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.debug.xcconfig"; sourceTree = "<group>"; };
 		F214D4A6214E58BA0043690C /* video.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = video.json; sourceTree = "<group>"; };
 		F2234FC8207476DB0062C828 /* HNLandTax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTax.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -977,6 +981,8 @@
 			children = (
 				F2235120207486760062C828 /* FindViewController.h */,
 				F2235121207486760062C828 /* FindViewController.m */,
+				AEE6A9362160969F0015C9EF /* FTTViewController.h */,
+				AEE6A9372160969F0015C9EF /* FTTViewController.m */,
 				AE222478215FA70600B82BBD /* UIView+FITCornerRadiu.h */,
 				AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */,
 			);
@@ -1222,6 +1228,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+				"${BUILT_PRODUCTS_DIR}/YNPageViewController/YNPageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1234,6 +1241,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNPageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1274,6 +1282,7 @@
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/UITextView+Placeholder/UITextView_Placeholder.framework",
+				"${BUILT_PRODUCTS_DIR}/YNPageViewController/YNPageViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/ZFPlayer/ZFPlayer.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1286,6 +1295,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITextView_Placeholder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YNPageViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ZFPlayer.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1397,6 +1407,7 @@
 				AEABC1EB213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
 				F2235118207486230062C828 /* HomeViewController.m in Sources */,
 				F22351082074832F0062C828 /* JMNavigationViewController.m in Sources */,
+				AEE6A9382160969F0015C9EF /* FTTViewController.m in Sources */,
 				AE52929421491E1000FFF08A /* NSString+VideoSave.m in Sources */,
 				AE862266213CC31D00C93C9E /* FITConstants.m in Sources */,
 			);
@@ -1501,6 +1512,7 @@
 				AEABC1EC213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
 				F27357BD207493CE0029AE78 /* HomeViewController.m in Sources */,
 				F27357BF207493CE0029AE78 /* JMNavigationViewController.m in Sources */,
+				AEE6A9392160969F0015C9EF /* FTTViewController.m in Sources */,
 				AE52929521491E1000FFF08A /* NSString+VideoSave.m in Sources */,
 				AE862267213CC31D00C93C9E /* FITConstants.m in Sources */,
 			);
@@ -1660,7 +1672,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1681,7 +1693,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJUB5X35HA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,7 +7,9 @@
 //
 
 #import "RootViewController.h"
+#import <YNPageViewController/YNPageViewController.h>
+#import <YNPageViewController/UIView+YNPageExtend.h>
 
-@interface FindViewController : RootViewController
-
+@interface FindViewController : YNPageViewController
++ (instancetype)suspendTopPausePageVC;
 @end
