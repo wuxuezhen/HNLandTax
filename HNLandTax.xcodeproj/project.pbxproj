@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
+		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
+		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
+		5124989C2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
+		5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
+		5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
 		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
 		AE222479215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
 		AE22247A215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
@@ -216,6 +222,13 @@
 		2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.release.xcconfig"; sourceTree = "<group>"; };
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
+		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
+		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
+		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
+		512498922199580600C40B18 /* CWCarouselProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselProtocol.h; sourceTree = "<group>"; };
+		512498932199580600C40B18 /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
+		512498952199580600C40B18 /* CWPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPageControl.h; sourceTree = "<group>"; };
+		512498962199580600C40B18 /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
 		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FITCornerRadiu.m"; sourceTree = "<group>"; };
 		AE222478215FA70600B82BBD /* UIView+FITCornerRadiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FITCornerRadiu.h"; sourceTree = "<group>"; };
@@ -460,6 +473,28 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		5124988C2199580600C40B18 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				5124988D2199580600C40B18 /* MGCarousel */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		5124988D2199580600C40B18 /* MGCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				512498922199580600C40B18 /* CWCarouselProtocol.h */,
+				512498952199580600C40B18 /* CWPageControl.h */,
+				512498902199580600C40B18 /* CWPageControl.m */,
+				512498932199580600C40B18 /* CWCarousel.h */,
+				5124988F2199580600C40B18 /* CWCarousel.m */,
+				512498962199580600C40B18 /* CWFlowLayout.h */,
+				512498912199580600C40B18 /* CWFlowLayout.m */,
+			);
+			path = MGCarousel;
+			sourceTree = "<group>";
+		};
 		8D04E6B178C532DA3AC148CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -683,6 +718,7 @@
 				F223510B207484620062C828 /* AppDelegate */,
 				F22350B02074832E0062C828 /* BaseViewController */,
 				F2235112207485EB0062C828 /* Controller */,
+				5124988C2199580600C40B18 /* VIews */,
 				F2234FFD2074832E0062C828 /* Common */,
 				F223510F207485210062C828 /* Config */,
 				F2234FD4207476DC0062C828 /* Assets.xcassets */,
@@ -1331,6 +1367,7 @@
 				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
 				F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
+				5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */,
 				AEABC201213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F22351062074832F0062C828 /* JMKeyManager.m in Sources */,
 				F22351042074832F0062C828 /* UIColor+JMColor.m in Sources */,
@@ -1359,6 +1396,7 @@
 				AE862272213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
+				512498992199580700C40B18 /* CWCarousel.m in Sources */,
 				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
 				AEABC1E3213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
@@ -1402,6 +1440,7 @@
 				F223510E207484620062C828 /* AppDelegate.m in Sources */,
 				AEABC20A213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
+				5124989B2199580700C40B18 /* CWPageControl.m in Sources */,
 				AEABC1F1213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC208213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EB213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
@@ -1436,6 +1475,7 @@
 				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
 				F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
+				5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */,
 				AEABC202213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */,
 				F273578A207493CE0029AE78 /* UIColor+JMColor.m in Sources */,
@@ -1464,6 +1504,7 @@
 				AE862273213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
+				5124989A2199580700C40B18 /* CWCarousel.m in Sources */,
 				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
 				AEABC1E4213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
@@ -1507,6 +1548,7 @@
 				F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */,
 				AEABC20B213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
+				5124989C2199580700C40B18 /* CWPageControl.m in Sources */,
 				AEABC1F2213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC209213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EC213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
