@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
+		5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
+		5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
+		5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
 		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
@@ -222,6 +226,10 @@
 		2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.release.xcconfig"; sourceTree = "<group>"; };
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
+		51101897219AA915002E943D /* UIView+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadingHud.h"; sourceTree = "<group>"; };
+		51101898219AA915002E943D /* UIView+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadingHud.m"; sourceTree = "<group>"; };
+		5110189B219AB990002E943D /* UIViewController+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingHud.h"; sourceTree = "<group>"; };
+		5110189C219AB990002E943D /* UIViewController+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingHud.m"; sourceTree = "<group>"; };
 		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
 		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
 		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
@@ -642,6 +650,8 @@
 				AEABC1CC213CD0D2009D099E /* UIViewController+BarButtonItem.m */,
 				AEABC1CD213CD0D2009D099E /* UIViewController+FITAppSettings.h */,
 				AEABC1CE213CD0D2009D099E /* UIViewController+FITAppSettings.m */,
+				5110189B219AB990002E943D /* UIViewController+LoadingHud.h */,
+				5110189C219AB990002E943D /* UIViewController+LoadingHud.m */,
 			);
 			path = UIController;
 			sourceTree = "<group>";
@@ -673,6 +683,8 @@
 				AEABC1E0213CD0D2009D099E /* FITArcView.m */,
 				AEABC1E1213CD0D2009D099E /* UIView+FITHud.h */,
 				AEABC1E2213CD0D2009D099E /* UIView+FITHud.m */,
+				51101897219AA915002E943D /* UIView+LoadingHud.h */,
+				51101898219AA915002E943D /* UIView+LoadingHud.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -1427,6 +1439,7 @@
 				F22350BD2074832F0062C828 /* JMRefreshnAutoNormalFooter.m in Sources */,
 				F2234FDB207476DC0062C828 /* main.m in Sources */,
 				F22350E72074832F0062C828 /* CLLocation+Location.m in Sources */,
+				51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1ED213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
 				F22350FF2074832F0062C828 /* JMBaseTableViewController.m in Sources */,
 				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
@@ -1441,6 +1454,7 @@
 				AEABC20A213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
 				5124989B2199580700C40B18 /* CWPageControl.m in Sources */,
+				5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */,
 				AEABC1F1213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC208213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EB213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
@@ -1535,6 +1549,7 @@
 				F27357AE207493CE0029AE78 /* JMRefreshnAutoNormalFooter.m in Sources */,
 				F27357AF207493CE0029AE78 /* main.m in Sources */,
 				F27357B0207493CE0029AE78 /* CLLocation+Location.m in Sources */,
+				5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1EE213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
 				F27357B2207493CE0029AE78 /* JMBaseTableViewController.m in Sources */,
 				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
@@ -1549,6 +1564,7 @@
 				AEABC20B213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
 				5124989C2199580700C40B18 /* CWPageControl.m in Sources */,
+				5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */,
 				AEABC1F2213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC209213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EC213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
