@@ -12,7 +12,7 @@
 #import "JMWeiDu.h"
 #define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
 @interface HomeViewController ()
-@property (nonatomic, strong) UITextField *text;
+@property (nonatomic, strong) UISearchController *searchController;
 @end
 
 @implementation HomeViewController
@@ -31,11 +31,13 @@
             [self.dataArray addObject:url];
         }
     }
-
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_W, 50)];
-    view.backgroundColor = JM_RGB_HEX(0xf1f1f1);
-    [view addSubview:self.text];
-    self.tableView.tableHeaderView = view;
+    
+    if (@available(iOS 11.0, *)) {
+//        self.navigationItem.hidesSearchBarWhenScrolling = NO;
+        self.navigationItem.searchController = self.searchController;
+    } else {
+        // Fallback on earlier versions
+    }
     [self.tableView registerNib:[HomeTableViewCell nib]
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
@@ -46,11 +48,12 @@
 }
 
 -(void)jm_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
-    if (self.text.text.length > 0) {
-        [self.dataArray insertObject:self.text.text atIndex:0];
+    NSString *text = self.searchController.searchBar.text;
+    if (text.length > 0) {
+        [self.dataArray insertObject:text atIndex:0];
         [[NSUserDefaults standardUserDefaults] setObject:self.dataArray forKey:@"video"];
         [self.tableView reloadData];
-        self.text.text = nil;
+        self.searchController.searchBar.text = nil;
     }
 }
 
@@ -105,20 +108,18 @@
     return array;
 }
 
--(UITextField *)text{
-    if (!_text) {
-        _text = [[UITextField alloc]initWithFrame:CGRectMake(15, 8, SCREEN_W-30, 34)];
-        _text.borderStyle = UITextBorderStyleRoundedRect;
-        _text.placeholder = @"请输入视频URL,添加到列表";
-        _text.clearButtonMode = UITextFieldViewModeWhileEditing;
-        _text.textColor = [UIColor blackColor];
-        _text.tintColor = [UIColor blackColor];
-        _text.font = [UIFont systemFontOfSize:14];
+-(UISearchController *)searchController{
+    if (!_searchController) {
+        _searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
+        _searchController.searchBar.searchBarStyle = UISearchBarStyleDefault;
+        _searchController.searchBar.placeholder = @"请输入视频URL,添加到播放列表";
+        _searchController.dimsBackgroundDuringPresentation = NO;
+        _searchController.hidesNavigationBarDuringPresentation = NO;
+        _searchController.searchBar.showsCancelButton = NO;
     }
-    return _text;
+    return _searchController;
 }
-
-
+    
 
 /*
 #pragma mark - Navigation

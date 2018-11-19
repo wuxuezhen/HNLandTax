@@ -48,6 +48,9 @@
     [queue addOperationWithBlock:^{
         UIImage *image = [self getVideoPreViewImage:videoUrl];
         [[HUserManager manager] cacheObject:image forKey:key];
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            self.photoView.image = image;
+        }];
     }];
 }
 

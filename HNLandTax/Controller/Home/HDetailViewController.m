@@ -14,12 +14,15 @@
 #import "NSString+VideoSave.h"
 #import "APPDevice.h"
 #import "JMWeiDu.h"
+#import "HUserManager.h"
 @interface HDetailViewController ()
 @property (nonatomic, strong) FITDownSession *session;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
+
 @property (nonatomic, strong) NSURL *localUrl;
 @property (nonatomic, copy) NSString *key;
 @property (nonatomic, assign) BOOL isDown;
@@ -42,18 +45,23 @@
     NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
     self.isDown = path && path.length > 0;
     
+    NSURL *videoUrl = nil;
     if (self.isDown ) {
         self.stateLabel.text = @"已下载";
         self.progressView.progress = 1;
         self.progressLabel.text = @"100%";
+        videoUrl = self.localUrl;
     }else{
         self.progressLabel.text = @"0%";
         self.progressView.progress = 0;
         self.stateLabel.text = @"未下载";
+        videoUrl = [NSURL URLWithString:self.url];
     }
     self.nameLabel.text = self.url;
-    
+    [self setVideoUrl:videoUrl];
 }
+
+
 -(void)deleteVideo{
     if (self.isDown) {
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
@@ -63,6 +71,7 @@
         self.isDown = NO;
     }
 }
+
 -(void)shareVideo{
     NSURL *URL;
     if (self.isDown) {
@@ -130,22 +139,56 @@
                    confirmAction:nil];
     
 }
+
 - (IBAction)saveToLocal:(id)sender {
     if (self.isDown) {
         [self.localUrl.path jm_saveVideoToAlbums];
     }else{
         [JMTip showCenterWithText:@"本地找不到文件"];
     }
-    
 }
 
 
+#pragma mark - 获取视频第一帧
+- (void)setVideoUrl:(NSURL *)url{
+    UIImage *image = (UIImage *)[[HUserManager manager] getCacheObjectForKey:self.key];
+    if (image) {
+        self.photoView.image = image;
+    }else{
+        [self loadImageWithUrl:url forKey:self.key];
+    }
+}
 
-#pragma mark ---
+-(void)loadImageWithUrl:(NSURL *)videoUrl forKey:(NSString *)key{
+    NSOperationQueue *queue = [HUserManager manager].queue;
+    [queue addOperationWithBlock:^{
+        UIImage *image = [self getVideoPreViewImage:videoUrl];
+        if (image) {
+            [[HUserManager manager] cacheObject:image forKey:key];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.photoView.image = image;
+            }];
+        }
+    }];
+}
+
+
+- (UIImage*) getVideoPreViewImage:(NSURL *)path{
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:path options:nil];
+    AVAssetImageGenerator *assetGen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    assetGen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMake(600, 600);
+    NSError *error = nil;
+    CGImageRef image = [assetGen copyCGImageAtTime:time actualTime:NULL error:&error];
+    UIImage *videoImage = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return videoImage;
+}
+
+#pragma mark --- 懒加载
 -(NSString *)getFilePath{
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
-
 
 -(FITDownSession *)session{
     if (!_session) {
@@ -177,14 +220,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+
 
 @end
