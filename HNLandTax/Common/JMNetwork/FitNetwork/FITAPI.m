@@ -60,6 +60,24 @@
 //    return [FITGeneralDataCache sharedFITGeneralDataCache].authToken;
 //}
 
+#pragma mark - 证书设置
+//+(AFSecurityPolicy*)customSecurityPolicy {
+//
+//    NSArray *cerPaths = @[@"tryfits.com",@"_.shanghaicaiyi"];
+//    NSMutableArray *cers = [NSMutableArray arrayWithCapacity:cerPaths.count];
+//    for (NSString *path in cerPaths) {
+//        NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:path ofType:@"cer"]];
+//        [cers addObject:data];
+//    }
+//    // AFSSLPinningModeCertificate 使用证书验证模式
+//    AFSecurityPolicy * securityPolicy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeCertificate];
+//    securityPolicy.allowInvalidCertificates = NO;
+//    securityPolicy.validatesDomainName = YES;
+//    securityPolicy.pinnedCertificates = [[NSSet alloc]initWithArray:cers];
+//    
+//    return securityPolicy;
+//    
+//}
 
 #pragma mark - GET、POST、PUT、DELETE 四请求方式
 

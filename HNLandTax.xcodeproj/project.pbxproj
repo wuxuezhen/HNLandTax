@@ -17,6 +17,10 @@
 		5124989C2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
 		5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
 		5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
+		517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
+		517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
+		517D8C5C21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
+		517D8C5D21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
 		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
 		AE222479215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
 		AE22247A215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
@@ -237,6 +241,10 @@
 		512498932199580600C40B18 /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
 		512498952199580600C40B18 /* CWPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPageControl.h; sourceTree = "<group>"; };
 		512498962199580600C40B18 /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
+		517D8C5621A2973C004A4744 /* JMCoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
+		517D8C5721A2973C004A4744 /* JMCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCoreDataManager.m; sourceTree = "<group>"; };
+		517D8C5A21A29883004A4744 /* coredatamr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coredatamr.h; sourceTree = "<group>"; };
+		517D8C5B21A29883004A4744 /* coredatamr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coredatamr.m; sourceTree = "<group>"; };
 		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FITCornerRadiu.m"; sourceTree = "<group>"; };
 		AE222478215FA70600B82BBD /* UIView+FITCornerRadiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FITCornerRadiu.h"; sourceTree = "<group>"; };
@@ -503,6 +511,17 @@
 			path = MGCarousel;
 			sourceTree = "<group>";
 		};
+		517D8C5521A296FC004A4744 /* JMCoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				517D8C5621A2973C004A4744 /* JMCoreDataManager.h */,
+				517D8C5721A2973C004A4744 /* JMCoreDataManager.m */,
+				517D8C5A21A29883004A4744 /* coredatamr.h */,
+				517D8C5B21A29883004A4744 /* coredatamr.m */,
+			);
+			path = JMCoreDataManager;
+			sourceTree = "<group>";
+		};
 		8D04E6B178C532DA3AC148CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -760,6 +779,7 @@
 		F2234FFD2074832E0062C828 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				517D8C5521A296FC004A4744 /* JMCoreDataManager */,
 				AEABC1BA213CD0D2009D099E /* JMCategory */,
 				AE86222F213CC31D00C93C9E /* JMNetwork */,
 				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
@@ -1392,6 +1412,7 @@
 				AEABC1E9213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225C213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
+				517D8C5C21A29883004A4744 /* coredatamr.m in Sources */,
 				F2B91ACA21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E5213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
@@ -1451,6 +1472,7 @@
 				F22350E22074832F0062C828 /* JMTip.m in Sources */,
 				AE862270213CC31D00C93C9E /* FITNetRequst.m in Sources */,
 				F223510E207484620062C828 /* AppDelegate.m in Sources */,
+				517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */,
 				AEABC20A213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
 				5124989B2199580700C40B18 /* CWPageControl.m in Sources */,
@@ -1502,6 +1524,7 @@
 				AEABC1EA213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225D213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
+				517D8C5D21A29883004A4744 /* coredatamr.m in Sources */,
 				F2B91ACB21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E6213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
@@ -1561,6 +1584,7 @@
 				F27357B6207493CE0029AE78 /* JMTip.m in Sources */,
 				AE862271213CC31D00C93C9E /* FITNetRequst.m in Sources */,
 				F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */,
+				517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */,
 				AEABC20B213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
 				5124989C2199580700C40B18 /* CWPageControl.m in Sources */,
