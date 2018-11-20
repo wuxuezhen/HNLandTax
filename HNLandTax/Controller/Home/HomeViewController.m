@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "HDetailViewController.h"
 #import "HomeTableViewCell.h"
+#import "JMJsonHandle.h"
 #import "JMWeiDu.h"
 #define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
 @interface HomeViewController ()
@@ -25,12 +26,18 @@
     if (arr && arr.count > 0) {
         [self.dataArray addObjectsFromArray:arr];
     }
-    NSArray *urls = [self jsontoArray:@"video"];
+    
+    NSArray *urls = [JMJsonHandle toObjectWithJsonPath:@"video"];
     for (NSString *url in urls) {
         if (![self.dataArray containsObject:url]) {
             [self.dataArray addObject:url];
         }
     }
+    [self.dataArray sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
+        return [obj1 compare:obj2];
+    }];
+    
+    [self WZLog];
     
     if (@available(iOS 11.0, *)) {
 //        self.navigationItem.hidesSearchBarWhenScrolling = NO;
@@ -42,6 +49,15 @@
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
 }
+
+-(void)WZLog{
+    NSMutableString *str = [NSMutableString string];
+    for (NSString *key in self.dataArray) {
+        [str appendFormat:@"\"%@\",",key];
+    }
+    NSLog(@"str = %@",[str substringToIndex:str.length-1]);
+}
+
 -(void)jm_leftBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
     self.tableView.editing = !self.tableView.editing;
     barButtonItem.title = self.tableView.editing ? @"取消" : @"编辑";
@@ -99,13 +115,6 @@
     HDetailViewController *h = [[HDetailViewController alloc]init];
     h.url = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:h animated:YES];
-}
-
--(NSArray *)jsontoArray:(NSString *)string{
-    NSString *path = [[NSBundle mainBundle] pathForResource:string ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:path];
-    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    return array;
 }
 
 -(UISearchController *)searchController{
