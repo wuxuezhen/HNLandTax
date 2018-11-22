@@ -20,6 +20,7 @@ def share_pods
     pod 'ZFPlayer/ControlView', '~> 3.0'
     pod 'ZFPlayer/AVPlayer', '~> 3.0'
     pod 'YNPageViewController','~> 0.1.8'
+    pod 'YYKit'
 end
 
 

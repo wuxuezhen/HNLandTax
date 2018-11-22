@@ -33,7 +33,7 @@
 /**
  判断是否有加载框
 
- @return
+ @return yes/no
  */
 - (BOOL)fit_hudExist;
 

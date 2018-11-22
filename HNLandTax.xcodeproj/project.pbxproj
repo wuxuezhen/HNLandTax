@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
+		5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
+		5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
+		5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
+		51185B7021A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
+		51185B7121A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
+		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
+		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
+		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
+		5124989C2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
+		5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
+		5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
+		517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
+		517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
+		517D8C5C21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
+		517D8C5D21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
 		A6D37667DA9DE0334DBD3C85 /* Pods_HNLandTaxBeta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */; };
 		AE222479215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
 		AE22247A215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */ = {isa = PBXBuildFile; fileRef = AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */; };
@@ -216,6 +232,25 @@
 		2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.release.xcconfig"; sourceTree = "<group>"; };
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
+		51101897219AA915002E943D /* UIView+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadingHud.h"; sourceTree = "<group>"; };
+		51101898219AA915002E943D /* UIView+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadingHud.m"; sourceTree = "<group>"; };
+		5110189B219AB990002E943D /* UIViewController+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingHud.h"; sourceTree = "<group>"; };
+		5110189C219AB990002E943D /* UIViewController+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingHud.m"; sourceTree = "<group>"; };
+		51185B6E21A6A8230060B015 /* WZVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZVideo.h; sourceTree = "<group>"; };
+		51185B6F21A6A8230060B015 /* WZVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZVideo.m; sourceTree = "<group>"; };
+		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
+		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
+		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
+		512498922199580600C40B18 /* CWCarouselProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselProtocol.h; sourceTree = "<group>"; };
+		512498932199580600C40B18 /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
+		512498952199580600C40B18 /* CWPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPageControl.h; sourceTree = "<group>"; };
+		512498962199580600C40B18 /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
+		517D8C5621A2973C004A4744 /* JMCoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
+		517D8C5721A2973C004A4744 /* JMCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCoreDataManager.m; sourceTree = "<group>"; };
+		517D8C5A21A29883004A4744 /* coredatamr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coredatamr.h; sourceTree = "<group>"; };
+		517D8C5B21A29883004A4744 /* coredatamr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coredatamr.m; sourceTree = "<group>"; };
+		517D8C7D21A2C19A004A4744 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
+		517D8C7E21A2C19A004A4744 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
 		7ED3F9A1723644D50D24E61C /* Pods_HNLandTaxBeta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTaxBeta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE222477215FA70500B82BBD /* UIView+FITCornerRadiu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FITCornerRadiu.m"; sourceTree = "<group>"; };
 		AE222478215FA70600B82BBD /* UIView+FITCornerRadiu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FITCornerRadiu.h"; sourceTree = "<group>"; };
@@ -460,6 +495,48 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		51185B6D21A6A7B50060B015 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51185B6E21A6A8230060B015 /* WZVideo.h */,
+				51185B6F21A6A8230060B015 /* WZVideo.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5124988C2199580600C40B18 /* VIews */ = {
+			isa = PBXGroup;
+			children = (
+				5124988D2199580600C40B18 /* MGCarousel */,
+			);
+			path = VIews;
+			sourceTree = "<group>";
+		};
+		5124988D2199580600C40B18 /* MGCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				512498922199580600C40B18 /* CWCarouselProtocol.h */,
+				512498952199580600C40B18 /* CWPageControl.h */,
+				512498902199580600C40B18 /* CWPageControl.m */,
+				512498932199580600C40B18 /* CWCarousel.h */,
+				5124988F2199580600C40B18 /* CWCarousel.m */,
+				512498962199580600C40B18 /* CWFlowLayout.h */,
+				512498912199580600C40B18 /* CWFlowLayout.m */,
+			);
+			path = MGCarousel;
+			sourceTree = "<group>";
+		};
+		517D8C5521A296FC004A4744 /* JMCoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				517D8C5621A2973C004A4744 /* JMCoreDataManager.h */,
+				517D8C5721A2973C004A4744 /* JMCoreDataManager.m */,
+				517D8C5A21A29883004A4744 /* coredatamr.h */,
+				517D8C5B21A29883004A4744 /* coredatamr.m */,
+			);
+			path = JMCoreDataManager;
+			sourceTree = "<group>";
+		};
 		8D04E6B178C532DA3AC148CA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,6 +684,8 @@
 				AEABC1CC213CD0D2009D099E /* UIViewController+BarButtonItem.m */,
 				AEABC1CD213CD0D2009D099E /* UIViewController+FITAppSettings.h */,
 				AEABC1CE213CD0D2009D099E /* UIViewController+FITAppSettings.m */,
+				5110189B219AB990002E943D /* UIViewController+LoadingHud.h */,
+				5110189C219AB990002E943D /* UIViewController+LoadingHud.m */,
 			);
 			path = UIController;
 			sourceTree = "<group>";
@@ -638,6 +717,8 @@
 				AEABC1E0213CD0D2009D099E /* FITArcView.m */,
 				AEABC1E1213CD0D2009D099E /* UIView+FITHud.h */,
 				AEABC1E2213CD0D2009D099E /* UIView+FITHud.m */,
+				51101897219AA915002E943D /* UIView+LoadingHud.h */,
+				51101898219AA915002E943D /* UIView+LoadingHud.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -683,6 +764,8 @@
 				F223510B207484620062C828 /* AppDelegate */,
 				F22350B02074832E0062C828 /* BaseViewController */,
 				F2235112207485EB0062C828 /* Controller */,
+				51185B6D21A6A7B50060B015 /* Models */,
+				5124988C2199580600C40B18 /* VIews */,
 				F2234FFD2074832E0062C828 /* Common */,
 				F223510F207485210062C828 /* Config */,
 				F2234FD4207476DC0062C828 /* Assets.xcassets */,
@@ -712,6 +795,7 @@
 		F2234FFD2074832E0062C828 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				517D8C5521A296FC004A4744 /* JMCoreDataManager */,
 				AEABC1BA213CD0D2009D099E /* JMCategory */,
 				AE86222F213CC31D00C93C9E /* JMNetwork */,
 				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
@@ -1118,6 +1202,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = F2234FBF207476DB0062C828;
 			productRefGroup = F2234FC9207476DB0062C828 /* Products */;
@@ -1331,6 +1416,7 @@
 				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
 				F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
+				5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */,
 				AEABC201213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F22351062074832F0062C828 /* JMKeyManager.m in Sources */,
 				F22351042074832F0062C828 /* UIColor+JMColor.m in Sources */,
@@ -1343,6 +1429,7 @@
 				AEABC1E9213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225C213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
+				517D8C5C21A29883004A4744 /* coredatamr.m in Sources */,
 				F2B91ACA21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E5213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
@@ -1359,8 +1446,10 @@
 				AE862272213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
+				512498992199580700C40B18 /* CWCarousel.m in Sources */,
 				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
+				51185B7021A6A8230060B015 /* WZVideo.m in Sources */,
 				AEABC1E3213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
 				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F7213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
@@ -1389,6 +1478,7 @@
 				F22350BD2074832F0062C828 /* JMRefreshnAutoNormalFooter.m in Sources */,
 				F2234FDB207476DC0062C828 /* main.m in Sources */,
 				F22350E72074832F0062C828 /* CLLocation+Location.m in Sources */,
+				51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1ED213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
 				F22350FF2074832F0062C828 /* JMBaseTableViewController.m in Sources */,
 				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
@@ -1400,8 +1490,11 @@
 				F22350E22074832F0062C828 /* JMTip.m in Sources */,
 				AE862270213CC31D00C93C9E /* FITNetRequst.m in Sources */,
 				F223510E207484620062C828 /* AppDelegate.m in Sources */,
+				517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */,
 				AEABC20A213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
+				5124989B2199580700C40B18 /* CWPageControl.m in Sources */,
+				5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */,
 				AEABC1F1213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC208213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EB213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
@@ -1436,6 +1529,7 @@
 				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
 				F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
+				5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */,
 				AEABC202213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */,
 				F273578A207493CE0029AE78 /* UIColor+JMColor.m in Sources */,
@@ -1448,6 +1542,7 @@
 				AEABC1EA213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225D213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
+				517D8C5D21A29883004A4744 /* coredatamr.m in Sources */,
 				F2B91ACB21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E6213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
@@ -1464,8 +1559,10 @@
 				AE862273213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
+				5124989A2199580700C40B18 /* CWCarousel.m in Sources */,
 				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
+				51185B7121A6A8230060B015 /* WZVideo.m in Sources */,
 				AEABC1E4213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
 				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F8213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
@@ -1494,6 +1591,7 @@
 				F27357AE207493CE0029AE78 /* JMRefreshnAutoNormalFooter.m in Sources */,
 				F27357AF207493CE0029AE78 /* main.m in Sources */,
 				F27357B0207493CE0029AE78 /* CLLocation+Location.m in Sources */,
+				5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1EE213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
 				F27357B2207493CE0029AE78 /* JMBaseTableViewController.m in Sources */,
 				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
@@ -1505,8 +1603,11 @@
 				F27357B6207493CE0029AE78 /* JMTip.m in Sources */,
 				AE862271213CC31D00C93C9E /* FITNetRequst.m in Sources */,
 				F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */,
+				517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */,
 				AEABC20B213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
+				5124989C2199580700C40B18 /* CWPageControl.m in Sources */,
+				5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */,
 				AEABC1F2213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC209213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EC213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
@@ -1538,6 +1639,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2234FD2207476DB0062C828 /* Base */,
+				517D8C7E21A2C19A004A4744 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1546,6 +1648,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				F2234FD7207476DC0062C828 /* Base */,
+				517D8C7D21A2C19A004A4744 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1557,6 +1660,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1615,6 +1719,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1670,7 +1775,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YJUB5X35HA;
+				DEVELOPMENT_TEAM = 6ZKMB3R7AA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1691,7 +1796,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YJUB5X35HA;
+				DEVELOPMENT_TEAM = 6ZKMB3R7AA;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

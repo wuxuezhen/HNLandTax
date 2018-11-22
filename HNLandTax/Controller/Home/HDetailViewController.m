@@ -14,15 +14,14 @@
 #import "NSString+VideoSave.h"
 #import "APPDevice.h"
 #import "JMWeiDu.h"
-@interface HDetailViewController ()
+#import "HUserManager.h"
+@interface HDetailViewController ()<DownloadDelegate>
 @property (nonatomic, strong) FITDownSession *session;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
-@property (nonatomic, strong) NSURL *localUrl;
-@property (nonatomic, copy) NSString *key;
-@property (nonatomic, assign) BOOL isDown;
+@property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @end
 
 @implementation HDetailViewController
@@ -38,11 +37,9 @@
                                                             target:self
                                                             action:@selector(shareVideo)];
     self.navigationItem.rightBarButtonItems = @[item1,item2];
-    self.key = self.url.lastPathComponent;
-    NSString *path = [[NSUserDefaults standardUserDefaults] objectForKey:self.key];
-    self.isDown = path && path.length > 0;
+   
     
-    if (self.isDown ) {
+    if (self.video.isDownload ) {
         self.stateLabel.text = @"已下载";
         self.progressView.progress = 1;
         self.progressLabel.text = @"100%";
@@ -51,27 +48,34 @@
         self.progressView.progress = 0;
         self.stateLabel.text = @"未下载";
     }
-    self.nameLabel.text = self.url;
+    self.nameLabel.text = self.video.videoUrl;
+    [self setVideoUrl:[NSURL URLWithString:self.video.videoUrl]];
+    
+    FITDownSession *session = [[HUserManager manager] taskForKey:self.video.key];
+    if (session) {
+        _session = session;
+       self.session.delegate = self;
+    }
     
 }
+- (void)wz_download:(FITDownLoadResponse *)response{
+    self.progressView.progress = response.progress;
+    self.progressLabel.text = [NSString stringWithFormat:@"%.2lf%%",response.progress * 100];
+    if (response.progress >= 1) {
+        [self save:response.downloadSaveFileUrl forkey:self.video.key];
+    }
+}
+
 -(void)deleteVideo{
-    if (self.isDown) {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
-        [[NSFileManager defaultManager] removeItemAtPath:self.localUrl.path error:nil];
+    if (self.video.isDownload) {
+        [self.video wz_removeObjectForKey];
         self.stateLabel.text = @"未下载";
         self.progressView.progress = 0;
-        self.isDown = NO;
     }
 }
+
 -(void)shareVideo{
-    NSURL *URL;
-    if (self.isDown) {
-        URL = self.localUrl;
-    }else{
-        URL = [NSURL URLWithString:self.url];
-    }
-    NSArray *activityItems = @[URL];
-    
+    NSArray *activityItems = @[self.video.playURL];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems
                                                                                          applicationActivities:nil];
     
@@ -84,13 +88,6 @@
     [self presentViewController:activityViewController animated:YES completion:nil];
 }
 
--(void)save:(NSURL *)url forkey:(NSString *)key{
-    self.localUrl = url;
-    [[NSUserDefaults standardUserDefaults] setObject:url.path forKey:key];
-    self.isDown = YES ;
-    self.stateLabel.text = @"已下载";
-}
-
 -(void)playVideo:(NSURL *)videoURL{
     HAVPlayerViewController * afterVC = [[HAVPlayerViewController alloc]init];
     AVPlayer * player = [AVPlayer playerWithURL:videoURL];
@@ -99,24 +96,26 @@
 }
 
 - (IBAction)down:(id)sender {
-    [self.session fit_downloadResume];
+    UIButton *btn = (UIButton *)sender;
+    btn.selected = !btn.selected;
+    if (btn.selected) {
+        [self.session fit_downloadResume];
+        [[HUserManager manager]addTask:self.session];
+    }else{
+        [[HUserManager manager] deleteTaskForKey:self.video.key];
+        self.session.delegate = nil;
+        self.session = nil;
+    }
+    
 }
 
 - (IBAction)play:(id)sender {
-    if (self.isDown) {
-        [self playVideo:self.localUrl];
-    }else{
-        [self playVideo:[NSURL URLWithString:self.url]];
-    }
+    [self playVideo:self.video.playURL];
 }
 
 - (IBAction)zfPlay:(id)sender {
     HZPlayerViewController *play = [[HZPlayerViewController alloc]init];
-    if (self.isDown) {
-        play.url = self.localUrl;
-    }else{
-        play.url = [NSURL URLWithString:self.url];
-    }
+    play.url = self.video.playURL;
     [self.navigationController pushViewController:play animated:YES];
 }
 
@@ -130,46 +129,81 @@
                    confirmAction:nil];
     
 }
+
 - (IBAction)saveToLocal:(id)sender {
-    if (self.isDown) {
-        [self.localUrl.path jm_saveVideoToAlbums];
+    if (self.video.isDownload) {
+        [self.video.localPath jm_saveVideoToAlbums];
     }else{
         [JMTip showCenterWithText:@"本地找不到文件"];
     }
-    
 }
 
 
+#pragma mark - 获取视频第一帧
+- (void)setVideoUrl:(NSURL *)url{
+    UIImage *image = (UIImage *)[[HUserManager manager] getCacheObjectForKey:self.video.key];
+    if (image) {
+        self.photoView.image = image;
+    }else{
+        [self loadImageWithUrl:url forKey:self.video.key];
+    }
+}
 
-#pragma mark ---
+-(void)loadImageWithUrl:(NSURL *)videoUrl forKey:(NSString *)key{
+    NSOperationQueue *queue = [HUserManager manager].queue;
+    [queue addOperationWithBlock:^{
+        UIImage *image = [self getVideoPreViewImage:videoUrl];
+        if (image) {
+            [[HUserManager manager] cacheObject:image forKey:key];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.photoView.image = image;
+            }];
+        }
+    }];
+}
+
+
+- (UIImage*) getVideoPreViewImage:(NSURL *)path{
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:path options:nil];
+    AVAssetImageGenerator *assetGen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    assetGen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMake(600, 600);
+    NSError *error = nil;
+    CGImageRef image = [assetGen copyCGImageAtTime:time actualTime:NULL error:&error];
+    UIImage *videoImage = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return videoImage;
+}
+
+-(void)save:(NSURL *)url forkey:(NSString *)key{
+    [[NSUserDefaults standardUserDefaults] setObject:url.path forKey:key];
+    self.video.isDownload = YES ;
+    self.stateLabel.text = @"已下载";
+}
+
+#pragma mark --- 懒加载
 -(NSString *)getFilePath{
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
-
 -(FITDownSession *)session{
     if (!_session) {
         __weak typeof(self) this = self;
-        _session = [[FITDownSession alloc] initWithDownloadUrl:self.url
-                                                    identifier:self.url.lastPathComponent
+        _session = [[FITDownSession alloc] initWithDownloadUrl:self.video.videoUrl
+                                                    identifier:self.video.key
                                                downloadHandler:^(FITDownLoadResponse *response) {
                                                    this.progressView.progress = response.progress;
                                                    this.progressLabel.text = [NSString stringWithFormat:@"%.2lf%%",response.progress * 100];
                                                    if (response.progress >= 1) {
-                                                       [this save:response.downloadSaveFileUrl forkey:this.key];
+                                                       [this save:response.downloadSaveFileUrl forkey:this.video.key];
                                                    }
                                                }];
     }
     return _session;
 }
 
--(NSURL *)localUrl{
-    if (!_localUrl) {
-        NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-        NSString *url  = [path stringByAppendingPathComponent:self.key];
-        _localUrl = [NSURL fileURLWithPath:url];
-    }
-    return _localUrl;
+-(void)dealloc{
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -177,14 +211,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
+
 
 @end

@@ -10,6 +10,7 @@
 #define LOCAL_CACHE_PATH [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject stringByAppendingString:@"/cacheImage"]
 @interface HUserManager()
 @property (nonatomic, strong) NSMutableDictionary *dict;
+@property (nonatomic, strong) NSMutableArray *downTasks;
 @end
 @implementation HUserManager
 +(instancetype)manager{
@@ -23,9 +24,11 @@
             manager = [[HUserManager alloc] init];
             manager.dict = [[NSMutableDictionary alloc]init];;
         }
+        manager.downTasks = [NSMutableArray arrayWithCapacity:0];
     });
     return manager;
 }
+
 
 -(void)cacheObject:(id)object forKey:(NSString *)key{
     if (![self.dict objectForKey:key] && object) {
@@ -56,5 +59,30 @@
         _queue.maxConcurrentOperationCount = 3;
     }
     return _queue;
+}
+
+-(void)addTask:(FITDownSession *)task{
+    [self.downTasks addObject:task];
+}
+
+-(void)deleteTaskForKey:(NSString *)key{
+    FITDownSession *task = nil;
+    for (FITDownSession *tempTask in self.downTasks) {
+        if ([tempTask.identifier isEqualToString:key]) {
+            task = tempTask;
+            break;
+        }
+    }
+    [self.downTasks removeObject:task];
+    [task fit_downloadCancle];
+}
+
+-(FITDownSession *)taskForKey:(NSString *)key{
+    for (FITDownSession *tempTask in self.downTasks) {
+        if ([tempTask.identifier isEqualToString:key]) {
+            return tempTask;
+        }
+    }
+    return nil;
 }
 @end
