@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "WZVideo.h"
 @interface HomeTableViewCell : UITableViewCell
-@property (nonatomic, copy) NSString *path;
+@property (nonatomic, strong) WZVideo *video;
 @end

@@ -7,11 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "FITDownSession.h"
 @interface HUserManager : NSObject
 +(instancetype)manager;
 @property (nonatomic, strong) NSOperationQueue *queue;
 -(void)cacheObject:(id)object forKey:(NSString *)key;
 -(id)getCacheObjectForKey:(NSString *)key;
+
+
+-(void)addTask:(FITDownSession *)task;
+
+-(void)deleteTaskForKey:(NSString *)key;
+
+-(FITDownSession *)taskForKey:(NSString *)key;
 
 @end

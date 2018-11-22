@@ -11,6 +11,8 @@
 		5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
 		5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
 		5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
+		51185B7021A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
+		51185B7121A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
 		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
@@ -234,6 +236,8 @@
 		51101898219AA915002E943D /* UIView+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadingHud.m"; sourceTree = "<group>"; };
 		5110189B219AB990002E943D /* UIViewController+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingHud.h"; sourceTree = "<group>"; };
 		5110189C219AB990002E943D /* UIViewController+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingHud.m"; sourceTree = "<group>"; };
+		51185B6E21A6A8230060B015 /* WZVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZVideo.h; sourceTree = "<group>"; };
+		51185B6F21A6A8230060B015 /* WZVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZVideo.m; sourceTree = "<group>"; };
 		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
 		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
 		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
@@ -489,6 +493,15 @@
 				25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		51185B6D21A6A7B50060B015 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51185B6E21A6A8230060B015 /* WZVideo.h */,
+				51185B6F21A6A8230060B015 /* WZVideo.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5124988C2199580600C40B18 /* VIews */ = {
@@ -751,6 +764,7 @@
 				F223510B207484620062C828 /* AppDelegate */,
 				F22350B02074832E0062C828 /* BaseViewController */,
 				F2235112207485EB0062C828 /* Controller */,
+				51185B6D21A6A7B50060B015 /* Models */,
 				5124988C2199580600C40B18 /* VIews */,
 				F2234FFD2074832E0062C828 /* Common */,
 				F223510F207485210062C828 /* Config */,
@@ -1435,6 +1449,7 @@
 				512498992199580700C40B18 /* CWCarousel.m in Sources */,
 				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
+				51185B7021A6A8230060B015 /* WZVideo.m in Sources */,
 				AEABC1E3213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
 				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F7213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
@@ -1547,6 +1562,7 @@
 				5124989A2199580700C40B18 /* CWCarousel.m in Sources */,
 				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
+				51185B7121A6A8230060B015 /* WZVideo.m in Sources */,
 				AEABC1E4213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
 				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F8213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,

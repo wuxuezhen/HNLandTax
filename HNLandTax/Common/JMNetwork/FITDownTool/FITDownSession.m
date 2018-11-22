@@ -75,6 +75,7 @@
     // 获取已经下载的文件长度
     if (self.response.downloadStatus == FITDownloadSuccuss) {
         self.downloadHandler ? self.downloadHandler(self.response) : nil;
+        [self fit_downloadDelegate];
     }
     NSInteger currentLength = [self fileLengthForPath:[self getFilePath]];
     if (currentLength > 0) {
@@ -88,7 +89,6 @@
                progress:self.lastProgress
                 fileUrl:nil];
 }
-
 
 /**
  重新下载
@@ -136,13 +136,20 @@
     
 }
 
+-(void)fit_downloadDelegate{
+    if (self.delegate && [self.delegate respondsToSelector:@selector(wz_download:)]) {
+        [self.delegate wz_download:self.response];
+    }
+}
 
 #pragma mark - 任务下载代理事件
 
 /**
- 下载任务收到回复
- 
- @param response
+  下载任务收到回复
+ @param session session
+ @param dataTask dataTask
+ @param response response
+ @param completionHandler completionHandler
  */
 -(void)URLSession:(NSURLSession *)session dataTask:(nonnull NSURLSessionDataTask *)dataTask didReceiveResponse:(nonnull NSURLResponse *)response completionHandler:(nonnull void (^)(NSURLSessionResponseDisposition))completionHandler{
     
@@ -239,6 +246,7 @@
     
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         self.downloadHandler ? self.downloadHandler(self.response) : nil;
+        [self fit_downloadDelegate];
     }];
     
 };
@@ -269,7 +277,7 @@
 /**
  存储路径
  
- @return
+ @return path
  */
 -(NSString *)getFilePath{
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -314,7 +322,7 @@
  Configuration
  
  @param identifier id
- @return
+ @return config
  */
 -(NSURLSessionConfiguration *)getSessionConfiguration:(NSString *)identifier{
     NSString *string = [NSString stringWithFormat:@"background-NSURLSession-%@",identifier];

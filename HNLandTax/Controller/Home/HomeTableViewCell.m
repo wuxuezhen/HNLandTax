@@ -21,24 +21,16 @@
     self.selectionStyle = UITableViewCellSelectionStyleNone;
     // Initialization code
 }
-- (void)setPath:(NSString *)path{
-    _path = path;
-    NSString *string = path.lastPathComponent;
-    NSString *url = [[NSUserDefaults standardUserDefaults] objectForKey:string];
-    self.nameLabel.text = path.lastPathComponent;
-    NSURL *videoUrl = nil;
-    if (url) {
-        self.stateLabel.text = @"已下载";
-        videoUrl = [NSURL fileURLWithPath:url];
-    }else{
-        self.stateLabel.text = @"未下载";
-        videoUrl = [NSURL URLWithString:path];
-    }
-    UIImage *image = (UIImage *)[[HUserManager manager] getCacheObjectForKey:string];
+- (void)setVideo:(WZVideo *)video{
+    _video = video;
+    self.stateLabel.text = video.isDownload ? @"已下载" : @"未下载";
+    self.nameLabel.text  = video.key;
+ 
+    UIImage *image = (UIImage *)[[HUserManager manager] getCacheObjectForKey:video.key];
     if (image) {
         self.photoView.image = image;
     }else{
-        [self loadImageWithUrl:videoUrl forKey:string];
+        [self loadImageWithUrl:[NSURL URLWithString:video.videoUrl] forKey:video.key];
     }
    
 }

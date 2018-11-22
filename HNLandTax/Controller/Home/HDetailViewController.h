@@ -7,7 +7,7 @@
 //
 
 #import "RootViewController.h"
-
+#import "WZVideo.h"
 @interface HDetailViewController : RootViewController
-@property (nonatomic, copy) NSString *url;
+@property (nonatomic, strong) WZVideo *video;
 @end

@@ -276,7 +276,7 @@ static NSString *kCancel = @"cancelled";
 /**
  存储路径
  
- @return
+ @return path
  */
 -(NSString *)getFilePath{
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
@@ -339,7 +339,7 @@ static NSString *kCancel = @"cancelled";
 /**
  懒加载初始化 response
  
- @return
+ @return response
  */
 -(FITDownLoadResponse *)response{
     if (!_response) {
@@ -352,7 +352,7 @@ static NSString *kCancel = @"cancelled";
  Configuration
  
  @param identifier id
- @return
+ @return config
  */
 -(NSURLSessionConfiguration *)getSessionConfiguration:(NSString *)identifier{
     NSString *string = [NSString stringWithFormat:@"background-NSURLSession-%@",identifier];

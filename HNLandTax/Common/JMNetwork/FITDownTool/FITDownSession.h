@@ -10,11 +10,17 @@
 #import "FITDownLoadResponse.h"
 
 typedef void(^DownloadBlock)(FITDownLoadResponse *response);
+@protocol DownloadDelegate <NSObject>
+
+-(void)wz_download:(FITDownLoadResponse *)response;
+
+@end
 
 @interface FITDownSession : NSObject
 
 @property (nonatomic, copy) NSString *downloadUrl;
 @property (nonatomic, copy) NSString *identifier;
+@property (nonatomic, weak) id <DownloadDelegate> delegate;
 
 /**
  ** 初始化 配置一个下载任务 支持离线断点下载
