@@ -30,19 +30,20 @@
     if (image) {
         self.photoView.image = image;
     }else{
-        [self loadImageWithUrl:[NSURL URLWithString:video.videoUrl] forKey:video.key];
+        [self loadImageWithUrl:video.playURL forKey:video.key];
     }
    
 }
 
 -(void)loadImageWithUrl:(NSURL *)videoUrl forKey:(NSString *)key{
-    NSOperationQueue *queue = [HUserManager manager].queue;
-    [queue addOperationWithBlock:^{
+    [[[NSOperationQueue alloc]init] addOperationWithBlock:^{
         UIImage *image = [self getVideoPreViewImage:videoUrl];
-        [[HUserManager manager] cacheObject:image forKey:key];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            self.photoView.image = image;
-        }];
+        if (image) {
+            [[HUserManager manager] cacheObject:image forKey:key];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.photoView.image = image;
+            }];
+        }
     }];
 }
 

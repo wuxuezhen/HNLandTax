@@ -53,14 +53,6 @@
     return self;
 }
 
--(NSOperationQueue *)queue{
-    if (!_queue) {
-        _queue = [[NSOperationQueue alloc]init];
-        _queue.maxConcurrentOperationCount = 3;
-    }
-    return _queue;
-}
-
 -(void)addTask:(FITDownSession *)task{
     [self.downTasks addObject:task];
 }
