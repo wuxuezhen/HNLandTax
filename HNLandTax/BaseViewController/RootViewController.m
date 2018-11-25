@@ -8,7 +8,7 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()<UIGestureRecognizerDelegate>
+@interface RootViewController ()
 
 @end
 
@@ -16,14 +16,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-}
-
-#pragma mark - image handle
--(void)cameraOrAlbumObtainPhoto:(UIImage *)image{
-    
-}
--(void)photoToSave{
-    
 }
 
 //#pragma mark - 隐藏导航栏 shadow image

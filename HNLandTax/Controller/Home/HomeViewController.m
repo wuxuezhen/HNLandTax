@@ -23,8 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.videoUrls = [NSMutableArray arrayWithCapacity:0];
-    [self jm_createRightBarButtonItemWithTitle:@"添加"];
-    [self jm_createLeftBarButtonItemWithTitle:@"编辑"];
+    [self fit_createRightBarButtonItemWithTitle:@"添加"];
+    [self fit_createLeftBarButtonItemWithTitle:@"编辑"];
     NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"video"];
     if (arr && arr.count > 0) {
         [self.videoUrls addObjectsFromArray:arr];

@@ -13,6 +13,8 @@
 		5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
 		51185B7021A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
 		51185B7121A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
+		511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */; };
+		511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */; };
 		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
@@ -238,6 +240,8 @@
 		5110189C219AB990002E943D /* UIViewController+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingHud.m"; sourceTree = "<group>"; };
 		51185B6E21A6A8230060B015 /* WZVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZVideo.h; sourceTree = "<group>"; };
 		51185B6F21A6A8230060B015 /* WZVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZVideo.m; sourceTree = "<group>"; };
+		511CAD2421AA7B250023D184 /* UIViewController+WZCameraAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZCameraAlbum.h"; sourceTree = "<group>"; };
+		511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZCameraAlbum.m"; sourceTree = "<group>"; };
 		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
 		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
 		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
@@ -682,6 +686,8 @@
 				AEABC1CA213CD0D2009D099E /* UIViewController+Alert.m */,
 				AEABC1CB213CD0D2009D099E /* UIViewController+BarButtonItem.h */,
 				AEABC1CC213CD0D2009D099E /* UIViewController+BarButtonItem.m */,
+				511CAD2421AA7B250023D184 /* UIViewController+WZCameraAlbum.h */,
+				511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */,
 				AEABC1CD213CD0D2009D099E /* UIViewController+FITAppSettings.h */,
 				AEABC1CE213CD0D2009D099E /* UIViewController+FITAppSettings.m */,
 				5110189B219AB990002E943D /* UIViewController+LoadingHud.h */,
@@ -985,8 +991,8 @@
 				F2B91AB7214803AE003311A1 /* JMCacheManager.m */,
 				F2B91ABA214806F6003311A1 /* APPDevice.h */,
 				F2B91ABB214806F6003311A1 /* APPDevice.m */,
-				F22350B12074832E0062C828 /* RootViewController.m */,
 				F22350B22074832E0062C828 /* RootViewController.h */,
+				F22350B12074832E0062C828 /* RootViewController.m */,
 				F22350B32074832E0062C828 /* JMNavigationController */,
 				F22350B62074832E0062C828 /* JMTabBarController */,
 			);
@@ -1460,6 +1466,7 @@
 				AE86225E213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
 				F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */,
+				511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
 				F2B91AC321494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862274213CC31D00C93C9E /* APPConstants.m in Sources */,
@@ -1573,6 +1580,7 @@
 				AE86225F213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
 				F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */,
+				511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
 				F2B91AC421494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862275213CC31D00C93C9E /* APPConstants.m in Sources */,

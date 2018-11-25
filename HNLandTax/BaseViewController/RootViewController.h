@@ -9,13 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "UIViewController+BarButtonItem.h"
 @interface RootViewController : UIViewController
-@property (nonatomic, assign) BOOL banSlidingBack;
-
-/**
- image handle
- @param image 图片
- */
-- (void)cameraOrAlbumObtainPhoto:(UIImage *)image;
-- (void)photoToSave;
+@property (nonatomic, assign) BOOL wz_banPopGestureRecognizerEnable;
 
 @end
