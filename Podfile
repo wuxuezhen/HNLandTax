@@ -14,6 +14,7 @@ def share_pods
     pod 'JSONModel'
     pod 'JPush'
     pod 'UITextView+Placeholder'
+    pod 'UMengUShare', '~> 6.4.6'
     pod 'AMap3DMap'
     pod 'AMapLocation', '~> 2.6.1'
     pod 'ZFPlayer', '~> 3.0'
