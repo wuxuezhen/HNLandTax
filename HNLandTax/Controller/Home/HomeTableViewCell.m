@@ -29,35 +29,9 @@
     UIImage *image = (UIImage *)[[HUserManager manager] getCacheObjectForKey:video.key];
     if (image) {
         self.photoView.image = image;
-    }else{
-        [self loadImageWithUrl:[NSURL URLWithString:video.videoUrl] forKey:video.key];
     }
-   
 }
 
--(void)loadImageWithUrl:(NSURL *)videoUrl forKey:(NSString *)key{
-    NSOperationQueue *queue = [HUserManager manager].queue;
-    [queue addOperationWithBlock:^{
-        UIImage *image = [self getVideoPreViewImage:videoUrl];
-        [[HUserManager manager] cacheObject:image forKey:key];
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            self.photoView.image = image;
-        }];
-    }];
-}
-
-
-- (UIImage*) getVideoPreViewImage:(NSURL *)path{
-    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:path options:nil];
-    AVAssetImageGenerator *assetGen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
-    assetGen.appliesPreferredTrackTransform = YES;
-    CMTime time = CMTimeMake(600, 600);
-    NSError *error = nil;
-    CGImageRef image = [assetGen copyCGImageAtTime:time actualTime:NULL error:&error];
-    UIImage *videoImage = [[UIImage alloc] initWithCGImage:image];
-    CGImageRelease(image);
-    return videoImage;
-}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
