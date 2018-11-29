@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fit_setSuperNavnavigation];
 }
 
 //#pragma mark - 隐藏导航栏 shadow image

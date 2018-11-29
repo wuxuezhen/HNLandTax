@@ -14,25 +14,25 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - AMap3DMap (6.3.1):
+  - AMap3DMap (6.5.0):
     - AMapFoundation (~> 1.5)
-  - AMapFoundation (1.5.3)
+  - AMapFoundation (1.5.5)
   - AMapLocation (2.6.1):
     - AMapFoundation (~> 1.4)
-  - FMDB (2.7.2):
-    - FMDB/standard (= 2.7.2)
-  - FMDB/standard (2.7.2)
-  - JCore (1.1.7)
-  - JPush (3.0.6):
-    - JCore (~> 1.1.1)
-  - JSONModel (1.7.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - JCore (1.2.5)
+  - JPush (3.1.1.1):
+    - JCore (~> 1.2.5)
+  - JSONModel (1.8.0)
   - Masonry (1.1.0)
   - MBProgressHUD (1.0.0)
-  - MJRefresh (3.1.15.3)
-  - SDWebImage (4.3.3):
-    - SDWebImage/Core (= 4.3.3)
-  - SDWebImage/Core (4.3.3)
-  - "UITextView+Placeholder (1.2.0)"
+  - MJRefresh (3.1.15.7)
+  - SDWebImage (4.4.2):
+    - SDWebImage/Core (= 4.4.2)
+  - SDWebImage/Core (4.4.2)
+  - UITextView+Placeholder (1.2.1)
   - UMengUShare (6.4.8.2):
     - UMengUShare/Core (= 6.4.8.2)
     - UMengUShare/Network (= 6.4.8.2)
@@ -150,17 +150,17 @@ PODS:
     - UMengUShare/Core
   - UMengUShare/UI (6.4.8.2):
     - UMengUShare/Core
-  - YNPageViewController (0.1.8)
+  - YNPageViewController (0.1.9)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
-  - ZFPlayer (3.1.5):
-    - ZFPlayer/Core (= 3.1.5)
-  - ZFPlayer/AVPlayer (3.1.5):
+  - ZFPlayer (3.2.2):
+    - ZFPlayer/Core (= 3.2.2)
+  - ZFPlayer/AVPlayer (3.2.2):
     - ZFPlayer/Core
-  - ZFPlayer/ControlView (3.1.5):
+  - ZFPlayer/ControlView (3.2.2):
     - ZFPlayer/Core
-  - ZFPlayer/Core (3.1.5)
+  - ZFPlayer/Core (3.2.2)
 
 DEPENDENCIES:
   - AFNetworking
@@ -173,7 +173,7 @@ DEPENDENCIES:
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh
   - SDWebImage
-  - "UITextView+Placeholder"
+  - UITextView+Placeholder
   - UMengUShare (~> 6.4.6)
   - YNPageViewController (~> 0.1.8)
   - YYKit
@@ -181,45 +181,25 @@ DEPENDENCIES:
   - ZFPlayer/AVPlayer (~> 3.0)
   - ZFPlayer/ControlView (~> 3.0)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - AMap3DMap
-    - AMapFoundation
-    - AMapLocation
-    - FMDB
-    - JCore
-    - JPush
-    - JSONModel
-    - Masonry
-    - MBProgressHUD
-    - MJRefresh
-    - SDWebImage
-    - "UITextView+Placeholder"
-    - UMengUShare
-    - YNPageViewController
-    - YYKit
-    - ZFPlayer
-
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AMap3DMap: 7e1b2f2a1628a584f085d7f158d7c9835837e8c2
-  AMapFoundation: 58f883c80754c659cf626deb3150936bfe8f1772
+  AMap3DMap: cbe10cc4302ac3f2817ef4221e1259d7e18d1c2f
+  AMapFoundation: 652bd70ba579f48a98bdf0c74d6e62a89a06ca58
   AMapLocation: cf024b53dc03663efb4ea4bcce27d4cce58bb97a
-  FMDB: 6198a90e7b6900cfc046e6bc0ef6ebb7be9236aa
-  JCore: f7459c81c135281a874a6beafdd321666adcc834
-  JPush: c41be50eb1a574a66aeb68d237f00a4ec6ec3a82
-  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  JCore: 14706de2640b25fb77dbd02332696491407f37c9
+  JPush: 25dd9013fbe106082c14f9f30a82364ee98852fb
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
-  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
-  SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
-  "UITextView+Placeholder": 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  UITextView+Placeholder: 0c3efd97f37ea64bde7f34cc6e90fe02e87b3909
   UMengUShare: 370d180101e13ee0227ae657ab119ba97243d2b3
-  YNPageViewController: fdd2b7ad7fa9b2100f1498a532641ab826fca0d8
+  YNPageViewController: 38dd5441005b4472fc59ed9e57ae73e72de86564
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
-  ZFPlayer: 8273a62fcc76f451db043ce640434d5f8799c09a
+  ZFPlayer: 8547effaab9e2764c2e9f72ecf32530d6bd96165
 
 PODFILE CHECKSUM: 816e58106ccb912b2431327f7421034fed67ebba
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.4.0

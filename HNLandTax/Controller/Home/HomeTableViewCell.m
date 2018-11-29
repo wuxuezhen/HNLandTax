@@ -47,7 +47,6 @@
     }];
 }
 
-
 - (UIImage*) getVideoPreViewImage:(NSURL *)path{
     AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:path options:nil];
     AVAssetImageGenerator *assetGen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
@@ -59,7 +58,7 @@
     CGImageRelease(image);
     return videoImage;
 }
->>>>>>> e8bc6063640af50dd33a2d703a7f72ae83fffc78
+
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

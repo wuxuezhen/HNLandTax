@@ -105,6 +105,8 @@
 		AEE6A9382160969F0015C9EF /* FTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6A9372160969F0015C9EF /* FTTViewController.m */; };
 		AEE6A9392160969F0015C9EF /* FTTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AEE6A9372160969F0015C9EF /* FTTViewController.m */; };
 		DD145844C403DC630B9A64B5 /* Pods_HNLandTax.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */; };
+		F2128DA221AFCC7200592C43 /* WZLocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = F2128DA121AFCC7200592C43 /* WZLocalAuthentication.m */; };
+		F2128DA321AFCC7200592C43 /* WZLocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = F2128DA121AFCC7200592C43 /* WZLocalAuthentication.m */; };
 		F214D4A7214E58BA0043690C /* video.json in Resources */ = {isa = PBXBuildFile; fileRef = F214D4A6214E58BA0043690C /* video.json */; };
 		F214D4A8214E58BA0043690C /* video.json in Resources */ = {isa = PBXBuildFile; fileRef = F214D4A6214E58BA0043690C /* video.json */; };
 		F2234FD3207476DB0062C828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2234FD1207476DB0062C828 /* Main.storyboard */; };
@@ -339,6 +341,8 @@
 		AEE6A9362160969F0015C9EF /* FTTViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTTViewController.h; sourceTree = "<group>"; };
 		AEE6A9372160969F0015C9EF /* FTTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTTViewController.m; sourceTree = "<group>"; };
 		CF193BDDFC8AD49174162DDF /* Pods-HNLandTaxBeta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.debug.xcconfig"; sourceTree = "<group>"; };
+		F2128DA021AFCC7200592C43 /* WZLocalAuthentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZLocalAuthentication.h; sourceTree = "<group>"; };
+		F2128DA121AFCC7200592C43 /* WZLocalAuthentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZLocalAuthentication.m; sourceTree = "<group>"; };
 		F214D4A6214E58BA0043690C /* video.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = video.json; sourceTree = "<group>"; };
 		F2234FC8207476DB0062C828 /* HNLandTax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HNLandTax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2234FD2207476DB0062C828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -1066,6 +1070,8 @@
 				F2B91ABE21494ADC003311A1 /* VideoPlay */,
 				F2235116207486230062C828 /* HomeViewController.h */,
 				F2235117207486230062C828 /* HomeViewController.m */,
+				F2128DA021AFCC7200592C43 /* WZLocalAuthentication.h */,
+				F2128DA121AFCC7200592C43 /* WZLocalAuthentication.m */,
 				F2B91AC721494E14003311A1 /* HomeTableViewCell.h */,
 				F2B91AC821494E14003311A1 /* HomeTableViewCell.m */,
 				F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */,
@@ -1495,6 +1501,7 @@
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
 				512498992199580700C40B18 /* CWCarousel.m in Sources */,
+				F2128DA221AFCC7200592C43 /* WZLocalAuthentication.m in Sources */,
 				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
 				51185B7021A6A8230060B015 /* WZVideo.m in Sources */,
@@ -1611,6 +1618,7 @@
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
 				5124989A2199580700C40B18 /* CWCarousel.m in Sources */,
+				F2128DA321AFCC7200592C43 /* WZLocalAuthentication.m in Sources */,
 				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
 				51185B7121A6A8230060B015 /* WZVideo.m in Sources */,
@@ -1827,7 +1835,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6ZKMB3R7AA;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1849,7 +1857,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6ZKMB3R7AA;
+				DEVELOPMENT_TEAM = YJUB5X35HA;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

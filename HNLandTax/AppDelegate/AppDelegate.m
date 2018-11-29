@@ -25,6 +25,7 @@
     
     [JMLocationManager shareManager];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     self.window.rootViewController = [[JMTabBarViewController alloc]init];
     return YES;

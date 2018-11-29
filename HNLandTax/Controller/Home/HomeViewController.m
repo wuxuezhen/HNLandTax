@@ -12,16 +12,31 @@
 #import "JMJsonHandle.h"
 #import "JMWeiDu.h"
 #import "WZVideo.h"
+#import "WZLocalAuthentication.h"
+
 #define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
 @interface HomeViewController ()
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSMutableArray *videoUrls;
+@property (nonatomic, strong) WZLocalAuthentication *authentication;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self wx_initUI];
+    self.tableView.hidden = YES;
+    self.authentication = [[WZLocalAuthentication alloc]init];
+    __weak typeof(self) this  = self;
+    [self.authentication wz_evaluatePolicy:^(BOOL success, NSString * _Nullable message, NSError * _Nullable error) {
+        if (success) {
+            self.tableView.hidden = NO;
+        }
+    }];
+}
+
+-(void)wx_initUI{
     self.videoUrls = [NSMutableArray arrayWithCapacity:0];
     [self fit_createRightBarButtonItemWithTitle:@"添加"];
     [self fit_createLeftBarButtonItemWithTitle:@"编辑"];
@@ -46,7 +61,7 @@
     [self WZLog];
     
     if (@available(iOS 11.0, *)) {
-//        self.navigationItem.hidesSearchBarWhenScrolling = NO;
+        //        self.navigationItem.hidesSearchBarWhenScrolling = NO;
         self.navigationItem.searchController = self.searchController;
     } else {
         // Fallback on earlier versions
