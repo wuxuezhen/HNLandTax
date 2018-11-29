@@ -16,9 +16,11 @@
     if (self.navigationController.viewControllers.count>1) {
         self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc]init];
         self.navigationItem.backBarButtonItem.title = @"返回";
+        //        self.navigationItem.leftItemsSupplementBackButton = YES;
+        //        self.navigationController.navigationBar.backIndicatorImage = [UIImage imageNamed:@"backImageName"];
+        //        self.navigationController.navigationBar.backIndicatorTransitionMaskImage = [UIImage imageNamed:@"backImageName"];
     }
 }
-
 
 
 

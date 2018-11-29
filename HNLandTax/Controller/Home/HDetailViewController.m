@@ -49,7 +49,7 @@
         self.stateLabel.text = @"未下载";
     }
     self.nameLabel.text = self.video.videoUrl;
-    [self setVideoUrl:[NSURL URLWithString:self.video.videoUrl]];
+    [self setVideoUrl:self.video.playURL];
     
     FITDownSession *session = [[HUserManager manager] taskForKey:self.video.key];
     if (session) {
@@ -150,8 +150,7 @@
 }
 
 -(void)loadImageWithUrl:(NSURL *)videoUrl forKey:(NSString *)key{
-    NSOperationQueue *queue = [HUserManager manager].queue;
-    [queue addOperationWithBlock:^{
+    [[[NSOperationQueue alloc]init] addOperationWithBlock:^{
         UIImage *image = [self getVideoPreViewImage:videoUrl];
         if (image) {
             [[HUserManager manager] cacheObject:image forKey:key];

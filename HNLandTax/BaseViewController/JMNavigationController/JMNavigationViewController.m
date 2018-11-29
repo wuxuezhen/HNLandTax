@@ -8,7 +8,8 @@
 
 #import "JMNavigationViewController.h"
 #import "UIColor+JMColor.h"
-@interface JMNavigationViewController ()
+#import "RootViewController.h"
+@interface JMNavigationViewController ()<UIGestureRecognizerDelegate,UINavigationControllerDelegate>
 
 @end
 
@@ -16,6 +17,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.delegate = self;
+    self.interactivePopGestureRecognizer.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -30,11 +33,11 @@
 -(void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
    if (self.childViewControllers.count > 0){
        viewController.hidesBottomBarWhenPushed = YES;
-//       UIImage *image = [UIImage imageNamed:@"WD_NavgationBack_Normal1"];
-//       viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image
-//                                                                                         style:UIBarButtonItemStylePlain
-//                                                                                        target:self
-//                                                                                        action:@selector(jm_back)];
+       UIImage *image = [UIImage imageNamed:@"WD_NavgationBack_Normal1"];
+       viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:image
+                                                                                         style:UIBarButtonItemStylePlain
+                                                                                        target:self
+                                                                                        action:@selector(jm_back)];
    }
     [super pushViewController:viewController animated:animated];
 }
@@ -42,6 +45,32 @@
 -(void)jm_back{
     [self popViewControllerAnimated:YES];
 }
+
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    return self.childViewControllers.count > 1;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    
+    if ([navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
+        navigationController.interactivePopGestureRecognizer.enabled = YES;
+    }
+    
+    if ([viewController isKindOfClass:RootViewController.class]) {
+        RootViewController *root = (RootViewController *)viewController;
+        if ([root respondsToSelector:@selector(wz_banPopGestureRecognizerEnable)] && root.wz_banPopGestureRecognizerEnable) {
+            navigationController.interactivePopGestureRecognizer.enabled = NO;
+            navigationController.interactivePopGestureRecognizer.delegate = nil;
+        }
+    }
+    
+    
+    if (navigationController.viewControllers.count == 1) {
+        navigationController.interactivePopGestureRecognizer.enabled = NO;
+        navigationController.interactivePopGestureRecognizer.delegate = nil;
+    }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

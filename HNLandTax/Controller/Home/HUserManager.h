@@ -10,8 +10,9 @@
 #import "FITDownSession.h"
 @interface HUserManager : NSObject
 +(instancetype)manager;
-@property (nonatomic, strong) NSOperationQueue *queue;
+
 -(void)cacheObject:(id)object forKey:(NSString *)key;
+
 -(id)getCacheObjectForKey:(NSString *)key;
 
 

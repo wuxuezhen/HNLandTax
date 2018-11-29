@@ -13,12 +13,18 @@
 		5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
 		51185B7021A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
 		51185B7121A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
+		511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */; };
+		511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */; };
 		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
 		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
 		5124989C2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
 		5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
 		5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
+		5161BA0121AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */; };
+		5161BA0221AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */; };
+		5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0421AD3FB300D2F9F3 /* WZShare.m */; };
+		5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0421AD3FB300D2F9F3 /* WZShare.m */; };
 		517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
 		517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
 		517D8C5C21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
@@ -238,6 +244,8 @@
 		5110189C219AB990002E943D /* UIViewController+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadingHud.m"; sourceTree = "<group>"; };
 		51185B6E21A6A8230060B015 /* WZVideo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZVideo.h; sourceTree = "<group>"; };
 		51185B6F21A6A8230060B015 /* WZVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZVideo.m; sourceTree = "<group>"; };
+		511CAD2421AA7B250023D184 /* UIViewController+WZCameraAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZCameraAlbum.h"; sourceTree = "<group>"; };
+		511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZCameraAlbum.m"; sourceTree = "<group>"; };
 		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
 		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
 		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
@@ -245,6 +253,10 @@
 		512498932199580600C40B18 /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
 		512498952199580600C40B18 /* CWPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPageControl.h; sourceTree = "<group>"; };
 		512498962199580600C40B18 /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
+		5161B9FF21AD3F8A00D2F9F3 /* UIViewController+WZShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZShare.h"; sourceTree = "<group>"; };
+		5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZShare.m"; sourceTree = "<group>"; };
+		5161BA0321AD3FB300D2F9F3 /* WZShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZShare.h; sourceTree = "<group>"; };
+		5161BA0421AD3FB300D2F9F3 /* WZShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZShare.m; sourceTree = "<group>"; };
 		517D8C5621A2973C004A4744 /* JMCoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
 		517D8C5721A2973C004A4744 /* JMCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCoreDataManager.m; sourceTree = "<group>"; };
 		517D8C5A21A29883004A4744 /* coredatamr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coredatamr.h; sourceTree = "<group>"; };
@@ -500,6 +512,8 @@
 			children = (
 				51185B6E21A6A8230060B015 /* WZVideo.h */,
 				51185B6F21A6A8230060B015 /* WZVideo.m */,
+				5161BA0321AD3FB300D2F9F3 /* WZShare.h */,
+				5161BA0421AD3FB300D2F9F3 /* WZShare.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -682,6 +696,10 @@
 				AEABC1CA213CD0D2009D099E /* UIViewController+Alert.m */,
 				AEABC1CB213CD0D2009D099E /* UIViewController+BarButtonItem.h */,
 				AEABC1CC213CD0D2009D099E /* UIViewController+BarButtonItem.m */,
+				511CAD2421AA7B250023D184 /* UIViewController+WZCameraAlbum.h */,
+				511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */,
+				5161B9FF21AD3F8A00D2F9F3 /* UIViewController+WZShare.h */,
+				5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */,
 				AEABC1CD213CD0D2009D099E /* UIViewController+FITAppSettings.h */,
 				AEABC1CE213CD0D2009D099E /* UIViewController+FITAppSettings.m */,
 				5110189B219AB990002E943D /* UIViewController+LoadingHud.h */,
@@ -985,8 +1003,8 @@
 				F2B91AB7214803AE003311A1 /* JMCacheManager.m */,
 				F2B91ABA214806F6003311A1 /* APPDevice.h */,
 				F2B91ABB214806F6003311A1 /* APPDevice.m */,
-				F22350B12074832E0062C828 /* RootViewController.m */,
 				F22350B22074832E0062C828 /* RootViewController.h */,
+				F22350B12074832E0062C828 /* RootViewController.m */,
 				F22350B32074832E0062C828 /* JMNavigationController */,
 				F22350B62074832E0062C828 /* JMTabBarController */,
 			);
@@ -1288,10 +1306,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterKitResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterShareExtensionUIResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1400,10 +1430,22 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/QQ/QQSDK/TencentOpenApi_IOS_Bundle.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Sina/SinaSDK/WeiboSDK.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterKitResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/SocialLibraries/Twitter/TwitterShareExtensionUIResources.bundle",
+				"${PODS_ROOT}/UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKPromptResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TencentOpenApi_IOS_Bundle.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/WeiboSDK.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterShareExtensionUIResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/UMSocialSDKResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1418,6 +1460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F22350BB2074832F0062C828 /* DismissTransitionAnimated.m in Sources */,
+				5161BA0121AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */,
 				F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
 				5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */,
@@ -1443,6 +1486,7 @@
 				AE862262213CC31D00C93C9E /* FITDownSession.m in Sources */,
 				AE86227A213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
 				F22350C62074832F0062C828 /* DatePickerView.m in Sources */,
+				5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */,
 				F22350D22074832F0062C828 /* JMPermissions.m in Sources */,
 				F2235126207486770062C828 /* MineViewController.m in Sources */,
@@ -1460,6 +1504,7 @@
 				AE86225E213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
 				F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */,
+				511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
 				F2B91AC321494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862274213CC31D00C93C9E /* APPConstants.m in Sources */,
@@ -1531,6 +1576,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2735787207493CE0029AE78 /* DismissTransitionAnimated.m in Sources */,
+				5161BA0221AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */,
 				F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
 				5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */,
@@ -1556,6 +1602,7 @@
 				AE862263213CC31D00C93C9E /* FITDownSession.m in Sources */,
 				AE86227B213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
 				F273579A207493CE0029AE78 /* DatePickerView.m in Sources */,
+				5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */,
 				F273579C207493CE0029AE78 /* JMPermissions.m in Sources */,
 				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
@@ -1573,6 +1620,7 @@
 				AE86225F213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
 				F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */,
+				511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
 				F2B91AC421494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862275213CC31D00C93C9E /* APPConstants.m in Sources */,
@@ -1779,7 +1827,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YJUB5X35HA;
+				DEVELOPMENT_TEAM = 6ZKMB3R7AA;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1800,7 +1849,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YJUB5X35HA;
+				DEVELOPMENT_TEAM = 6ZKMB3R7AA;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HNLandTax/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

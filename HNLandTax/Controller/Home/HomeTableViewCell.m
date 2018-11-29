@@ -30,8 +30,36 @@
     if (image) {
         self.photoView.image = image;
     }
+//    else{
+//        [self loadImageWithUrl:video.playURL forKey:video.key];
+//    }
 }
 
+-(void)loadImageWithUrl:(NSURL *)videoUrl forKey:(NSString *)key{
+    [[[NSOperationQueue alloc]init] addOperationWithBlock:^{
+        UIImage *image = [self getVideoPreViewImage:videoUrl];
+        if (image) {
+            [[HUserManager manager] cacheObject:image forKey:key];
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.photoView.image = image;
+            }];
+        }
+    }];
+}
+
+
+- (UIImage*) getVideoPreViewImage:(NSURL *)path{
+    AVURLAsset *asset = [[AVURLAsset alloc] initWithURL:path options:nil];
+    AVAssetImageGenerator *assetGen = [[AVAssetImageGenerator alloc] initWithAsset:asset];
+    assetGen.appliesPreferredTrackTransform = YES;
+    CMTime time = CMTimeMake(600, 600);
+    NSError *error = nil;
+    CGImageRef image = [assetGen copyCGImageAtTime:time actualTime:NULL error:&error];
+    UIImage *videoImage = [[UIImage alloc] initWithCGImage:image];
+    CGImageRelease(image);
+    return videoImage;
+}
+>>>>>>> e8bc6063640af50dd33a2d703a7f72ae83fffc78
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

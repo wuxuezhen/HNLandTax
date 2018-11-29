@@ -23,7 +23,7 @@ static NSString *leftImage = @"WD_NavgationBack_Normal1";
 @implementation JMWebViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self jm_createLeftBarButtonItemWithImage:leftImage];
+    [self fit_createLeftBarButtonItemWithImage:leftImage];
     [self loadWebView:self.url];
     [self createProgressView];
 }
