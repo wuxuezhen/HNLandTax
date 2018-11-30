@@ -29,7 +29,6 @@
     [super viewDidLoad];
     [self wz_initUI];
     [self wz_authentication];
-   
 }
 
 -(void)wz_initUI{
