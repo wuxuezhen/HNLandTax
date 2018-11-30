@@ -12,6 +12,7 @@
 #import "JMJsonHandle.h"
 #import "JMWeiDu.h"
 #import "WZVideo.h"
+#import "WZAuthenView.h"
 #import "WZLocalAuthentication.h"
 
 #define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
@@ -19,24 +20,19 @@
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSMutableArray *videoUrls;
 @property (nonatomic, strong) WZLocalAuthentication *authentication;
+@property (nonatomic, strong) WZAuthenView *authenView;
 @end
 
 @implementation HomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self wx_initUI];
-    self.tableView.hidden = YES;
-    self.authentication = [[WZLocalAuthentication alloc]init];
-    __weak typeof(self) this  = self;
-    [self.authentication wz_evaluatePolicy:^(BOOL success, NSString * _Nullable message, NSError * _Nullable error) {
-        if (success) {
-            self.tableView.hidden = NO;
-        }
-    }];
+    [self wz_initUI];
+    [self wz_authentication];
+   
 }
 
--(void)wx_initUI{
+-(void)wz_initUI{
     self.videoUrls = [NSMutableArray arrayWithCapacity:0];
     [self fit_createRightBarButtonItemWithTitle:@"添加"];
     [self fit_createLeftBarButtonItemWithTitle:@"编辑"];
@@ -69,6 +65,8 @@
     [self.tableView registerNib:[HomeTableViewCell nib]
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
+    
+    [self.view addSubview:self.authenView];
 }
 
 -(void)resetData{
@@ -87,12 +85,43 @@
     NSLog(@"str = %@",[str substringToIndex:str.length-1]);
 }
 
--(void)jm_leftBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
+
+-(void)wz_authentication{
+    if ([self.authentication wz_canEvaluatePolicy]) {
+        __weak typeof(self) this  = self;
+        [self.authentication wz_evaluatePolicy:^(BOOL success, NSString * _Nullable message) {
+            [this refreshUIWithMessage:message success:success];
+        }];
+    }else{
+        self.authenView.hidden = YES;
+    }
+}
+
+
+
+- (void)refreshUIWithMessage:(NSString *)message success:(BOOL)success {
+    
+    NSString *title = success ? @"指纹验证成功":@"指纹验证失败";
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:title
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    __weak typeof(self) this  = self;
+    [self presentViewController:alert animated:YES completion:^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [alert dismissViewControllerAnimated:YES completion:nil];
+            this.authenView.hidden = success;
+        });
+    }];
+    
+}
+
+
+-(void)fit_leftBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
     self.tableView.editing = !self.tableView.editing;
     barButtonItem.title = self.tableView.editing ? @"取消" : @"编辑";
 }
 
--(void)jm_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
+-(void)fit_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
     NSString *text = self.searchController.searchBar.text;
     if (text.length > 0) {
         [self.videoUrls insertObject:text atIndex:0];
@@ -153,8 +182,24 @@
     }
     return _searchController;
 }
-    
 
+-(WZLocalAuthentication *)authentication{
+    if (!_authentication) {
+        _authentication = [[WZLocalAuthentication alloc]init];
+    }
+    return _authentication;
+}
+
+-(WZAuthenView *)authenView{
+    if (!_authenView) {
+        __weak typeof(self) this  = self;
+        _authenView = [[WZAuthenView alloc]initWithFrame:self.view.bounds];
+        [_authenView setTouchAuthBlock:^{
+            [this wz_authentication];
+        }];
+    }
+    return _authenView;
+}
 /*
 #pragma mark - Navigation
 

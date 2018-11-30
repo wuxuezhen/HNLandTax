@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WZLocalAuthentication : NSObject
--(void)wz_evaluatePolicy:(void(^)(BOOL, NSString * _Nullable, NSError * _Nullable))replyBlock;
+
+-(BOOL)wz_canEvaluatePolicy;
+
+-(void)wz_evaluatePolicy:(void(^)(BOOL, NSString * _Nullable))replyBlock;
+
 @end
 
 
