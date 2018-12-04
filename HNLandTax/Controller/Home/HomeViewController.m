@@ -19,6 +19,7 @@
 @interface HomeViewController ()
 @property (nonatomic, strong) UISearchController *searchController;
 @property (nonatomic, strong) NSMutableArray *videoUrls;
+@property (nonatomic, strong) NSMutableArray *deleteUrls;
 @property (nonatomic, strong) WZLocalAuthentication *authentication;
 @property (nonatomic, strong) WZAuthenView *authenView;
 @end
@@ -32,10 +33,12 @@
 }
 
 -(void)wz_initUI{
-    self.videoUrls = [NSMutableArray arrayWithCapacity:0];
+    self.videoUrls  = [NSMutableArray arrayWithCapacity:0];
+    self.deleteUrls = [NSMutableArray arrayWithCapacity:0];
     [self fit_createRightBarButtonItemWithTitle:@"添加"];
     [self fit_createLeftBarButtonItemWithTitle:@"编辑"];
     NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"video"];
+    NSArray *deleteArr = [[NSUserDefaults standardUserDefaults] objectForKey:@"deleteVideo"];
     if (arr && arr.count > 0) {
         [self.videoUrls addObjectsFromArray:arr];
     }
@@ -47,6 +50,13 @@
             [self.videoUrls addObject:url];
         }
     }
+    
+    for (WZVideo *video in deleteArr) {
+        if (![self.videoUrls containsObject:video.videoUrl]) {
+            [self.videoUrls removeObject:video.videoUrl];
+        }
+    }
+    
     [self.videoUrls sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
         return [obj1 compare:obj2];
     }];
@@ -149,11 +159,12 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     WZVideo *video = self.dataArray[indexPath.row];
     [video wz_removeObjectForKey];
+    [self.deleteUrls addObject:video];
     [self.dataArray removeObjectAtIndex:indexPath.row];
     [self.videoUrls removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [[NSUserDefaults standardUserDefaults] setObject:self.videoUrls forKey:@"video"];
-    
+    [[NSUserDefaults standardUserDefaults] setObject:self.deleteUrls forKey:@"deleteVideo"];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
