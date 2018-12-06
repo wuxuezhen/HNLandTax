@@ -70,4 +70,6 @@
 /** 数据转型后得到model类 **/
 -(Class)jm_pageModelClass;
 
+-(void)wz_noInsetAdjustmentBehavior;
+
 @end

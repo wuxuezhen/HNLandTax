@@ -22,7 +22,6 @@
 }
 
 #pragma mark - 默认创建
-
 -(void)jm_tableViewDefaut{
     [self.view addSubview:self.tableView];
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -39,6 +38,17 @@
         make.leading.trailing.bottom.equalTo(self.view);
         make.top.equalTo(self.mas_topLayoutGuide);
     }];
+}
+
+-(void)wz_noInsetAdjustmentBehavior{
+    if (@available(iOS 11.0, *)) {
+        if ([self.tableView respondsToSelector:@selector(setContentInsetAdjustmentBehavior:)]) {
+            self.tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+        }
+    }else{
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
+    self.edgesForExtendedLayout =  UIRectEdgeAll;
 }
 
 #pragma mark -  Page MJRefresh

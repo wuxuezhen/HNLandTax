@@ -8,17 +8,47 @@
 
 #import <Foundation/Foundation.h>
 #import <AMapLocationKit/AMapLocationKit.h>
+
+typedef void (^wz_locationHandler)(CLLocation *_Nullable , AMapLocationReGeocode * _Nullable , NSError * _Nullable );
 @interface JMLocationManager : NSObject
 
-@property (nonatomic, assign) CLLocationCoordinate2D coordinate;
-@property (nonatomic, copy) NSString *currentCity;
-@property (nonatomic, assign) BOOL allowLocation;
+@property (nonatomic)         CLLocationCoordinate2D  coordinate;
+@property (nonatomic, strong) AMapLocationReGeocode  *reGeocode;
+@property (nonatomic, copy)   NSString               *currentCity;
+@property (nonatomic, assign) BOOL                   isLocationSuccess;
 
 + (instancetype)shareManager;
 
-- (void)startAMapLocationWithReGeocode:(BOOL)ReGeocode
-                              location:(void (^_Nullable)(CLLocationCoordinate2D coordinate,AMapLocationReGeocode *reGeocode))location;
+/**
+ 开始定位 默认单次定位
+ @param reGeocode 城市信息
+ @param locationHandler 回调
+ */
+- (void)wz_startAMapLocationWithReGeocode:(BOOL)reGeocode
+                          locationHandler:(wz_locationHandler)locationHandler;
 
-+ (BOOL)jm_openLocation;
+/**
+ 开始定位 默认不反地理编码
+ @param updating 是否持续定位
+ @param locationHandler 回调
+ */
+- (void)wz_startAMapLocationWithUpdating:(BOOL)updating
+                          locationHandler:(wz_locationHandler)locationHandler;
+
+/**
+ 开始定位
+ */
+-(void)wz_startUpdatingLocation;
+
+/**
+ 停止定位
+ */
+-(void)wz_stopUpdatingLocation;
+
+/**
+ 是否打开定位
+ @return yes/no
+ */
++ (BOOL)wz_openLocation;
 
 @end

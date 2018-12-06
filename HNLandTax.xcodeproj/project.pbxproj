@@ -125,7 +125,6 @@
 		F22350C52074832F0062C828 /* ValuePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350182074832E0062C828 /* ValuePickerView.m */; };
 		F22350C62074832F0062C828 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350192074832E0062C828 /* DatePickerView.m */; };
 		F22350C72074832F0062C828 /* JMCityPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = F223501C2074832E0062C828 /* JMCityPicker.m */; };
-		F22350D22074832F0062C828 /* JMPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350352074832E0062C828 /* JMPermissions.m */; };
 		F22350D32074832F0062C828 /* JMPhotosPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350362074832E0062C828 /* JMPhotosPermission.m */; };
 		F22350E22074832F0062C828 /* JMTip.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350512074832E0062C828 /* JMTip.m */; };
 		F22350E32074832F0062C828 /* JMDateFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350552074832E0062C828 /* JMDateFormat.m */; };
@@ -178,7 +177,6 @@
 		F2735796207493CE0029AE78 /* JMUI.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509B2074832E0062C828 /* JMUI.m */; };
 		F273579A207493CE0029AE78 /* DatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350192074832E0062C828 /* DatePickerView.m */; };
 		F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350062074832E0062C828 /* JMRefreshNormalHeader.m */; };
-		F273579C207493CE0029AE78 /* JMPermissions.m in Sources */ = {isa = PBXBuildFile; fileRef = F22350352074832E0062C828 /* JMPermissions.m */; };
 		F273579E207493CE0029AE78 /* MineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235124207486760062C828 /* MineViewController.m */; };
 		F273579F207493CE0029AE78 /* FindViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F2235121207486760062C828 /* FindViewController.m */; };
 		F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F223509E2074832E0062C828 /* JMBaseCollectionViewViewController.m */; };
@@ -376,9 +374,7 @@
 		F223501A2074832E0062C828 /* ValuePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValuePickerView.h; sourceTree = "<group>"; };
 		F223501C2074832E0062C828 /* JMCityPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMCityPicker.m; sourceTree = "<group>"; };
 		F223501D2074832E0062C828 /* JMCityPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMCityPicker.h; sourceTree = "<group>"; };
-		F22350332074832E0062C828 /* JMPermissions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPermissions.h; sourceTree = "<group>"; };
 		F22350342074832E0062C828 /* JMPhotosPermission.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMPhotosPermission.h; sourceTree = "<group>"; };
-		F22350352074832E0062C828 /* JMPermissions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPermissions.m; sourceTree = "<group>"; };
 		F22350362074832E0062C828 /* JMPhotosPermission.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMPhotosPermission.m; sourceTree = "<group>"; };
 		F22350512074832E0062C828 /* JMTip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMTip.m; sourceTree = "<group>"; };
 		F22350522074832E0062C828 /* JMDateFormat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMDateFormat.h; sourceTree = "<group>"; };
@@ -907,9 +903,7 @@
 		F22350322074832E0062C828 /* Permission */ = {
 			isa = PBXGroup;
 			children = (
-				F22350332074832E0062C828 /* JMPermissions.h */,
 				F22350342074832E0062C828 /* JMPhotosPermission.h */,
-				F22350352074832E0062C828 /* JMPermissions.m */,
 				F22350362074832E0062C828 /* JMPhotosPermission.m */,
 			);
 			path = Permission;
@@ -1508,7 +1502,6 @@
 				F22350C62074832F0062C828 /* DatePickerView.m in Sources */,
 				5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */,
-				F22350D22074832F0062C828 /* JMPermissions.m in Sources */,
 				F2235126207486770062C828 /* MineViewController.m in Sources */,
 				F2B91AD021495371003311A1 /* HUserManager.m in Sources */,
 				AE862272213CC31D00C93C9E /* FITResponseModel.m in Sources */,
@@ -1626,7 +1619,6 @@
 				F273579A207493CE0029AE78 /* DatePickerView.m in Sources */,
 				5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */,
-				F273579C207493CE0029AE78 /* JMPermissions.m in Sources */,
 				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
 				F2B91AD121495371003311A1 /* HUserManager.m in Sources */,
 				AE862273213CC31D00C93C9E /* FITResponseModel.m in Sources */,
