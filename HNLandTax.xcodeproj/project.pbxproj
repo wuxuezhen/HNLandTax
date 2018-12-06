@@ -217,6 +217,10 @@
 		F2B91ACD21494E14003311A1 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */; };
 		F2B91AD021495371003311A1 /* HUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ACF21495371003311A1 /* HUserManager.m */; };
 		F2B91AD121495371003311A1 /* HUserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F2B91ACF21495371003311A1 /* HUserManager.m */; };
+		F2BE314A21B95006004C1330 /* UIViewController+JMTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE314921B95006004C1330 /* UIViewController+JMTheme.m */; };
+		F2BE314B21B95006004C1330 /* UIViewController+JMTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE314921B95006004C1330 /* UIViewController+JMTheme.m */; };
+		F2BE314E21B950AC004C1330 /* UIImage+ImageExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE314D21B950AC004C1330 /* UIImage+ImageExtent.m */; };
+		F2BE314F21B950AC004C1330 /* UIImage+ImageExtent.m in Sources */ = {isa = PBXBuildFile; fileRef = F2BE314D21B950AC004C1330 /* UIImage+ImageExtent.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -458,6 +462,10 @@
 		F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		F2B91ACE21495371003311A1 /* HUserManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HUserManager.h; sourceTree = "<group>"; };
 		F2B91ACF21495371003311A1 /* HUserManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HUserManager.m; sourceTree = "<group>"; };
+		F2BE314821B95006004C1330 /* UIViewController+JMTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JMTheme.h"; sourceTree = "<group>"; };
+		F2BE314921B95006004C1330 /* UIViewController+JMTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JMTheme.m"; sourceTree = "<group>"; };
+		F2BE314C21B950AC004C1330 /* UIImage+ImageExtent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageExtent.h"; sourceTree = "<group>"; };
+		F2BE314D21B950AC004C1330 /* UIImage+ImageExtent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageExtent.m"; sourceTree = "<group>"; };
 		FB817D405BD07A9F91B9D26E /* Pods_HNLandTax.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HNLandTax.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -709,6 +717,8 @@
 			children = (
 				AEABC1C9213CD0D2009D099E /* UIViewController+Alert.h */,
 				AEABC1CA213CD0D2009D099E /* UIViewController+Alert.m */,
+				F2BE314821B95006004C1330 /* UIViewController+JMTheme.h */,
+				F2BE314921B95006004C1330 /* UIViewController+JMTheme.m */,
 				AEABC1CB213CD0D2009D099E /* UIViewController+BarButtonItem.h */,
 				AEABC1CC213CD0D2009D099E /* UIViewController+BarButtonItem.m */,
 				511CAD2421AA7B250023D184 /* UIViewController+WZCameraAlbum.h */,
@@ -728,6 +738,8 @@
 			children = (
 				AEABC1D2213CD0D2009D099E /* UIImage+Save.h */,
 				AEABC1D3213CD0D2009D099E /* UIImage+Save.m */,
+				F2BE314C21B950AC004C1330 /* UIImage+ImageExtent.h */,
+				F2BE314D21B950AC004C1330 /* UIImage+ImageExtent.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -1496,6 +1508,7 @@
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
 				AE86226C213CC31D00C93C9E /* FITResponseSerializer.m in Sources */,
 				F22350C52074832F0062C828 /* ValuePickerView.m in Sources */,
+				F2BE314E21B950AC004C1330 /* UIImage+ImageExtent.m in Sources */,
 				F22351002074832F0062C828 /* JMUI.m in Sources */,
 				AE862262213CC31D00C93C9E /* FITDownSession.m in Sources */,
 				AE86227A213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
@@ -1519,6 +1532,7 @@
 				F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */,
 				511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
+				F2BE314A21B95006004C1330 /* UIViewController+JMTheme.m in Sources */,
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
 				F2B91AC321494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862274213CC31D00C93C9E /* APPConstants.m in Sources */,
@@ -1613,6 +1627,7 @@
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
 				AE86226D213CC31D00C93C9E /* FITResponseSerializer.m in Sources */,
 				F2735795207493CE0029AE78 /* ValuePickerView.m in Sources */,
+				F2BE314F21B950AC004C1330 /* UIImage+ImageExtent.m in Sources */,
 				F2735796207493CE0029AE78 /* JMUI.m in Sources */,
 				AE862263213CC31D00C93C9E /* FITDownSession.m in Sources */,
 				AE86227B213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
@@ -1636,6 +1651,7 @@
 				F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */,
 				511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
+				F2BE314B21B95006004C1330 /* UIViewController+JMTheme.m in Sources */,
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
 				F2B91AC421494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862275213CC31D00C93C9E /* APPConstants.m in Sources */,
