@@ -40,6 +40,7 @@
     }];
 }
 
+#pragma mark - noInsetAdjustmentBehavior
 -(void)wz_noInsetAdjustmentBehavior{
     if (@available(iOS 11.0, *)) {
         if ([self.tableView respondsToSelector:@selector(setContentInsetAdjustmentBehavior:)]) {
@@ -66,7 +67,6 @@
 
 
 #pragma mark - MJRefresh
-
 - (void)mj_refresh {
     [self mj_headerRefresh];
     [self mj_footerRefresh];
@@ -171,30 +171,31 @@
                     strongSelf.dataArray = [NSMutableArray array];
                 } else {
                     [strongSelf.dataArray removeAllObjects];
-                    // [strongSelf.tableView reloadData];
+                }
+            }
+        };
+        _pageNet.NextPageHandler = ^(NSArray *results, BOOL isAllLoaded) {
+            __strong typeof(self) strongSelf = wself;
+            if (strongSelf) {
+                [strongSelf.dataArray addObjectsFromArray:results];
+                if (isAllLoaded) {
+                     [strongSelf.tableView endRefreshAllLoad:isAllLoaded];
+                }else{
+                    [strongSelf.tableView endRefresh];
                 }
             }
         };
         
-        _pageNet.AllDownloadedHandler = ^{
+        _pageNet.AllLoadedHandler = ^{
             __strong typeof(self) strongSelf = wself;
             if (strongSelf) {
                 [strongSelf.tableView endRefreshAllLoad:YES];
             }
         };
         
-        _pageNet.ErrorHandler = ^(NSError *error) {
+        _pageNet.NetworkingErrorHandler = ^(NSError *error, NSString *message) {
             __strong typeof(self) strongSelf = wself;
             if (strongSelf) {
-                [strongSelf.tableView endRefresh];
-            }
-        };
-        
-        _pageNet.NextPageHandler = ^(NSArray *results) {
-            __strong typeof(self) strongSelf = wself;
-            if (strongSelf) {
-                [strongSelf.dataArray addObjectsFromArray:results];
-                
                 [strongSelf.tableView endRefresh];
             }
         };

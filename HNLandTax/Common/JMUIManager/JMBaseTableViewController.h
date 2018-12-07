@@ -13,6 +13,13 @@
 @property (nonatomic, strong) NSMutableArray *dataArray;
 @property (nonatomic, strong) UITableView *tableView;
 
+#pragma mark - 创建tableView
+-(void)jm_tableViewDefaut;
+
+-(void)jm_tableViewForFill;
+
+
+#pragma mark - 分页刷新
 /** 分页刷新 包含上拉，下拉 事件已经实现 **/
 -(void)mj_pageRefresh;
 
@@ -22,8 +29,7 @@
 /** 分页刷新 包含下拉事件已经实现 **/
 -(void)mj_pageRefreshForHeader;
 
-
-
+#pragma mark - 普通刷新 需要实现上拉，下拉事件
 /** 普通刷新 需要实现上拉，下拉事件**/
 -(void)mj_refresh;
 
@@ -39,25 +45,17 @@
 /** 上拉事件**/
 -(void)mj_footerRefreshAction;
 
-
-
-/** 第一次下拉刷新**/
+/** 第一次下拉刷新 需要调用下来刷新**/
 -(void)jm_beginLoadRequest;
 
 /** 刷新数据 **/
 -(void)jm_refreshData;
 
-/** 创建默认tableView **/
--(void)jm_tableViewDefaut;
-
-/** 创建全屏tableView **/
--(void)jm_tableViewForFill;
-
+#pragma mark - 配置tableView
 /** tableView的风格 默认plain **/
 -(UITableViewStyle)tableViewStyle;
 
-
-
+#pragma mark - 配置Config
 /** 分页请求的URL **/
 -(NSString *)jm_pageUrl;
 
@@ -69,6 +67,7 @@
 
 /** 数据转型后得到model类 **/
 -(Class)jm_pageModelClass;
+
 
 -(void)wz_noInsetAdjustmentBehavior;
 

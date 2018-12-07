@@ -45,7 +45,6 @@
 }
 
 - (void)getFirstPage {
-    self.RefreshHandler ? self.RefreshHandler() : nil;
     [self refreshState];
     [self getNextPage];
 }
@@ -54,7 +53,7 @@
     if (self.isLoading || self.allDownloaded) {
         if (self.allDownloaded) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                self.AllDownloadedHandler ? self.AllDownloadedHandler() : nil;
+                self.AllLoadedHandler ? self.AllLoadedHandler() : nil;
             });
         }
         return ;
@@ -82,25 +81,25 @@
             if (self.refreshCompletionBlock) {
                 self.refreshCompletionBlock();
             }
-            if (self.AllTotalCount) {
-                self.AllTotalCount(self.totalCount);
-            }
             self.refreshCompletionBlock = nil;
         });
         
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            strongSelf.NextPageHandler ? strongSelf.NextPageHandler(results) : nil;
-        });
+        if (strongSelf.currentPage == 1) {
+            strongSelf.RefreshHandler ? strongSelf.RefreshHandler() :  nil;
+        }
         
         if (strongSelf.currentPage == strongSelf.totalPage || results.count < 20) {
             strongSelf.allDownloaded = YES;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                strongSelf.AllDownloadedHandler ? strongSelf.AllDownloadedHandler() : nil;
-            });
         } else {
+            strongSelf.allDownloaded = NO;
             strongSelf.currentPage++;
         }
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            strongSelf.NextPageHandler ? strongSelf.NextPageHandler(results, strongSelf.allDownloaded) : nil;
+        });
+        
+        
     } failure:^(NSError * _Nonnull error) {
         __strong typeof(self) strongSelf = wself;
         if (!strongSelf) {
@@ -110,51 +109,13 @@
         strongSelf.allDownloaded = YES;
         strongSelf.networkFailed = YES;
         dispatch_async(dispatch_get_main_queue(), ^{
-            strongSelf.ErrorHandler ? strongSelf.ErrorHandler(error) : nil;
-            
+            strongSelf.NetworkingErrorHandler ? strongSelf.NetworkingErrorHandler(error , [error.userInfo objectForKey:JMMETAERRMSGKEY]) : nil;
         });
         dispatch_async(dispatch_get_main_queue(), ^{
             if (self.refreshCompletionBlock) {
                 self.refreshCompletionBlock();
             }
             self.refreshCompletionBlock = nil;
-        });
-    }];
-}
-
-- (void)getNextPage:(void (^)(NSArray *results))success failure:(void (^)(NSError *error))failure {
-    if (self.isLoading || self.allDownloaded) {
-        return ;
-    }
-    
-    self.loading = YES;
-    NSDictionary *params = @{
-                             @"pageNum" : @(self.currentPage),
-                             @"pageSize" : @20
-                             };
-    
-    
-    self.currentDataTask = [JMAPI GET:self.path params:params success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.loading = NO;
-        self.currentPage++;
-        NSArray *results = [JMAPI parseIntoArrayOfClass:self.klass fromArray:responseObject[self.key ? : @"result"]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            success(results);
-        });
-        
-        if (self.currentPage == self.totalPage || results.count < 20) {
-            self.allDownloaded = YES;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                self.AllDownloadedHandler ? self.AllDownloadedHandler() : nil;
-            });
-        }
-    } failure:^(NSError * _Nonnull error) {
-        self.loading = NO;
-        self.allDownloaded = YES;
-        self.networkFailed = YES;
-        dispatch_async(dispatch_get_main_queue(), ^{
-            self.NetworkingErrorHandler ? self.NetworkingErrorHandler() : nil;
         });
     }];
 }

@@ -42,6 +42,19 @@
 //    return  nil;
 //}
 
+//-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    if (self.tableView == scrollView) {
+//        if (scrollView.contentOffset.y > 200) {
+//            CGFloat alpha = (scrollView.contentOffset.y - 200) / 64;
+//            if (alpha <= 1) {
+//                [self jm_setNavigationBarWithAlpha:alpha];
+//            }
+//        }else{
+//            [self jm_setNavigationBarWithAlpha:0.0];
+//        }
+//    }
+//}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -14,7 +14,7 @@
 #import "WZVideo.h"
 #import "WZAuthenView.h"
 #import "WZLocalAuthentication.h"
-
+#import "UIViewController+JMTheme.h"
 #define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
 @interface HomeViewController ()
 @property (nonatomic, strong) UISearchController *searchController;
@@ -75,7 +75,6 @@
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
     
-    [self.view addSubview:self.authenView];
 }
 
 -(void)resetData{

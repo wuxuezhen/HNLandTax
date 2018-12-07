@@ -27,18 +27,16 @@
     if (loaded) {
         [self.mj_footer endRefreshingWithNoMoreData];
     }
-    if ([self.mj_header isRefreshing]) {
-        [self.mj_header endRefreshing];
-    }
+    [self endRefreshForHeader];
+    [self reloadData];
 }
+
 -(void)endRefresh{
     if ([self.mj_header isRefreshing]) {
         [self.mj_header endRefreshing];
         self.mj_footer.state = MJRefreshStateIdle;
     }
-    if ([self.mj_footer isRefreshing]) {
-        [self.mj_footer endRefreshing];
-    }
+    [self endRefreshForFooter];
     [self reloadData];
 }
 

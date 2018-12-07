@@ -15,12 +15,10 @@
 @property (nonatomic, readonly) BOOL networkFailed;
 @property (nonatomic, readonly, getter=isLoading) BOOL loading;
 
-@property (nonatomic, copy) void (^AllDownloadedHandler)(void);
-@property (nonatomic, copy) void (^NetworkingErrorHandler)(void);
-@property (nonatomic, copy) void (^NextPageHandler)(NSArray *results);
-@property (nonatomic, copy) void (^ErrorHandler)(NSError *error);
+@property (nonatomic, copy) void (^NetworkingErrorHandler)(NSError *error ,NSString *message);
+@property (nonatomic, copy) void (^NextPageHandler)(NSArray *results, BOOL isAllLoaded);
 @property (nonatomic, copy) void (^RefreshHandler)(void);
-@property (nonatomic, copy) void (^AllTotalCount)(NSInteger total);
+@property (nonatomic, copy) void (^AllLoadedHandler)(void);
 
 - (void)getNextPage;
 - (void)getFirstPage;
