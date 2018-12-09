@@ -51,9 +51,9 @@
         }
     }
     
-    for (WZVideo *video in deleteArr) {
-        if (![self.videoUrls containsObject:video.videoUrl]) {
-            [self.videoUrls removeObject:video.videoUrl];
+    for (NSString *key in deleteArr) {
+        if (![self.videoUrls containsObject:key]) {
+            [self.videoUrls removeObject:key];
         }
     }
     
@@ -158,7 +158,7 @@
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     WZVideo *video = self.dataArray[indexPath.row];
     [video wz_removeObjectForKey];
-    [self.deleteUrls addObject:video];
+    [self.deleteUrls addObject:video.videoUrl];
     [self.dataArray removeObjectAtIndex:indexPath.row];
     [self.videoUrls removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
