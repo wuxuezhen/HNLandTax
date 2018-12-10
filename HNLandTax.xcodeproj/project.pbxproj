@@ -27,8 +27,16 @@
 		5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0421AD3FB300D2F9F3 /* WZShare.m */; };
 		517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
 		517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
-		517D8C5C21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
-		517D8C5D21A29883004A4744 /* coredatamr.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5B21A29883004A4744 /* coredatamr.m */; };
+		51B31D0B21BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D0921BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld */; };
+		51B31D0C21BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D0921BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld */; };
+		51B31D1921BE5774005C0EAC /* JMVideo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D1721BE5774005C0EAC /* JMVideo+CoreDataClass.m */; };
+		51B31D1A21BE5774005C0EAC /* JMVideo+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D1721BE5774005C0EAC /* JMVideo+CoreDataClass.m */; };
+		51B31D1B21BE5774005C0EAC /* JMVideo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D1821BE5774005C0EAC /* JMVideo+CoreDataProperties.m */; };
+		51B31D1C21BE5774005C0EAC /* JMVideo+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D1821BE5774005C0EAC /* JMVideo+CoreDataProperties.m */; };
+		51B31D2021BE5BE0005C0EAC /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D1E21BE5BE0005C0EAC /* AddDataViewController.m */; };
+		51B31D2121BE5BE0005C0EAC /* AddDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D1E21BE5BE0005C0EAC /* AddDataViewController.m */; };
+		51B31D2221BE5BE0005C0EAC /* AddDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B31D1F21BE5BE0005C0EAC /* AddDataViewController.xib */; };
+		51B31D2321BE5BE0005C0EAC /* AddDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B31D1F21BE5BE0005C0EAC /* AddDataViewController.xib */; };
 		51BABC0A21B1410B00FE7901 /* WZLocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BABC0621B1410B00FE7901 /* WZLocalAuthentication.m */; };
 		51BABC0B21B1410B00FE7901 /* WZLocalAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BABC0621B1410B00FE7901 /* WZLocalAuthentication.m */; };
 		51BABC0C21B1410B00FE7901 /* WZAuthenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51BABC0721B1410B00FE7901 /* WZAuthenView.m */; };
@@ -265,10 +273,16 @@
 		5161BA0421AD3FB300D2F9F3 /* WZShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZShare.m; sourceTree = "<group>"; };
 		517D8C5621A2973C004A4744 /* JMCoreDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCoreDataManager.h; sourceTree = "<group>"; };
 		517D8C5721A2973C004A4744 /* JMCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCoreDataManager.m; sourceTree = "<group>"; };
-		517D8C5A21A29883004A4744 /* coredatamr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = coredatamr.h; sourceTree = "<group>"; };
-		517D8C5B21A29883004A4744 /* coredatamr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = coredatamr.m; sourceTree = "<group>"; };
 		517D8C7D21A2C19A004A4744 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		517D8C7E21A2C19A004A4744 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		51B31D0A21BE4E8F005C0EAC /* JMVideoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JMVideoModel.xcdatamodel; sourceTree = "<group>"; };
+		51B31D1521BE5774005C0EAC /* JMVideo+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JMVideo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		51B31D1621BE5774005C0EAC /* JMVideo+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JMVideo+CoreDataClass.h"; sourceTree = "<group>"; };
+		51B31D1721BE5774005C0EAC /* JMVideo+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JMVideo+CoreDataClass.m"; sourceTree = "<group>"; };
+		51B31D1821BE5774005C0EAC /* JMVideo+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JMVideo+CoreDataProperties.m"; sourceTree = "<group>"; };
+		51B31D1D21BE5BE0005C0EAC /* AddDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddDataViewController.h; sourceTree = "<group>"; };
+		51B31D1E21BE5BE0005C0EAC /* AddDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddDataViewController.m; sourceTree = "<group>"; };
+		51B31D1F21BE5BE0005C0EAC /* AddDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDataViewController.xib; sourceTree = "<group>"; };
 		51BABC0621B1410B00FE7901 /* WZLocalAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZLocalAuthentication.m; sourceTree = "<group>"; };
 		51BABC0721B1410B00FE7901 /* WZAuthenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZAuthenView.m; sourceTree = "<group>"; };
 		51BABC0821B1410B00FE7901 /* WZLocalAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZLocalAuthentication.h; sourceTree = "<group>"; };
@@ -555,10 +569,13 @@
 		517D8C5521A296FC004A4744 /* JMCoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
+				51B31D1521BE5774005C0EAC /* JMVideo+CoreDataProperties.h */,
+				51B31D1821BE5774005C0EAC /* JMVideo+CoreDataProperties.m */,
+				51B31D1621BE5774005C0EAC /* JMVideo+CoreDataClass.h */,
+				51B31D1721BE5774005C0EAC /* JMVideo+CoreDataClass.m */,
 				517D8C5621A2973C004A4744 /* JMCoreDataManager.h */,
 				517D8C5721A2973C004A4744 /* JMCoreDataManager.m */,
-				517D8C5A21A29883004A4744 /* coredatamr.h */,
-				517D8C5B21A29883004A4744 /* coredatamr.m */,
+				51B31D0921BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld */,
 			);
 			path = JMCoreDataManager;
 			sourceTree = "<group>";
@@ -1092,6 +1109,9 @@
 				F2B91ABE21494ADC003311A1 /* VideoPlay */,
 				F2235116207486230062C828 /* HomeViewController.h */,
 				F2235117207486230062C828 /* HomeViewController.m */,
+				51B31D1D21BE5BE0005C0EAC /* AddDataViewController.h */,
+				51B31D1E21BE5BE0005C0EAC /* AddDataViewController.m */,
+				51B31D1F21BE5BE0005C0EAC /* AddDataViewController.xib */,
 				F2B91AC721494E14003311A1 /* HomeTableViewCell.h */,
 				F2B91AC821494E14003311A1 /* HomeTableViewCell.m */,
 				F2B91AC921494E14003311A1 /* HomeTableViewCell.xib */,
@@ -1270,6 +1290,7 @@
 				F2234FD8207476DC0062C828 /* LaunchScreen.storyboard in Resources */,
 				F2234FD5207476DC0062C828 /* Assets.xcassets in Resources */,
 				F2B91ACC21494E14003311A1 /* HomeTableViewCell.xib in Resources */,
+				51B31D2221BE5BE0005C0EAC /* AddDataViewController.xib in Resources */,
 				F2234FD3207476DB0062C828 /* Main.storyboard in Resources */,
 				F214D4A7214E58BA0043690C /* video.json in Resources */,
 			);
@@ -1297,6 +1318,7 @@
 				F214D4A8214E58BA0043690C /* video.json in Resources */,
 				F27357C3207493CE0029AE78 /* LaunchScreen.storyboard in Resources */,
 				F26B86712079B1F700B11F21 /* HNLandTaxBeta-Info.plist in Resources */,
+				51B31D2321BE5BE0005C0EAC /* AddDataViewController.xib in Resources */,
 				F27357C4207493CE0029AE78 /* Assets.xcassets in Resources */,
 				F2B91ACD21494E14003311A1 /* HomeTableViewCell.xib in Resources */,
 				F27357C5207493CE0029AE78 /* Main.storyboard in Resources */,
@@ -1502,7 +1524,6 @@
 				AEABC1E9213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225C213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
-				517D8C5C21A29883004A4744 /* coredatamr.m in Sources */,
 				F2B91ACA21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E5213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F22350E42074832F0062C828 /* JMJsonHandle.m in Sources */,
@@ -1515,6 +1536,7 @@
 				F22350C62074832F0062C828 /* DatePickerView.m in Sources */,
 				5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */,
+				51B31D2021BE5BE0005C0EAC /* AddDataViewController.m in Sources */,
 				F2235126207486770062C828 /* MineViewController.m in Sources */,
 				F2B91AD021495371003311A1 /* HUserManager.m in Sources */,
 				AE862272213CC31D00C93C9E /* FITResponseModel.m in Sources */,
@@ -1532,8 +1554,11 @@
 				F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9421457C6A00891331 /* HDetailViewController.m in Sources */,
 				511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
+				51B31D1B21BE5774005C0EAC /* JMVideo+CoreDataProperties.m in Sources */,
 				F2BE314A21B95006004C1330 /* UIViewController+JMTheme.m in Sources */,
+				51B31D1921BE5774005C0EAC /* JMVideo+CoreDataClass.m in Sources */,
 				F22351072074832F0062C828 /* RootViewController.m in Sources */,
+				51B31D0B21BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld in Sources */,
 				F2B91AC321494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862274213CC31D00C93C9E /* APPConstants.m in Sources */,
 				F2B91AB8214803AE003311A1 /* JMCacheManager.m in Sources */,
@@ -1621,7 +1646,6 @@
 				AEABC1EA213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225D213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
-				517D8C5D21A29883004A4744 /* coredatamr.m in Sources */,
 				F2B91ACB21494E14003311A1 /* HomeTableViewCell.m in Sources */,
 				AEABC1E6213CD0D2009D099E /* NSString+NSStringHandle.m in Sources */,
 				F2735794207493CE0029AE78 /* JMJsonHandle.m in Sources */,
@@ -1634,6 +1658,7 @@
 				F273579A207493CE0029AE78 /* DatePickerView.m in Sources */,
 				5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */,
+				51B31D2121BE5BE0005C0EAC /* AddDataViewController.m in Sources */,
 				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
 				F2B91AD121495371003311A1 /* HUserManager.m in Sources */,
 				AE862273213CC31D00C93C9E /* FITResponseModel.m in Sources */,
@@ -1651,8 +1676,11 @@
 				F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */,
 				F231DA9521457C6A00891331 /* HDetailViewController.m in Sources */,
 				511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */,
+				51B31D1C21BE5774005C0EAC /* JMVideo+CoreDataProperties.m in Sources */,
 				F2BE314B21B95006004C1330 /* UIViewController+JMTheme.m in Sources */,
+				51B31D1A21BE5774005C0EAC /* JMVideo+CoreDataClass.m in Sources */,
 				F27357A5207493CE0029AE78 /* RootViewController.m in Sources */,
+				51B31D0C21BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld in Sources */,
 				F2B91AC421494ADC003311A1 /* HAVPlayerViewController.m in Sources */,
 				AE862275213CC31D00C93C9E /* APPConstants.m in Sources */,
 				F2B91AB9214803AE003311A1 /* JMCacheManager.m in Sources */,
@@ -2067,6 +2095,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		51B31D0921BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				51B31D0A21BE4E8F005C0EAC /* JMVideoModel.xcdatamodel */,
+			);
+			currentVersion = 51B31D0A21BE4E8F005C0EAC /* JMVideoModel.xcdatamodel */;
+			path = JMVideoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F2234FC0207476DB0062C828 /* Project object */;
 }

@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *videoUrl;
 @property (nonatomic, copy) NSString *key;
 @property (nonatomic, assign) BOOL isDownload;
-
+@property (nonatomic, assign) BOOL isDelete;
 @property (nonatomic, strong) NSURL *playURL;
 
 -(void)wz_removeObjectForKey;

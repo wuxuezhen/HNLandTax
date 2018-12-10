@@ -24,7 +24,7 @@
 - (void)setVideo:(WZVideo *)video{
     _video = video;
     self.stateLabel.text = video.isDownload ? @"已下载" : @"未下载";
-    self.nameLabel.text  = video.key;
+    self.nameLabel.text  = video.name ? : video.key;
  
     UIImage *image = (UIImage *)[[HUserManager manager] getCacheObjectForKey:video.key];
     if (image) {

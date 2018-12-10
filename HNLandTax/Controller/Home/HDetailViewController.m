@@ -22,22 +22,15 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *progressView;
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @end
 
 @implementation HDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    UIBarButtonItem *item1 = [[UIBarButtonItem alloc]initWithTitle:@"删除"
-                                                             style:UIBarButtonItemStylePlain
-                                                            target:self
-                                                            action:@selector(deleteVideo)];
-    UIBarButtonItem *item2 = [[UIBarButtonItem alloc]initWithTitle:@"分享"
-                                                             style:UIBarButtonItemStylePlain
-                                                            target:self
-                                                            action:@selector(shareVideo)];
-    self.navigationItem.rightBarButtonItems = @[item1,item2];
-   
+    [self fit_createRightBarButtonItemWithTitle:@"分享"];
     
     if (self.video.isDownload ) {
         self.stateLabel.text = @"已下载";
@@ -48,6 +41,7 @@
         self.progressView.progress = 0;
         self.stateLabel.text = @"未下载";
     }
+    self.titleLabel.text = self.video.name ? :self.video.key;
     self.nameLabel.text = self.video.videoUrl;
     [self setVideoUrl:self.video.playURL];
     
@@ -58,23 +52,8 @@
     }
     
 }
-- (void)wz_download:(FITDownLoadResponse *)response{
-    self.progressView.progress = response.progress;
-    self.progressLabel.text = [NSString stringWithFormat:@"%.2lf%%",response.progress * 100];
-    if (response.progress >= 1) {
-        [self save:response.downloadSaveFileUrl forkey:self.video.key];
-    }
-}
 
--(void)deleteVideo{
-    if (self.video.isDownload) {
-        [self.video wz_removeObjectForKey];
-        self.stateLabel.text = @"未下载";
-        self.progressView.progress = 0;
-    }
-}
-
--(void)shareVideo{
+-(void)fit_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
     NSArray *activityItems = @[self.video.playURL];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems
                                                                                          applicationActivities:nil];
@@ -86,6 +65,14 @@
     }];
     
     [self presentViewController:activityViewController animated:YES completion:nil];
+}
+
+- (void)wz_download:(FITDownLoadResponse *)response{
+    self.progressView.progress = response.progress;
+    self.progressLabel.text = [NSString stringWithFormat:@"%.2lf%%",response.progress * 100];
+    if (response.progress >= 1) {
+        [self save:response.downloadSaveFileUrl forkey:self.video.key];
+    }
 }
 
 -(void)playVideo:(NSURL *)videoURL{

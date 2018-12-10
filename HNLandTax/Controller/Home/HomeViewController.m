@@ -15,11 +15,12 @@
 #import "WZAuthenView.h"
 #import "WZLocalAuthentication.h"
 #import "UIViewController+JMTheme.h"
+#import "JMCoreDataManager.h"
+#import "AddDataViewController.h"
+
+
 #define path_local @"/Users/wuzhenzhen/Desktop/video/vv.plist"
 @interface HomeViewController ()
-@property (nonatomic, strong) UISearchController *searchController;
-@property (nonatomic, strong) NSMutableArray *videoUrls;
-@property (nonatomic, strong) NSMutableArray *deleteUrls;
 @property (nonatomic, strong) WZLocalAuthentication *authentication;
 @property (nonatomic, strong) WZAuthenView *authenView;
 @end
@@ -33,66 +34,70 @@
 }
 
 -(void)wz_initUI{
-    self.videoUrls  = [NSMutableArray arrayWithCapacity:0];
-    self.deleteUrls = [NSMutableArray arrayWithCapacity:0];
     [self fit_createRightBarButtonItemWithTitle:@"添加"];
     [self fit_createLeftBarButtonItemWithTitle:@"编辑"];
-    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"video"];
-    NSArray *deleteArr = [[NSUserDefaults standardUserDefaults] objectForKey:@"deleteVideo"];
-    if (arr && arr.count > 0) {
-        [self.videoUrls addObjectsFromArray:arr];
-    }
-    
-    NSArray *urls = [JMJsonHandle toObjectWithJsonPath:@"video"];
-    
-    for (NSString *url in urls) {
-        if (![self.videoUrls containsObject:url]) {
-            [self.videoUrls addObject:url];
-        }
-    }
-    
-    for (NSString *key in deleteArr) {
-        if (![self.videoUrls containsObject:key]) {
-            [self.videoUrls removeObject:key];
-        }
-    }
-    
-    [self.videoUrls sortedArrayUsingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        return [obj1 compare:obj2];
-    }];
-    
+    [self initData];
     [self resetData];
-    
     [self WZLog];
     
-    if (@available(iOS 11.0, *)) {
-        //        self.navigationItem.hidesSearchBarWhenScrolling = NO;
-        self.navigationItem.searchController = self.searchController;
-    } else {
-        // Fallback on earlier versions
-    }
     [self.tableView registerNib:[HomeTableViewCell nib]
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
     
 }
 
--(void)resetData{
-    for (NSString *url in self.videoUrls) {
+-(void)initData{
+    NSArray *urls = [JMJsonHandle toObjectWithJsonPath:@"video"];
+    for (NSString *url in urls) {
         WZVideo *video = [WZVideo new];
         video.videoUrl = url;
         [self.dataArray addObject:video];
     }
 }
 
+-(void)resetData{
+    NSArray *arr = [self switchDataWithArray:[[JMCoreDataManager manager] sortAllData]];
+    for (WZVideo *video in arr) {
+        WZVideo *temp = [self getVideoWithUrl:video.videoUrl];
+        if (temp) {
+            [self.dataArray removeObject:temp];
+        }
+        if (!video.isDelete) {
+            [self.dataArray addObject:video];
+        }
+    }
+}
+
+-(WZVideo *)getVideoWithUrl:(NSString *)url{
+    WZVideo *video = nil;
+    for (WZVideo *obj in self.dataArray) {
+        if ([obj.videoUrl isEqualToString:url]) {
+            video = obj;
+            break;
+        }
+    }
+    return video;
+}
+
+-(NSArray *)switchDataWithArray:(NSArray *)array{
+    NSMutableArray *results = [NSMutableArray arrayWithCapacity:0];
+    for (JMVideo *video in array) {
+        WZVideo *obj = [[WZVideo alloc]init];
+        obj.name = video.name;
+        obj.videoUrl = video.videoUrl;
+        obj.isDelete = video.isDelete;
+        [results addObject:obj];
+    }
+    return results;
+}
+
 -(void)WZLog{
     NSMutableString *str = [NSMutableString string];
-    for (NSString *key in self.videoUrls) {
-        [str appendFormat:@"\"%@\",",key];
+    for (WZVideo *key in self.dataArray) {
+        [str appendFormat:@"\"%@\",",key.videoUrl];
     }
     NSLog(@"str = %@",[str substringToIndex:str.length-1]);
 }
-
 
 -(void)wz_authentication{
     if ([self.authentication wz_canEvaluatePolicy]) {
@@ -130,14 +135,14 @@
 }
 
 -(void)fit_rightBarButtonItemAction:(UIBarButtonItem *)barButtonItem{
-    NSString *text = self.searchController.searchBar.text;
-    if (text.length > 0) {
-        [self.videoUrls insertObject:text atIndex:0];
-        [[NSUserDefaults standardUserDefaults] setObject:self.videoUrls forKey:@"video"];
-        [self resetData];
-        [self.tableView reloadData];
-        self.searchController.searchBar.text = nil;
-    }
+    AddDataViewController *add = [[AddDataViewController alloc]init];
+    __weak typeof(self) this = self;
+    add.addVideoSuccess = ^{
+        [this resetData];
+        [this.tableView reloadData];
+    };
+    [self.navigationController pushViewController:add animated:YES];
+    
 }
 
 -(NSURL *)localUrl:(NSString *)key{
@@ -155,15 +160,14 @@
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"删除";
 }
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     WZVideo *video = self.dataArray[indexPath.row];
+    video.isDelete = YES;
     [video wz_removeObjectForKey];
-    [self.deleteUrls addObject:video.videoUrl];
     [self.dataArray removeObjectAtIndex:indexPath.row];
-    [self.videoUrls removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    [[NSUserDefaults standardUserDefaults] setObject:self.videoUrls forKey:@"video"];
-    [[NSUserDefaults standardUserDefaults] setObject:self.deleteUrls forKey:@"deleteVideo"];
+    [[JMCoreDataManager manager] updateData:video];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
@@ -178,18 +182,6 @@
     HDetailViewController *h = [[HDetailViewController alloc]init];
     h.video = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:h animated:YES];
-}
-
--(UISearchController *)searchController{
-    if (!_searchController) {
-        _searchController = [[UISearchController alloc]initWithSearchResultsController:nil];
-        _searchController.searchBar.searchBarStyle = UISearchBarStyleDefault;
-        _searchController.searchBar.placeholder = @"请输入视频URL,添加到播放列表";
-        _searchController.dimsBackgroundDuringPresentation = NO;
-        _searchController.hidesNavigationBarDuringPresentation = NO;
-        _searchController.searchBar.showsCancelButton = NO;
-    }
-    return _searchController;
 }
 
 -(WZLocalAuthentication *)authentication{

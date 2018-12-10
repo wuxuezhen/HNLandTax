@@ -8,6 +8,8 @@
 
 #import "JMCoreDataManager.h"
 
+static NSString *kJMVideo = @"JMVideo";
+
 @implementation JMCoreDataManager
 
 /**
@@ -30,7 +32,7 @@
 
 - (void)saveContext {
     NSManagedObjectContext *context = self.managerContenxt;
-    NSError*error =nil;
+    NSError *error =nil;
     if(context !=nil) {
         if([context hasChanges] && ![context save:&error]) {
             
@@ -75,7 +77,7 @@
 -(NSManagedObjectModel *)managerModel{
     
     if (!_managerModel) {
-        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"FitBody" withExtension:@"momd"];
+        NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"JMVideoModel" withExtension:@"momd"];
         _managerModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];;
     }
     
@@ -99,7 +101,7 @@
 
         NSError *error          = nil;
         NSString *failureReason = @"There was an error creating or loading the application's saved data.";
-        NSURL *url              = [[self getDocumentUrlPath] URLByAppendingPathComponent:@"FitBody.sqlite"
+        NSURL *url              = [[self getDocumentUrlPath] URLByAppendingPathComponent:@"JMVideoModel.sqlite"
                                                                              isDirectory:YES];
         NSDictionary* options   = @{NSMigratePersistentStoresAutomaticallyOption:@(YES),NSInferMappingModelAutomaticallyOption:@(YES)};
         
@@ -115,6 +117,97 @@
     }
     
     return _managerDinator;
+}
+
+
+#pragma mark - 私有方法
+/**
+ 增
+ @param data 新数据
+ */
+-(void)addData:(WZVideo *)data{
+    JMVideo *video = [NSEntityDescription  insertNewObjectForEntityForName:kJMVideo
+                                                    inManagedObjectContext:self.managerContenxt];
+    video.videoUrl = data.videoUrl;
+    video.name = data.name;
+    video.isDelete = data.isDelete;
+    [self saveContext];
+}
+
+
+/**
+ 删
+ @param videoUrl url
+ */
+- (void)deleteData:(NSString *)videoUrl{
+    
+    //创建删除请求
+    NSFetchRequest *deleRequest = [JMVideo fetchRequest];
+    //删除条件
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"videoUrl = %@", videoUrl];
+    deleRequest.predicate = pre;
+    
+    //返回需要删除的对象数组
+    NSArray *deleArray = [self.managerContenxt executeFetchRequest:deleRequest error:nil];
+    
+    //从数据库中删除
+    for (JMVideo *video in deleArray) {
+        [self.managerContenxt deleteObject:video];
+    }
+    [self saveContext];
+}
+
+
+/**
+ 查
+ 
+ @param videoUrl url
+ @return 查询结果
+ */
+-(NSArray *)checkData:(NSString *)videoUrl{
+    //创建查询请求
+    NSFetchRequest *request = [JMVideo fetchRequest];
+    request.predicate = [NSPredicate predicateWithFormat:@"videoUrl = %@", videoUrl];;
+    return [self.managerContenxt executeFetchRequest:request error:nil];;
+}
+
+
+/**
+ 改
+ @param data 数据
+ */
+- (void)updateData:(WZVideo *)data{
+    
+    //创建查询请求
+    NSFetchRequest *request = [JMVideo fetchRequest];
+    NSPredicate *pre = [NSPredicate predicateWithFormat:@"videoUrl = %@", data.videoUrl];
+    request.predicate = pre;
+    NSArray *resArray = [self.managerContenxt executeFetchRequest:request error:nil];
+    
+    for (JMVideo *video in resArray) {
+        video.videoUrl = data.videoUrl;
+        video.name = data.name;
+        video.isDelete = data.isDelete;
+    }
+    
+    [self saveContext];
+}
+
+
+/**
+ 数据排序
+ 
+ @return 排序结果
+ */
+- (NSArray *)sortAllData{
+    //创建排序请求
+    NSFetchRequest *request = [JMVideo fetchRequest];
+    //实例化排序对象
+    NSSortDescriptor *numberSort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    request.sortDescriptors = @[numberSort];
+    //发送请求
+    NSError *error = nil;
+    return [self.managerContenxt executeFetchRequest:request error:&error];
 }
 
 @end
