@@ -52,13 +52,13 @@
                     </connections>
                 </button>
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RYk-5Q-9mh">
-                    <rect key="frame" x="15" y="403.5" width="60" height="3"/>
+                    <rect key="frame" x="15" y="403.5" width="345" height="3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="3" id="8ma-DB-Eud"/>
                     </constraints>
                 </progressView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rwx-y0-bTo">
-                    <rect key="frame" x="34" y="375.5" width="22" height="18"/>
+                    <rect key="frame" x="176.5" y="375.5" width="22" height="18"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -118,7 +118,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNw-kA-SWL">
-                    <rect key="frame" x="-5" y="456.5" width="80" height="40"/>
+                    <rect key="frame" x="280" y="456.5" width="80" height="40"/>
                     <color key="backgroundColor" red="0.55428664130000005" green="0.76556417880000005" blue="0.9192116857" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="0x5-9h-YLe"/>
@@ -171,6 +171,7 @@
                 <constraint firstItem="GeK-E4-CzG" firstAttribute="top" secondItem="soK-Ws-jWc" secondAttribute="bottom" constant="20" id="Cg7-LQ-b01"/>
                 <constraint firstItem="RYk-5Q-9mh" firstAttribute="leading" secondItem="soK-Ws-jWc" secondAttribute="leading" id="DCe-bj-tR1"/>
                 <constraint firstItem="SNw-kA-SWL" firstAttribute="width" secondItem="ZEP-xE-TxO" secondAttribute="width" id="Duz-ib-6No"/>
+                <constraint firstItem="RYk-5Q-9mh" firstAttribute="trailing" secondItem="GAk-jZ-oJ6" secondAttribute="trailing" id="EEr-HC-9VI"/>
                 <constraint firstItem="kU6-NS-CBR" firstAttribute="trailing" secondItem="5Hq-gW-7Ig" secondAttribute="trailing" id="Kf3-fG-Dli"/>
                 <constraint firstItem="GAk-jZ-oJ6" firstAttribute="trailing" secondItem="kU6-NS-CBR" secondAttribute="trailing" id="NE3-VA-UY4"/>
                 <constraint firstItem="5Hq-gW-7Ig" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="NHG-Gf-8oe"/>
@@ -190,7 +191,6 @@
                 <constraint firstItem="VWK-Gd-dVx" firstAttribute="top" secondItem="GeK-E4-CzG" secondAttribute="top" id="rpg-Mi-kL8"/>
                 <constraint firstItem="Doz-ra-1TW" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="s8p-16-uNM"/>
                 <constraint firstItem="kU6-NS-CBR" firstAttribute="bottom" secondItem="soK-Ws-jWc" secondAttribute="bottom" id="vPi-lc-Wen"/>
-                <constraint firstItem="RYk-5Q-9mh" firstAttribute="trailing" secondItem="soK-Ws-jWc" secondAttribute="trailing" id="x4w-WA-nyU"/>
                 <constraint firstItem="GeK-E4-CzG" firstAttribute="leading" secondItem="soK-Ws-jWc" secondAttribute="leading" id="y3c-Zc-DyF"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>

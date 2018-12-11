@@ -32,6 +32,18 @@
     [self wz_initUI];
     [self wz_authentication];
 }
+-(void)wz_authentication{
+    if ([self.authentication wz_canEvaluatePolicy]) {
+        __weak typeof(self) this  = self;
+        [self.authentication wz_evaluatePolicy:^(BOOL success, NSString * _Nullable message) {
+            [this refreshUIWithMessage:message success:success];
+        }];
+    }else{
+        self.tableView.hidden = YES;
+        self.authenView.hidden = YES;
+    }
+}
+
 
 -(void)wz_initUI{
     [self fit_createRightBarButtonItemWithTitle:@"添加"];
@@ -43,6 +55,7 @@
     [self.tableView registerNib:[HomeTableViewCell nib]
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
     [self jm_tableViewDefaut];
+    self.tableView.hidden = YES;
     
 }
 
@@ -99,18 +112,6 @@
     NSLog(@"str = %@",[str substringToIndex:str.length-1]);
 }
 
--(void)wz_authentication{
-    if ([self.authentication wz_canEvaluatePolicy]) {
-        __weak typeof(self) this  = self;
-        [self.authentication wz_evaluatePolicy:^(BOOL success, NSString * _Nullable message) {
-            [this refreshUIWithMessage:message success:success];
-        }];
-    }else{
-        self.authenView.hidden = YES;
-    }
-}
-
-
 
 - (void)refreshUIWithMessage:(NSString *)message success:(BOOL)success {
     
@@ -121,8 +122,9 @@
     __weak typeof(self) this  = self;
     [self presentViewController:alert animated:YES completion:^{
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [alert dismissViewControllerAnimated:YES completion:nil];
             this.authenView.hidden = success;
+            this.tableView.hidden  = !success;
+            [alert dismissViewControllerAnimated:YES completion:nil];
         });
     }];
     
