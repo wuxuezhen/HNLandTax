@@ -18,30 +18,50 @@ typedef NS_ENUM(NSInteger, FITAPIMethod) {
 @interface FITAPI : NSObject
 
 #pragma mark - GET、POST、PUT、DELETE 四请求方式
+/**
+ 常用请求方式 GET
+ */
 + (NSURLSessionDataTask *_Nonnull)GET:(NSString *_Nonnull)path
                                params:(NSDictionary *_Nullable)params
                               success:(void (^_Nullable)(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject))success
                               failure:(void (^_Nullable)(NSError *_Nonnull error))failure;
 
-
+/**
+ 常用请求方式 POST
+ */
 + (NSURLSessionDataTask *_Nonnull)POST:(NSString *_Nonnull)path
                                 params:(NSDictionary *_Nullable)params
                                success:(void (^_Nullable)(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject))success
                                failure:(void (^_Nullable)(NSError *_Nonnull error))failure;
 
-
+/**
+ 常用请求方式 PUT
+ */
 + (NSURLSessionDataTask *_Nonnull)PUT:(NSString *_Nonnull)path
                                params:(NSDictionary *_Nullable)params
                               success:(void (^_Nullable)(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject))success
                               failure:(void (^_Nullable)(NSError *_Nonnull error))failure;
 
-
+/**
+ 常用请求方式 DELETE
+ */
 + (NSURLSessionDataTask *_Nonnull)DELETE:(NSString *_Nonnull)path
                                   params:(NSDictionary *_Nullable)params
                                  success:(void (^_Nullable)(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject))success
                                  failure:(void (^_Nullable)(NSError *_Nonnull error))failure;
 
+#pragma mark - 根据请求方式调用请求接口 （不转数据模型）
+/**
+ 通用请求 不转型
+ */
++ (NSURLSessionDataTask *)requestWithMethod:(FITAPIMethod)method
+                                       path:(NSString *)path
+                                     params:(NSDictionary *)params
+                                    success:(void (^ _Nullable)(NSURLSessionDataTask *_Nonnull task, id _Nullable responseObject))success
+                                    failure:(void (^ _Nullable)(NSError *_Nonnull error))failure;
 
+
+#pragma mark - 以下方法包括数据转型
 /**
  数组不带key请求
  @param method 请求方式

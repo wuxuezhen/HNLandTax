@@ -45,37 +45,12 @@
                                        success:(SuccessHandler)success
                                        failure:(FailureHandler)failure {
     
-    switch (fitRequst.requestMethod) {
-        case FITAPIMethodGet:
-            return [FITAPI GET:fitRequst.path
-                        params:fitRequst.parameters
-                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                           success(responseObject);
-                       } failure:failure];
-            break;
-        case FITAPIMethodPost:
-            return [FITAPI GET:fitRequst.path
-                        params:fitRequst.parameters
-                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                           success(responseObject);
-                       } failure:failure];
-            break;
-        case FITAPIMethodPut:
-            return [FITAPI GET:fitRequst.path
-                        params:fitRequst.parameters
-                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                           success(responseObject);
-                       } failure:failure];
-            break;
-        case FITAPIMethodDelete:
-            return [FITAPI GET:fitRequst.path
-                        params:fitRequst.parameters
-                       success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-                           success(responseObject);
-                       } failure:failure];
-        default:
-            break;
-    }
+    return [FITAPI requestWithMethod:fitRequst.requestMethod
+                                path:fitRequst.path
+                              params:fitRequst.parameters
+                             success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                                 success ? success(responseObject) : nil;
+                             } failure:failure];
 }
 
 
