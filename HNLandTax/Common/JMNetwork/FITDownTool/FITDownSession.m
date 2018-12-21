@@ -17,10 +17,10 @@
 @property (nonatomic, assign) NSInteger fileLength;
 @property (nonatomic, assign) NSInteger currentLength;
 @property (nonatomic, strong) NSFileHandle *fileHandle;
-@property (nonatomic, copy) NSString *fileName;
+@property (nonatomic, copy)   NSString *fileName;
 
 
-@property (nonatomic, copy) DownloadBlock downloadHandler;
+@property (nonatomic, copy)   DownloadBlock downloadHandler;
 @property (nonatomic, strong) FITDownLoadResponse *response;
 
 @property (nonatomic, assign) double lastProgress;
@@ -123,6 +123,9 @@
     
 }
 
+/**
+ 取消下载
+ */
 -(void)fit_downloadCancle{
     if (_downloadTask) {
         [self.downloadTask cancel];
@@ -136,6 +139,10 @@
     
 }
 
+-(double)progress{
+    return self.response.progress;
+};
+
 -(void)fit_downloadDelegate{
     if (self.delegate && [self.delegate respondsToSelector:@selector(wz_download:)]) {
         [self.delegate wz_download:self.response];
@@ -143,7 +150,6 @@
 }
 
 #pragma mark - 任务下载代理事件
-
 /**
   下载任务收到回复
  @param session session
@@ -268,7 +274,7 @@
         NSDictionary *fileDict = [fileManager attributesOfItemAtPath:path
                                                                error:&error];
         if (!error && fileDict) {
-            fileLength = [fileDict fileSize];
+            fileLength = (NSInteger)[fileDict fileSize];
         }
     }
     return fileLength;

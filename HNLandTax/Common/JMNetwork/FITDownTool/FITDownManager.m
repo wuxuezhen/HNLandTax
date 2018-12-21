@@ -140,13 +140,15 @@ static NSString *kCancel = @"cancelled";
     
 }
 
+-(double)progress{
+    return self.response.progress;
+};
 
 #pragma mark - 任务下载回调事件
 
 /**
  下载任务收到回复
- 
- @param response
+ @param response response
  */
 -(void)taskDidReceiveResponse:(NSURLResponse *)response{
     // 获得下载文件的总长度
@@ -167,8 +169,7 @@ static NSString *kCancel = @"cancelled";
 
 /**
  下载任务接收数据
- 
- @param data
+ @param data data
  */
 -(void)taskDidReceiveData:(NSData *)data{
     // 指定数据的写入位置 -- 文件内容的最后面
@@ -224,7 +225,6 @@ static NSString *kCancel = @"cancelled";
 
 /**
  更新response
- 
  */
 - (void)updateRespose:(FITDownloadStatus)status
            identifier:(NSString *)identifier
@@ -267,7 +267,7 @@ static NSString *kCancel = @"cancelled";
         NSDictionary *fileDict = [fileManager attributesOfItemAtPath:path
                                                                error:&error];
         if (!error && fileDict) {
-            fileLength = [fileDict fileSize];
+            fileLength = (NSInteger)[fileDict fileSize];
         }
     }
     return fileLength;
@@ -275,7 +275,6 @@ static NSString *kCancel = @"cancelled";
 
 /**
  存储路径
- 
  @return path
  */
 -(NSString *)getFilePath{

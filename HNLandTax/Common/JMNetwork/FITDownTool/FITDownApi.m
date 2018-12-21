@@ -88,8 +88,8 @@
 /**
  文件本地存储路径
  
- @param suggestedFilename
- @return
+ @param suggestedFilename filename
+ @return path
  */
 + (NSString *)getImagePath:(NSString *)suggestedFilename{
     NSString *cachesPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];

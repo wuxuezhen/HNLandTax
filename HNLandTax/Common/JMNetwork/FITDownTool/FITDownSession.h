@@ -18,6 +18,8 @@ typedef void(^DownloadBlock)(FITDownLoadResponse *response);
 
 @interface FITDownSession : NSObject
 
+@property (nonatomic, assign, readonly) double progress;
+
 @property (nonatomic, copy) NSString *downloadUrl;
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic, weak) id <DownloadDelegate> delegate;

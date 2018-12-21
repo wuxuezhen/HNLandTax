@@ -13,6 +13,7 @@
 @property (nonatomic, strong) NSMutableArray *downTasks;
 @end
 @implementation HUserManager
+
 +(instancetype)manager{
     static HUserManager *manager = nil;
     static dispatch_once_t onceToken;
@@ -52,6 +53,8 @@
     }
     return self;
 }
+
+
 
 -(void)addTask:(FITDownSession *)task{
     [self.downTasks addObject:task];

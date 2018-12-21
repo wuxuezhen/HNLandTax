@@ -18,13 +18,15 @@
 @end
 @implementation FITDownloadGroupManager
 
-- (instancetype)init {
-    if (self = [super init]) {
-        self.downloadManagerArr = [NSMutableArray array];
-    }
-    return self;
++(instancetype)manager{
+    static FITDownloadGroupManager *manager = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[FITDownloadGroupManager alloc] init];
+        manager.downloadManagerArr = [NSMutableArray array];
+    });
+    return manager;
 }
-
 
 - (void)addDownloadRequest:(NSString *)downloadUrl
                 identifier:(NSString *)identifier

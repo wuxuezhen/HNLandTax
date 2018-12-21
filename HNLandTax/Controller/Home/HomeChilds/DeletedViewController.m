@@ -61,6 +61,7 @@
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(nonnull NSIndexPath *)indexPath{
     WZVideo *video = self.dataArray[indexPath.row];
+    [video wz_removeObjectForKey];
     [self.dataArray removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [[JMCoreDataManager manager] deleteData:video.videoUrl];

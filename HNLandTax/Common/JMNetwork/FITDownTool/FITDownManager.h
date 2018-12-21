@@ -13,6 +13,8 @@ typedef void(^DownloadBlock)(FITDownLoadResponse *response);
 
 @interface FITDownManager : NSObject
 
+@property (nonatomic, assign, readonly) double progress;
+
 @property (nonatomic, copy) NSString *downloadUrl;
 @property (nonatomic, copy) NSString *identifier;
 

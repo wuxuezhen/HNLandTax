@@ -23,6 +23,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *progressLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *photoView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UIButton *downBtn;
 
 @end
 
@@ -47,6 +48,7 @@
     
     FITDownSession *session = [[HUserManager manager] taskForKey:self.video.key];
     if (session) {
+        self.downBtn.selected = YES;
         _session = session;
        self.session.delegate = self;
     }
@@ -87,7 +89,7 @@
     btn.selected = !btn.selected;
     if (btn.selected) {
         [self.session fit_downloadResume];
-        [[HUserManager manager]addTask:self.session];
+        [[HUserManager manager] addTask:self.session];
     }else{
         [[HUserManager manager] deleteTaskForKey:self.video.key];
         self.session.delegate = nil;

@@ -14,6 +14,8 @@ typedef void (^downloadResponse)(FITDownLoadResponse *response);
 
 @property (nonatomic, strong) NSOperationQueue *taskQueue;
 
++(instancetype)manager;
+
 // 下载请求
 - (void)addDownloadRequest:(NSString *)downloadUrl
                 identifier:(NSString *)identifier

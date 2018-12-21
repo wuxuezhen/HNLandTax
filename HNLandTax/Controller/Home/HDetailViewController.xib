@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HDetailViewController">
             <connections>
+                <outlet property="downBtn" destination="GeK-E4-CzG" id="pA2-aH-QX2"/>
                 <outlet property="nameLabel" destination="5Hq-gW-7Ig" id="H74-wl-Em6"/>
                 <outlet property="photoView" destination="Doz-ra-1TW" id="wVR-K4-7Ir"/>
                 <outlet property="progressLabel" destination="Rwx-y0-bTo" id="NfV-bw-V42"/>

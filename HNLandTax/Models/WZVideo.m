@@ -41,12 +41,13 @@
 
 -(void)wz_removeObjectForKey{
     
-    if ([[NSUserDefaults standardUserDefaults] objectForKey:self.key]) {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
-    }
     if ([[NSFileManager defaultManager] fileExistsAtPath:self.localPath]) {
         [[NSFileManager defaultManager] removeItemAtPath:self.localPath error:nil];
     }
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:self.key]) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:self.key];
+    }
+    
     self.isDownload = NO;
 }
 @end

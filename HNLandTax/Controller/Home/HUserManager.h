@@ -16,6 +16,7 @@
 -(id)getCacheObjectForKey:(NSString *)key;
 
 
+
 -(void)addTask:(FITDownSession *)task;
 
 -(void)deleteTaskForKey:(NSString *)key;
