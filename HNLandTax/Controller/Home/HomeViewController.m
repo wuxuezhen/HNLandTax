@@ -32,6 +32,7 @@
     [self wz_initUI];
     [self wz_authentication];
 }
+
 -(void)wz_authentication{
     if ([self.authentication wz_canEvaluatePolicy]) {
         __weak typeof(self) this  = self;
@@ -43,7 +44,6 @@
         self.authenView.hidden = YES;
     }
 }
-
 
 -(void)wz_initUI{
     [self fit_createRightBarButtonItemWithTitle:@"添加"];
@@ -159,6 +159,7 @@
     [tableView moveRowAtIndexPath:sourceIndexPath
                       toIndexPath:destinationIndexPath];
 }
+
 -(NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath{
     return @"删除";
 }
@@ -171,6 +172,7 @@
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [[JMCoreDataManager manager] updateData:video];
 }
+
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
@@ -180,6 +182,7 @@
     cell.video = self.dataArray[indexPath.row];
     return cell;
 }
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     HDetailViewController *h = [[HDetailViewController alloc]init];
     h.video = self.dataArray[indexPath.row];
@@ -203,6 +206,7 @@
     }
     return _authenView;
 }
+
 /*
 #pragma mark - Navigation
 
