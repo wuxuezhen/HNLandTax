@@ -9,7 +9,6 @@
 #import "AddDataViewController.h"
 #import <UITextView_Placeholder/UITextView+Placeholder.h>
 #import "JMCoreDataManager.h"
-#import "WZVideo.h"
 #import "JMWeiDu.h"
 @interface AddDataViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameField;

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		510FD31E21CCD8480018D487 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510FD31A21CCD8480018D487 /* DownloadViewController.m */; };
+		510FD31F21CCD8480018D487 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510FD31A21CCD8480018D487 /* DownloadViewController.m */; };
+		510FD32021CCD8480018D487 /* DeletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510FD31B21CCD8480018D487 /* DeletedViewController.m */; };
+		510FD32121CCD8480018D487 /* DeletedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 510FD31B21CCD8480018D487 /* DeletedViewController.m */; };
 		51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
 		5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 51101898219AA915002E943D /* UIView+LoadingHud.m */; };
 		5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */ = {isa = PBXBuildFile; fileRef = 5110189C219AB990002E943D /* UIViewController+LoadingHud.m */; };
@@ -252,6 +256,10 @@
 		2366947C106B6A8DF05F4B41 /* Pods-HNLandTax.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.release.xcconfig"; sourceTree = "<group>"; };
 		25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTaxBeta.release.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTaxBeta/Pods-HNLandTaxBeta.release.xcconfig"; sourceTree = "<group>"; };
 		485113F66943C30F7F206D5F /* Pods-HNLandTax.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HNLandTax.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HNLandTax/Pods-HNLandTax.debug.xcconfig"; sourceTree = "<group>"; };
+		510FD31A21CCD8480018D487 /* DownloadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		510FD31B21CCD8480018D487 /* DeletedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeletedViewController.m; sourceTree = "<group>"; };
+		510FD31C21CCD8480018D487 /* DownloadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		510FD31D21CCD8480018D487 /* DeletedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeletedViewController.h; sourceTree = "<group>"; };
 		51101897219AA915002E943D /* UIView+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+LoadingHud.h"; sourceTree = "<group>"; };
 		51101898219AA915002E943D /* UIView+LoadingHud.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+LoadingHud.m"; sourceTree = "<group>"; };
 		5110189B219AB990002E943D /* UIViewController+LoadingHud.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadingHud.h"; sourceTree = "<group>"; };
@@ -531,6 +539,17 @@
 				25B062EE19A82C66650459FB /* Pods-HNLandTaxBeta.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		510FD31921CCD8480018D487 /* HomeChilds */ = {
+			isa = PBXGroup;
+			children = (
+				510FD31C21CCD8480018D487 /* DownloadViewController.h */,
+				510FD31A21CCD8480018D487 /* DownloadViewController.m */,
+				510FD31D21CCD8480018D487 /* DeletedViewController.h */,
+				510FD31B21CCD8480018D487 /* DeletedViewController.m */,
+			);
+			path = HomeChilds;
 			sourceTree = "<group>";
 		};
 		51185B6D21A6A7B50060B015 /* Models */ = {
@@ -1105,6 +1124,7 @@
 		F2235113207485EB0062C828 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				510FD31921CCD8480018D487 /* HomeChilds */,
 				51BABC0521B1410B00FE7901 /* Authen */,
 				F2B91ABE21494ADC003311A1 /* VideoPlay */,
 				F2235116207486230062C828 /* HomeViewController.h */,
@@ -1521,6 +1541,7 @@
 				F22351052074832F0062C828 /* JMWebViewController.m in Sources */,
 				F22350EC2074832F0062C828 /* ICGThumbView.m in Sources */,
 				AEABC1EF213CD0D2009D099E /* UIViewController+BarButtonItem.m in Sources */,
+				510FD31E21CCD8480018D487 /* DownloadViewController.m in Sources */,
 				AEABC1E9213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225C213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
@@ -1548,6 +1569,7 @@
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
 				51185B7021A6A8230060B015 /* WZVideo.m in Sources */,
 				AEABC1E3213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
+				510FD32021CCD8480018D487 /* DeletedViewController.m in Sources */,
 				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F7213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225E213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
@@ -1643,6 +1665,7 @@
 				F2735790207493CE0029AE78 /* JMWebViewController.m in Sources */,
 				F2735792207493CE0029AE78 /* ICGThumbView.m in Sources */,
 				AEABC1F0213CD0D2009D099E /* UIViewController+BarButtonItem.m in Sources */,
+				510FD31F21CCD8480018D487 /* DownloadViewController.m in Sources */,
 				AEABC1EA213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
 				AE86225D213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
@@ -1670,6 +1693,7 @@
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
 				51185B7121A6A8230060B015 /* WZVideo.m in Sources */,
 				AEABC1E4213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
+				510FD32121CCD8480018D487 /* DeletedViewController.m in Sources */,
 				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
 				AEABC1F8213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225F213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
