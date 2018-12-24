@@ -47,6 +47,12 @@
 		512ABB6B21D0817700042340 /* UIResponder+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6421D0817700042340 /* UIResponder+Event.m */; };
 		512ABB6C21D0817700042340 /* UIResponder+ReverseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */; };
 		512ABB6D21D0817700042340 /* UIResponder+ReverseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */; };
+		512ABB7521D0C56700042340 /* MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6F21D0C56700042340 /* MGSafe.m */; };
+		512ABB7621D0C56700042340 /* MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6F21D0C56700042340 /* MGSafe.m */; };
+		512ABB7721D0C56700042340 /* NSArray+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7321D0C56700042340 /* NSArray+MGSafe.m */; };
+		512ABB7821D0C56700042340 /* NSArray+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7321D0C56700042340 /* NSArray+MGSafe.m */; };
+		512ABB7921D0C56700042340 /* NSDictionary+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */; };
+		512ABB7A21D0C56700042340 /* NSDictionary+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */; };
 		5161BA0121AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */; };
 		5161BA0221AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */; };
 		5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0421AD3FB300D2F9F3 /* WZShare.m */; };
@@ -331,6 +337,12 @@
 		512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ReverseEvent.m"; sourceTree = "<group>"; };
 		512ABB6621D0817700042340 /* UIResponder+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Event.h"; sourceTree = "<group>"; };
 		512ABB6721D0817700042340 /* UIView+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Event.h"; sourceTree = "<group>"; };
+		512ABB6F21D0C56700042340 /* MGSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSafe.m; sourceTree = "<group>"; };
+		512ABB7021D0C56700042340 /* NSArray+MGSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MGSafe.h"; sourceTree = "<group>"; };
+		512ABB7121D0C56700042340 /* NSDictionary+MGSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MGSafe.h"; sourceTree = "<group>"; };
+		512ABB7221D0C56700042340 /* MGSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSafe.h; sourceTree = "<group>"; };
+		512ABB7321D0C56700042340 /* NSArray+MGSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MGSafe.m"; sourceTree = "<group>"; };
+		512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MGSafe.m"; sourceTree = "<group>"; };
 		5161B9FF21AD3F8A00D2F9F3 /* UIViewController+WZShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZShare.h"; sourceTree = "<group>"; };
 		5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZShare.m"; sourceTree = "<group>"; };
 		5161BA0321AD3FB300D2F9F3 /* WZShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZShare.h; sourceTree = "<group>"; };
@@ -694,6 +706,19 @@
 			path = MGEvent;
 			sourceTree = "<group>";
 		};
+		512ABB6E21D0C56700042340 /* MGSafe */ = {
+			isa = PBXGroup;
+			children = (
+				512ABB7221D0C56700042340 /* MGSafe.h */,
+				512ABB6F21D0C56700042340 /* MGSafe.m */,
+				512ABB7021D0C56700042340 /* NSArray+MGSafe.h */,
+				512ABB7321D0C56700042340 /* NSArray+MGSafe.m */,
+				512ABB7121D0C56700042340 /* NSDictionary+MGSafe.h */,
+				512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */,
+			);
+			path = MGSafe;
+			sourceTree = "<group>";
+		};
 		517D8C5521A296FC004A4744 /* JMCoreDataManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -1004,22 +1029,23 @@
 		F2234FFD2074832E0062C828 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				512ABB6121D0816300042340 /* MGEvent */,
-				5190570421D070F400E9B394 /* MGNotify */,
-				517D8C5521A296FC004A4744 /* JMCoreDataManager */,
 				AEABC1BA213CD0D2009D099E /* JMCategory */,
-				AE86222F213CC31D00C93C9E /* JMNetwork */,
-				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
-				F22350032074832E0062C828 /* JMRefresh */,
-				F223500A2074832E0062C828 /* JMToolManager */,
+				F22350A22074832E0062C828 /* JMColorManager */,
+				517D8C5521A296FC004A4744 /* JMCoreDataManager */,
 				F22350502074832E0062C828 /* JMExtend */,
+				F22350A82074832E0062C828 /* JMKeyManager */,
 				F22350572074832E0062C828 /* JMLocationManager */,
 				F223505E2074832E0062C828 /* JMNavigation */,
-				F22350632074832E0062C828 /* JMVedioClip */,
+				AE86222F213CC31D00C93C9E /* JMNetwork */,
+				F22350032074832E0062C828 /* JMRefresh */,
+				F223500A2074832E0062C828 /* JMToolManager */,
+				F2234FFE2074832E0062C828 /* JMTransitionAnimated */,
 				F22350972074832E0062C828 /* JMUIManager */,
-				F22350A22074832E0062C828 /* JMColorManager */,
+				F22350632074832E0062C828 /* JMVedioClip */,
 				F22350A52074832E0062C828 /* JMWebManager */,
-				F22350A82074832E0062C828 /* JMKeyManager */,
+				512ABB6121D0816300042340 /* MGEvent */,
+				5190570421D070F400E9B394 /* MGNotify */,
+				512ABB6E21D0C56700042340 /* MGSafe */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1691,6 +1717,7 @@
 				AE86227A213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
 				512ABB4421D07D0100042340 /* NSObject+Object.m in Sources */,
 				512ABB5E21D07EF200042340 /* MGAuthorizationManager.m in Sources */,
+				512ABB7521D0C56700042340 /* MGSafe.m in Sources */,
 				F22350C62074832F0062C828 /* DatePickerView.m in Sources */,
 				512ABB5A21D07EB000042340 /* UIControl+YYAddMG.m in Sources */,
 				5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */,
@@ -1703,6 +1730,7 @@
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
 				512498992199580700C40B18 /* CWCarousel.m in Sources */,
+				512ABB7921D0C56700042340 /* NSDictionary+MGSafe.m in Sources */,
 				51BABC0A21B1410B00FE7901 /* WZLocalAuthentication.m in Sources */,
 				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
@@ -1748,6 +1776,7 @@
 				51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1ED213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
 				512ABB5421D07EB000042340 /* NSObject+MGModel.m in Sources */,
+				512ABB7721D0C56700042340 /* NSArray+MGSafe.m in Sources */,
 				512ABB6821D0817700042340 /* UIView+Event.m in Sources */,
 				F22350FF2074832F0062C828 /* JMBaseTableViewController.m in Sources */,
 				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
@@ -1831,6 +1860,7 @@
 				AE86227B213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
 				512ABB4521D07D0100042340 /* NSObject+Object.m in Sources */,
 				512ABB5F21D07EF200042340 /* MGAuthorizationManager.m in Sources */,
+				512ABB7621D0C56700042340 /* MGSafe.m in Sources */,
 				F273579A207493CE0029AE78 /* DatePickerView.m in Sources */,
 				512ABB5B21D07EB000042340 /* UIControl+YYAddMG.m in Sources */,
 				5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */,
@@ -1843,6 +1873,7 @@
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
 				5124989A2199580700C40B18 /* CWCarousel.m in Sources */,
+				512ABB7A21D0C56700042340 /* NSDictionary+MGSafe.m in Sources */,
 				51BABC0B21B1410B00FE7901 /* WZLocalAuthentication.m in Sources */,
 				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
@@ -1888,6 +1919,7 @@
 				5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1EE213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
 				512ABB5521D07EB000042340 /* NSObject+MGModel.m in Sources */,
+				512ABB7821D0C56700042340 /* NSArray+MGSafe.m in Sources */,
 				512ABB6921D0817700042340 /* UIView+Event.m in Sources */,
 				F27357B2207493CE0029AE78 /* JMBaseTableViewController.m in Sources */,
 				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
