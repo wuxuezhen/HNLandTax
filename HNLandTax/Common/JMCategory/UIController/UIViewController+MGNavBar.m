@@ -81,7 +81,7 @@
 
 - (void)mgShowNavBar {
 	
-	CGFloat delta = (IS_HOTSPOT_CONNECTED?(iPhoneX?0:HOTSPOT_STATUSBAR_HEIGHT):0);
+	CGFloat delta = (IS_HOTSPOT_CONNECTED?(MG_IS_IPHONE_X ? 0 : HOTSPOT_STATUSBAR_HEIGHT) : 0);
 	
     self.mgNavBar.frame = CGRectMake(0, 0,MG_NAV_BAR_WIDTH, STATUS_AND_NAV_BAR_HEIGHT - delta);
     self.mgNavBackBtn.frame = CGRectMake(0, 0, MG_NAV_NAVIGATION_BAR_HEIGHT, MG_NAV_NAVIGATION_BAR_HEIGHT);

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define MG_EVENT_KEY(name) static NSString *const name = @#name;
+#define MG_NOTIFY_KEY(name) static NSString *const name = @#name;
 
 typedef void (^NotifyBlock)(__nullable id info);
 

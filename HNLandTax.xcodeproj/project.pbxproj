@@ -1155,13 +1155,13 @@
 		F22350632074832E0062C828 /* JMVedioClip */ = {
 			isa = PBXGroup;
 			children = (
-				F22350642074832E0062C828 /* ICGThumbView.h */,
-				F22350652074832E0062C828 /* ICGRulerView.m */,
-				F22350662074832E0062C828 /* ICGVideoTrimmerView.m */,
-				F22350672074832E0062C828 /* ICGVideoTrimmer.h */,
-				F22350682074832E0062C828 /* ICGThumbView.m */,
 				F22350692074832E0062C828 /* ICGRulerView.h */,
+				F22350652074832E0062C828 /* ICGRulerView.m */,
+				F22350642074832E0062C828 /* ICGThumbView.h */,
+				F22350682074832E0062C828 /* ICGThumbView.m */,
+				F22350672074832E0062C828 /* ICGVideoTrimmer.h */,
 				F223506A2074832E0062C828 /* ICGVideoTrimmerView.h */,
+				F22350662074832E0062C828 /* ICGVideoTrimmerView.m */,
 			);
 			path = JMVedioClip;
 			sourceTree = "<group>";

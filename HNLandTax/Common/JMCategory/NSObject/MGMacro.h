@@ -67,10 +67,9 @@
 //判断iPhoneXs Max
 #define IS_IPHONE_Xs_Max ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) && !isPad_MG : NO)
 
-#define HAS_SAFEAREA (IS_IPHONE_X==YES || IS_IPHONE_Xr ==YES || IS_IPHONE_Xs== YES || IS_IPHONE_Xs_Max== YES)
+#define HAS_SAFEAREA (IS_IPHONE_X == YES || IS_IPHONE_Xr == YES || IS_IPHONE_Xs == YES || IS_IPHONE_Xs_Max == YES)
 
-#define iPhoneX HAS_SAFEAREA  //iPhoneX宏定义更新（不判断是否是iPhoneX设备，只判断有没有安全区域）
-
+//iPhoneX宏定义更新（不判断是否是iPhoneX设备，只判断有没有安全区域）
 #define MG_IS_IPHONE_X HAS_SAFEAREA
 
 // iOS系统版本

@@ -11,7 +11,7 @@
 #import "UIControl+YYAddMG.h"
 #import "MGMacro.h"
 
-@interface UIView (JMWhenTappedBlocks_Private)
+@interface UIView (WhenTappedBlocks_Private)
 
 - (void)runBlockForKey:(void *)blockKey;
 - (void)setBlock:(TouchBlock)block forKey:(void *)blockKey;
@@ -47,6 +47,10 @@ static char kWhenLongPressBlockKey;
 
 #pragma mark When Tapped
 
+/**
+ 手势 单击
+ @param block TouchBlock
+ */
 - (void)blockTapped:(TouchBlock)block {
 	[self setBlock:block forKey:&kWhenTappedBlockKey];
 	if (!block) return;
@@ -56,6 +60,10 @@ static char kWhenLongPressBlockKey;
 	[self addRequiredToDoubleTapsRecognizer:gesture];
 }
 
+/**
+ 手势 双击
+ @param block TouchBlock
+ */
 - (void)blockDoubleClick:(TouchBlock)block {
 	[self setBlock:block forKey:&kWhenDoubleTappedBlockKey];
 	if (!block) return;
@@ -65,6 +73,10 @@ static char kWhenLongPressBlockKey;
 	[self addRequirementToSingleTapsRecognizer:gesture];
 }
 
+/**
+ 手势 双指点击
+ @param block TouchBlock
+ */
 - (void)blockTwoFingerTapped:(TouchBlock)block {
 	[self setBlock:block forKey:&kWhenTwoFingerTappedBlockKey];
 	if (!block) return;
@@ -83,6 +95,10 @@ static char kWhenLongPressBlockKey;
 	[self setBlock:block forKey:&kWhenTouchedUpBlockKey];
 }
 
+/**
+ 事件 点击
+ @param block TouchBlock
+ */
 - (void)blockClick:(TouchBlock)block {
 	[self setBlock:block forKey:&kWhenClickBlockKey];
 	if (!block) return;
@@ -90,10 +106,11 @@ static char kWhenLongPressBlockKey;
 	if([self isKindOfClass:[UIControl class]]){
 		@weakify(self);
 		[((UIControl *) self) removeAllBlocksForControlEvents:UIControlEventTouchUpInside];
-		[((UIControl *) self) addBlockForControlEvents:UIControlEventTouchUpInside block:^(id sender) {
-			@strongify(self);
-			[self runBlockForKey:&kWhenClickBlockKey];
-		}];
+        [((UIControl *) self) addBlockForControlEvents:UIControlEventTouchUpInside
+                                                 block:^(id sender) {
+                                                     @strongify(self);
+                                                     [self runBlockForKey:&kWhenClickBlockKey];
+                                                 }];
 	}
 }
 

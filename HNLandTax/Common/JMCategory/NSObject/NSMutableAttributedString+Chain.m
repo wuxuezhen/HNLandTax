@@ -23,8 +23,7 @@
 }
 @end
 
-@interface MGAttributedMaker ()
-{
+@interface MGAttributedMaker (){
     NSMutableAttributedString *_attString;
 }
 @property (nonatomic, strong) NSMutableSet<MGAttributed *> *attributedSet;

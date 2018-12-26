@@ -8,21 +8,33 @@
 
 #import <Foundation/Foundation.h>
 
+/**
+ MGSafeArray
+ */
 @interface MGSafeArray<__covariant ObjectType> : NSObject
 @property (nonatomic, weak) NSArray *originArray;
 - (ObjectType _Nullable)objectAtIndexedSubscript:(NSUInteger)idx;
 @end
 
+/**
+ MGSafeMutableArray
+ */
 @interface MGSafeMutableArray<ObjectType> : MGSafeArray<ObjectType>
 - (void)setObject:(ObjectType _Nullable)obj atIndexedSubscript:(NSUInteger)idx;
 @end
 
+
+/**
+ MGSafeDictionary
+ */
 @interface MGSafeDictionary<__covariant KeyType, __covariant ObjectType> : NSObject
 @property (nonatomic, weak) NSDictionary *originDict;
-
 - (ObjectType _Nullable)objectForKeyedSubscript:(KeyType<NSCopying>_Nullable)key;
 @end
 
+/**
+ MGSafeMutableDictionary
+ */
 @interface MGSafeMutableDictionary<KeyType, ObjectType> : MGSafeDictionary<KeyType, ObjectType>
 - (void)setObject:(_Nullable ObjectType)obj forKeyedSubscript:(KeyType<NSCopying>_Nullable)key;
 @end

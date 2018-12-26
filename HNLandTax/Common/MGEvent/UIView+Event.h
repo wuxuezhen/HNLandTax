@@ -12,7 +12,6 @@ typedef void (^TouchBlock)(void);
 
 @interface UIView (Event)<UIGestureRecognizerDelegate>
 
-//================优先使用
 - (void)blockClick:(TouchBlock)block;
 - (void)blockLongPress:(TouchBlock)block;
 - (void)blockDoubleClick:(TouchBlock)block;

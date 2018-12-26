@@ -7,7 +7,7 @@
 //
 
 #import "MGSafe.h"
-#import "NSObject+ObjDic.h"
+#import "NSObject+Object.h"
 #import "NSArray+MGSafe.h"
 #import "NSDictionary+MGSafe.h"
 

@@ -10,6 +10,16 @@
 
 @implementation NSObject (CurrentNav)
 
+- (UINavigationController *)currentNav{
+    UIViewController *result = [self currentRootTopVC];
+    if(result.navigationController == nil){
+        NSLog(@"❗result.navigationController is nil,because result is %@❗",result);
+        NSLog(@"❗so create a testNav❗");
+        return [self testNav:result];
+    }
+    return result.navigationController;
+}
+
 //获取当前屏幕显示的viewcontroller
 - (UIViewController *)currentRootTopVC {
     UIViewController *result = nil;
@@ -44,16 +54,6 @@
         result = [(UINavigationController *)result visibleViewController];
     }
     return result;
-}
-
-- (UINavigationController *)currentNav{
-    UIViewController *result = [self currentRootTopVC];
-    if(result.navigationController == nil){
-        NSLog(@"❗result.navigationController is nil,because result is %@❗",result);
-        NSLog(@"❗so create a testNav❗");
-        return [self testNav:result];
-    }
-    return result.navigationController;
 }
 
 -(UINavigationController *)testNav:(UIViewController*)rootVC{
