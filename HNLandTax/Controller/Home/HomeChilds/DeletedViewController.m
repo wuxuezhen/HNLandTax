@@ -20,6 +20,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self wz_initUI];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(resetData)
+                                                 name:@"RefresListdata"
+                                               object:nil];
 }
 
 -(void)wz_initUI{
@@ -81,6 +85,10 @@
     HDetailViewController *h = [[HDetailViewController alloc]init];
     h.video = self.dataArray[indexPath.row];
     [self.navigationController pushViewController:h animated:YES];
+}
+
+-(void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

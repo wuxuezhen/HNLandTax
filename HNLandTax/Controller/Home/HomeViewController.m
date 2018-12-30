@@ -99,7 +99,6 @@
                   ((void (*)(id, SEL))objc_msgSend)(vc, NSSelectorFromString(@"resetData"));
             }
         }
-        [this.tableView reloadData];
     };
     [self.navigationController pushViewController:add animated:YES];
     

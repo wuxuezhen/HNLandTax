@@ -34,24 +34,28 @@
 
 -(void)initData{
     NSArray *urls = [JMJsonHandle toObjectWithJsonPath:@"video"];
-    for (NSString *url in urls) {
-        WZVideo *video = [WZVideo new];
-        video.videoUrl = url;
-        [self.dataArray addObject:video];
-    }
+  
 }
 
 -(void)resetData{
     NSArray *arr = [self switchDataWithArray:[[JMCoreDataManager manager] sortAllData]];
-    for (WZVideo *video in arr) {
-        WZVideo *temp = [self getVideoWithUrl:video.videoUrl];
-        if (temp) {
-            [self.dataArray removeObject:temp];
+    if (arr.count > 0) {
+        for (WZVideo *video in arr) {
+            WZVideo *temp = [self getVideoWithUrl:video.videoUrl];
+            if (temp) {
+                [self.dataArray removeObject:temp];
+            }
+            if (!video.isDelete) {
+                [self.dataArray addObject:video];
+            }
         }
-        if (!video.isDelete) {
-            [self.dataArray addObject:video];
+    }else{
+        for (WZVideo *video in self.dataArray) {
+            [[JMCoreDataManager manager] addData:video];
         }
+        
     }
+    
     [self.tableView reloadData];
 }
 
@@ -104,6 +108,7 @@
     [self.dataArray removeObjectAtIndex:indexPath.row];
     [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     [[JMCoreDataManager manager] updateData:video];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"RefresListdata" object:nil];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

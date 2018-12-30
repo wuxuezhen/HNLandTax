@@ -126,6 +126,10 @@ static NSString *kJMVideo = @"JMVideo";
  @param data 新数据
  */
 -(void)addData:(WZVideo *)data{
+    NSArray *results = [self checkData:data.videoUrl];
+    if (results.count > 0) {
+        return;
+    }
     JMVideo *video = [NSEntityDescription  insertNewObjectForEntityForName:kJMVideo
                                                     inManagedObjectContext:self.managerContenxt];
     video.videoUrl = data.videoUrl;
