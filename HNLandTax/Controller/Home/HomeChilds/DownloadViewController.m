@@ -25,7 +25,6 @@
 -(void)wz_initUI{
     [self initData];
     [self resetData];
-    [self WZLog];
     
     [self.tableView registerNib:[HomeTableViewCell nib]
          forCellReuseIdentifier:[HomeTableViewCell reuseIdentifier]];
@@ -80,14 +79,6 @@
         [results addObject:obj];
     }
     return results;
-}
-
--(void)WZLog{
-    NSMutableString *str = [NSMutableString string];
-    for (WZVideo *key in self.dataArray) {
-        [str appendFormat:@"\"%@\",",key.videoUrl];
-    }
-    NSLog(@"str = %@",[str substringToIndex:str.length-1]);
 }
 
 -(void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath{
