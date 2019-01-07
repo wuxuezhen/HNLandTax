@@ -51,5 +51,21 @@
     }
 }
 
+-(void)registerClass:(Class)kClass{
+    if (kClass) {
+        [self registerClass:kClass forCellReuseIdentifier:NSStringFromClass(kClass)];
+    }
+}
+
+-(void)registerNib:(Class)kClass{
+    if (kClass) {
+        NSString *nibName = NSStringFromClass(kClass);
+        [self registerNib:[UINib nibWithNibName:nibName bundle:nil] forCellReuseIdentifier:nibName];
+    }
+}
+
+-(void)dequeueReusableCell{
+    [self dequeueReusableCellWithIdentifier:<#(nonnull NSString *)#>]
+}
 @end
 

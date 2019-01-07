@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BDMJRefreshProtocol.h"
-@interface UITableView (BDRefresh)<BDMJRefreshProtocol>
+@interface UITableView (BDRefresh)<BDMJRefreshProtocol,BDCellRegisterProtocol>
 
 @end

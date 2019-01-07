@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "BDMJRefreshProtocol.h"
-@interface UICollectionView (BDRefresh)<BDMJRefreshProtocol>
+@interface UICollectionView (BDRefresh)<BDMJRefreshProtocol,BDCellRegisterProtocol>
 
 @end

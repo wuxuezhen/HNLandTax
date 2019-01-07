@@ -21,4 +21,14 @@
 -(void)endRefreshForFooter;
 
 @end
+
+
+@protocol BDCellRegisterProtocol <NSObject>
+
+-(void)registerNib:(Class)kClass;
+
+-(void)registerClass:(Class)kClass;
+
+@end
+
 #endif /* BDMJRefreshProtocol_h */
