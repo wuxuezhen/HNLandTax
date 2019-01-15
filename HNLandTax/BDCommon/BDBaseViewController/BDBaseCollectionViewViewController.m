@@ -7,9 +7,9 @@
 //
 
 #import "BDBaseCollectionViewViewController.h"
-#import "FITPageNetwork.h"
+#import "BDPageNetwork.h"
 @interface BDBaseCollectionViewViewController ()
-@property (nonatomic, strong) FITPageNetwork *pageNet;
+@property (nonatomic, strong) BDPageNetwork *pageNet;
 
 @end
 
@@ -91,7 +91,7 @@
 }
 
 -(void)bd_beginLoadRequest{
-    [self.collectionView.mj_header beginRefreshing];
+    [self.collectionView beginRefreshing];
 }
 
 -(void)bd_refreshData{
@@ -168,7 +168,7 @@
     return _layout;
 }
 
-- (FITPageNetwork *)pageNet {
+- (BDPageNetwork *)pageNet {
     if (!_pageNet) {
         NSString *url      = [self bd_pageUrl];
         NSString *key      = [self bd_parsingKey];
@@ -176,12 +176,12 @@
         Class class        = [self bd_pageModelClass];
         
         if (para) {
-            _pageNet = [[FITPageNetwork alloc] initWithJSONModelClass:class
+            _pageNet = [[BDPageNetwork alloc] initWithJSONModelClass:class
                                                                   key:key
                                                               apiPath:url
                                                                params:para];
         }else{
-            _pageNet = [[FITPageNetwork alloc] initWithJSONModelClass:class
+            _pageNet = [[BDPageNetwork alloc] initWithJSONModelClass:class
                                                                   key:key
                                                               apiPath:url];
         }

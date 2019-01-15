@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "BDBusinessDataHeader.h"
+#import "UIViewController+BarButtonItem.h"
+#import "UIViewController+LoadingHud.h"
 @interface RootViewController : UIViewController
 @property (nonatomic, assign) BOOL wz_banPopGestureRecognizerEnable;
 

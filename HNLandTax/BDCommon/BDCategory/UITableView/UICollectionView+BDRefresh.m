@@ -7,12 +7,12 @@
 //
 
 #import "UICollectionView+BDRefresh.h"
-
 #import "BDRefreshNormalHeader.h"
 #import "BDRefreshnAutoNormalFooter.h"
 
 @implementation UICollectionView (BDRefresh)
 
+#pragma mark - BDMJRefreshProtocol
 -(void)bd_headerRefreshTarget:(id)target selecter:(SEL)selecter{
     self.mj_header = [BDRefreshNormalHeader headerWithRefreshingTarget:target
                                                       refreshingAction:selecter];
@@ -51,7 +51,12 @@
     }
 }
 
+-(void)beginRefreshing{
+    [self.mj_header beginRefreshing];
+}
 
+
+#pragma mark - BDCellRegisterProtocol
 -(void)registerClass:(Class)kClass{
     if (kClass) {
         [self registerClass:kClass forCellWithReuseIdentifier:NSStringFromClass(kClass)];

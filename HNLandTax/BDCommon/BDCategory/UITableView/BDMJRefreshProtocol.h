@@ -20,6 +20,8 @@
 -(void)endRefreshForHeader;
 -(void)endRefreshForFooter;
 
+-(void)beginRefreshing;
+
 @end
 
 

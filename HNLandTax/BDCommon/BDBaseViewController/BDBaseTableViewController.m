@@ -6,9 +6,9 @@
 //
 
 #import "BDBaseTableViewController.h"
-#import "FITPageNetwork.h"
+#import "BDPageNetwork.h"
 @interface BDBaseTableViewController ()
-@property (nonatomic, strong) FITPageNetwork *pageNet;
+@property (nonatomic, strong) BDPageNetwork *pageNet;
 @end
 
 @implementation BDBaseTableViewController
@@ -81,7 +81,7 @@
 }
 
 -(void)bd_beginLoadRequest{
-    [self.tableView.mj_header beginRefreshing];
+    [self.tableView beginRefreshing];
 }
 
 -(void)bd_refreshData{
@@ -147,7 +147,7 @@
 }
 
 
-- (FITPageNetwork *)pageNet {
+- (BDPageNetwork *)pageNet {
     if (!_pageNet) {
         NSString *url      = [self bd_pageUrl];
         NSString *key      = [self bd_parsingKey];
@@ -155,12 +155,12 @@
         Class class        = [self bd_pageModelClass];
         
         if (para) {
-            _pageNet = [[FITPageNetwork alloc] initWithJSONModelClass:class
+            _pageNet = [[BDPageNetwork alloc] initWithJSONModelClass:class
                                                                   key:key
                                                               apiPath:url
                                                                params:para];
         }else{
-            _pageNet = [[FITPageNetwork alloc] initWithJSONModelClass:class
+            _pageNet = [[BDPageNetwork alloc] initWithJSONModelClass:class
                                                                   key:key
                                                               apiPath:url];
         }
