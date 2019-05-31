@@ -9,13 +9,13 @@
 //  LICENSE file in the root directory of this source tree.
 //
 
-#import "UIControl+YYAddMG.h"
+#import "UIControl+YYAddWZ.h"
 #import <objc/runtime.h>
 #import "MGMacro.h"
 
-YYSYNTH_DUMMY_CLASS(UIControl_YYAddMG)
+YYSYNTH_DUMMY_CLASS(UIControl_YYAddWZ)
 
-static const int block_keyMG;
+static const int block_keyWZ;
 
 @interface _YYUIControlBlockTargetMG : NSObject
 
@@ -46,7 +46,7 @@ static const int block_keyMG;
 
 
 
-@implementation UIControl (YYAddMG)
+@implementation UIControl (YYAddWZ)
 
 - (void)removeAllTargets {
     [[self allTargets] enumerateObjectsUsingBlock: ^(id object, BOOL *stop) {
@@ -106,10 +106,10 @@ static const int block_keyMG;
 }
 
 - (NSMutableArray *)_yy_allUIControlBlockTargetsMG {
-    NSMutableArray *targets = objc_getAssociatedObject(self, &block_keyMG);
+    NSMutableArray *targets = objc_getAssociatedObject(self, &block_keyWZ);
     if (!targets) {
         targets = [NSMutableArray array];
-        objc_setAssociatedObject(self, &block_keyMG, targets, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+        objc_setAssociatedObject(self, &block_keyWZ, targets, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
     return targets;
 }

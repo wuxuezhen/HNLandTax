@@ -1,17 +1,17 @@
 //
-//  NSObject+MGModel.m
+//  NSObject+WZModel.m
 //  MGTools
 //
 //  Created by Alfred Zhang on 2018/2/28.
 //  Copyright © 2018年 MIGU. All rights reserved.
 //
 
-#import "NSObject+MGModel.h"
+#import "NSObject+WZModel.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (MGModel)
+@implementation NSObject (WZModel)
 
-- (BOOL)mg_boolValue {
+- (BOOL)wz_boolValue {
     if ([self isKindOfClass:[NSString class]]) {
         if ([((NSString *)self) isEqualToString:@"0"]) {
             return NO;
@@ -23,7 +23,7 @@
     }
 }
 
-- (NSInteger)mg_integerValue {
+- (NSInteger)wz_integerValue {
     if ([self isKindOfClass:[NSString class]]) {
         return [((NSString *)self) integerValue];
     }else{
@@ -31,7 +31,7 @@
     }
 }
 
-- (CGFloat)mg_floatValue {
+- (CGFloat)wz_floatValue {
     if ([self isKindOfClass:[NSString class]]) {
         return [((NSString *)self) floatValue];
     }else{
@@ -39,12 +39,12 @@
     }
 }
 
--(id)mgOriginData{
+-(id)wzOriginData{
 	return objc_getAssociatedObject(self, _cmd);;
 }
 
--(void)setMgOriginData:(id)mgOriginData{
-	objc_setAssociatedObject(self, @selector(mgOriginData), mgOriginData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+-(void)setWzOriginData:(id)wzOriginData{
+	objc_setAssociatedObject(self, @selector(wzOriginData), wzOriginData, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end

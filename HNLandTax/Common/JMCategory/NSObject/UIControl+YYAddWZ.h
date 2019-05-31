@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Provides extensions for `UIControl`.
  */
-@interface UIControl (YYAddMG)
+@interface UIControl (YYAddWZ)
 
 /**
  Removes all targets and actions for a particular event (or events)
