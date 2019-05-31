@@ -11,7 +11,7 @@
 
 #import "UIControl+YYAddWZ.h"
 #import <objc/runtime.h>
-#import "MGMacro.h"
+#import "WZMacro.h"
 
 YYSYNTH_DUMMY_CLASS(UIControl_YYAddWZ)
 

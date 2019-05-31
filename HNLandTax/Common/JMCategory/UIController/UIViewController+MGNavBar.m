@@ -8,7 +8,7 @@
 
 #import "UIViewController+MGNavBar.h"
 #import <objc/runtime.h>
-#import "MGMacro.h"
+#import "WZMacro.h"
 #define MG_NAV_NAVIGATION_BAR_HEIGHT   44
 #define MG_NAV_BAR_WIDTH (MIN([UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height))
 

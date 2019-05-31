@@ -317,7 +317,7 @@
 		512ABB3A21D07BCD00042340 /* NSNumber+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Category.m"; sourceTree = "<group>"; };
 		512ABB4221D07D0100042340 /* NSObject+Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Object.h"; sourceTree = "<group>"; };
 		512ABB4321D07D0100042340 /* NSObject+Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Object.m"; sourceTree = "<group>"; };
-		512ABB4621D07E0900042340 /* MGMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MGMacro.h; sourceTree = "<group>"; };
+		512ABB4621D07E0900042340 /* WZMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZMacro.h; sourceTree = "<group>"; };
 		512ABB4821D07E7200042340 /* NSObject+CurrentNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CurrentNav.h"; sourceTree = "<group>"; };
 		512ABB4921D07E7200042340 /* NSObject+CurrentNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CurrentNav.m"; sourceTree = "<group>"; };
 		512ABB4C21D07EB000042340 /* UIControl+YYAddWZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+YYAddWZ.h"; sourceTree = "<group>"; };
@@ -674,7 +674,7 @@
 		512ABB3D21D07C4200042340 /* NSObject */ = {
 			isa = PBXGroup;
 			children = (
-				512ABB4621D07E0900042340 /* MGMacro.h */,
+				512ABB4621D07E0900042340 /* WZMacro.h */,
 				512ABB4221D07D0100042340 /* NSObject+Object.h */,
 				512ABB4321D07D0100042340 /* NSObject+Object.m */,
 				512ABB4821D07E7200042340 /* NSObject+CurrentNav.h */,

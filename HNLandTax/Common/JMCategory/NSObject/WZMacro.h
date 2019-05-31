@@ -1,13 +1,12 @@
 //
-//  MGMacro.h
-//  MiGuKit
+//  WZMacro.h
 //
 //  Created by zhgz on 2018/4/19.
 //  Copyright © 2018年 Migu Video Technology. All rights reserved.
 //
 
-#ifndef MGMacro_h
-#define MGMacro_h
+#ifndef WZMacro_h
+#define WZMacro_h
 
 #ifndef weakify
     #if DEBUG

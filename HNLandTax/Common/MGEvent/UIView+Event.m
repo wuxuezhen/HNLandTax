@@ -9,7 +9,7 @@
 #import "UIView+Event.h"
 #import <objc/runtime.h>
 #import "UIControl+YYAddWZ.h"
-#import "MGMacro.h"
+#import "WZMacro.h"
 
 @interface UIView (P_WhenTappedBlocks)
 
