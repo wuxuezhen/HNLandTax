@@ -19,54 +19,14 @@
 		51185B7121A6A8230060B015 /* WZVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 51185B6F21A6A8230060B015 /* WZVideo.m */; };
 		511CAD2621AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */; };
 		511CAD2721AA7B250023D184 /* UIViewController+WZCameraAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */; };
-		512498992199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
-		5124989A2199580700C40B18 /* CWCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5124988F2199580600C40B18 /* CWCarousel.m */; };
-		5124989B2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
-		5124989C2199580700C40B18 /* CWPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498902199580600C40B18 /* CWPageControl.m */; };
-		5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
-		5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 512498912199580600C40B18 /* CWFlowLayout.m */; };
-		512ABB3B21D07BCD00042340 /* NSNumber+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB3A21D07BCD00042340 /* NSNumber+Category.m */; };
-		512ABB3C21D07BCD00042340 /* NSNumber+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB3A21D07BCD00042340 /* NSNumber+Category.m */; };
-		512ABB4421D07D0100042340 /* NSObject+Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4321D07D0100042340 /* NSObject+Object.m */; };
-		512ABB4521D07D0100042340 /* NSObject+Object.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4321D07D0100042340 /* NSObject+Object.m */; };
-		512ABB4A21D07E7200042340 /* NSObject+CurrentNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4921D07E7200042340 /* NSObject+CurrentNav.m */; };
-		512ABB4B21D07E7200042340 /* NSObject+CurrentNav.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4921D07E7200042340 /* NSObject+CurrentNav.m */; };
-		512ABB5421D07EB000042340 /* NSObject+WZModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4D21D07EB000042340 /* NSObject+WZModel.m */; };
-		512ABB5521D07EB000042340 /* NSObject+WZModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4D21D07EB000042340 /* NSObject+WZModel.m */; };
-		512ABB5621D07EB000042340 /* UIDevice+RotateRrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4F21D07EB000042340 /* UIDevice+RotateRrientation.m */; };
-		512ABB5721D07EB000042340 /* UIDevice+RotateRrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB4F21D07EB000042340 /* UIDevice+RotateRrientation.m */; };
-		512ABB5821D07EB000042340 /* NSMutableAttributedString+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB5221D07EB000042340 /* NSMutableAttributedString+Chain.m */; };
-		512ABB5921D07EB000042340 /* NSMutableAttributedString+Chain.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB5221D07EB000042340 /* NSMutableAttributedString+Chain.m */; };
-		512ABB5A21D07EB000042340 /* UIControl+YYAddWZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB5321D07EB000042340 /* UIControl+YYAddWZ.m */; };
-		512ABB5B21D07EB000042340 /* UIControl+YYAddWZ.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB5321D07EB000042340 /* UIControl+YYAddWZ.m */; };
-		512ABB5E21D07EF200042340 /* MGAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB5D21D07EF200042340 /* MGAuthorizationManager.m */; };
-		512ABB5F21D07EF200042340 /* MGAuthorizationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB5D21D07EF200042340 /* MGAuthorizationManager.m */; };
-		512ABB6821D0817700042340 /* UIView+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6221D0817700042340 /* UIView+Event.m */; };
-		512ABB6921D0817700042340 /* UIView+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6221D0817700042340 /* UIView+Event.m */; };
-		512ABB6A21D0817700042340 /* UIResponder+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6421D0817700042340 /* UIResponder+Event.m */; };
-		512ABB6B21D0817700042340 /* UIResponder+Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6421D0817700042340 /* UIResponder+Event.m */; };
-		512ABB6C21D0817700042340 /* UIResponder+ReverseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */; };
-		512ABB6D21D0817700042340 /* UIResponder+ReverseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */; };
-		512ABB7521D0C56700042340 /* MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6F21D0C56700042340 /* MGSafe.m */; };
-		512ABB7621D0C56700042340 /* MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB6F21D0C56700042340 /* MGSafe.m */; };
-		512ABB7721D0C56700042340 /* NSArray+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7321D0C56700042340 /* NSArray+MGSafe.m */; };
-		512ABB7821D0C56700042340 /* NSArray+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7321D0C56700042340 /* NSArray+MGSafe.m */; };
-		512ABB7921D0C56700042340 /* NSDictionary+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */; };
-		512ABB7A21D0C56700042340 /* NSDictionary+MGSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */; };
 		5161BA0121AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */; };
 		5161BA0221AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */; };
 		5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0421AD3FB300D2F9F3 /* WZShare.m */; };
 		5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */ = {isa = PBXBuildFile; fileRef = 5161BA0421AD3FB300D2F9F3 /* WZShare.m */; };
 		517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
 		517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 517D8C5721A2973C004A4744 /* JMCoreDataManager.m */; };
-		5190574121D070F400E9B394 /* MGNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190570521D070F400E9B394 /* MGNotify.m */; };
-		5190574221D070F400E9B394 /* MGNotify.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190570521D070F400E9B394 /* MGNotify.m */; };
 		5190577121D0756E00E9B394 /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190576E21D0756D00E9B394 /* UIView+Gradient.m */; };
 		5190577221D0756E00E9B394 /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190576E21D0756D00E9B394 /* UIView+Gradient.m */; };
-		5190577321D0756E00E9B394 /* UIView+MGPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190577021D0756E00E9B394 /* UIView+MGPosition.m */; };
-		5190577421D0756E00E9B394 /* UIView+MGPosition.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190577021D0756E00E9B394 /* UIView+MGPosition.m */; };
-		5190577921D075AD00E9B394 /* UIViewController+MGNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190577521D075AC00E9B394 /* UIViewController+MGNavBar.m */; };
-		5190577A21D075AD00E9B394 /* UIViewController+MGNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190577521D075AC00E9B394 /* UIViewController+MGNavBar.m */; };
 		5190577B21D075AD00E9B394 /* UIViewController+PushAndPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190577821D075AD00E9B394 /* UIViewController+PushAndPop.m */; };
 		5190577C21D075AD00E9B394 /* UIViewController+PushAndPop.m in Sources */ = {isa = PBXBuildFile; fileRef = 5190577821D075AD00E9B394 /* UIViewController+PushAndPop.m */; };
 		51B31D0B21BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 51B31D0921BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld */; };
@@ -306,42 +266,6 @@
 		51185B6F21A6A8230060B015 /* WZVideo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WZVideo.m; sourceTree = "<group>"; };
 		511CAD2421AA7B250023D184 /* UIViewController+WZCameraAlbum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZCameraAlbum.h"; sourceTree = "<group>"; };
 		511CAD2521AA7B250023D184 /* UIViewController+WZCameraAlbum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZCameraAlbum.m"; sourceTree = "<group>"; };
-		5124988F2199580600C40B18 /* CWCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWCarousel.m; sourceTree = "<group>"; };
-		512498902199580600C40B18 /* CWPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWPageControl.m; sourceTree = "<group>"; };
-		512498912199580600C40B18 /* CWFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CWFlowLayout.m; sourceTree = "<group>"; };
-		512498922199580600C40B18 /* CWCarouselProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarouselProtocol.h; sourceTree = "<group>"; };
-		512498932199580600C40B18 /* CWCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWCarousel.h; sourceTree = "<group>"; };
-		512498952199580600C40B18 /* CWPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWPageControl.h; sourceTree = "<group>"; };
-		512498962199580600C40B18 /* CWFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CWFlowLayout.h; sourceTree = "<group>"; };
-		512ABB3921D07BCD00042340 /* NSNumber+Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+Category.h"; sourceTree = "<group>"; };
-		512ABB3A21D07BCD00042340 /* NSNumber+Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+Category.m"; sourceTree = "<group>"; };
-		512ABB4221D07D0100042340 /* NSObject+Object.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Object.h"; sourceTree = "<group>"; };
-		512ABB4321D07D0100042340 /* NSObject+Object.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Object.m"; sourceTree = "<group>"; };
-		512ABB4621D07E0900042340 /* WZMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZMacro.h; sourceTree = "<group>"; };
-		512ABB4821D07E7200042340 /* NSObject+CurrentNav.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+CurrentNav.h"; sourceTree = "<group>"; };
-		512ABB4921D07E7200042340 /* NSObject+CurrentNav.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+CurrentNav.m"; sourceTree = "<group>"; };
-		512ABB4C21D07EB000042340 /* UIControl+YYAddWZ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+YYAddWZ.h"; sourceTree = "<group>"; };
-		512ABB4D21D07EB000042340 /* NSObject+WZModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+WZModel.m"; sourceTree = "<group>"; };
-		512ABB4E21D07EB000042340 /* NSMutableAttributedString+Chain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Chain.h"; sourceTree = "<group>"; };
-		512ABB4F21D07EB000042340 /* UIDevice+RotateRrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+RotateRrientation.m"; sourceTree = "<group>"; };
-		512ABB5021D07EB000042340 /* NSObject+WZModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+WZModel.h"; sourceTree = "<group>"; };
-		512ABB5121D07EB000042340 /* UIDevice+RotateRrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+RotateRrientation.h"; sourceTree = "<group>"; };
-		512ABB5221D07EB000042340 /* NSMutableAttributedString+Chain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Chain.m"; sourceTree = "<group>"; };
-		512ABB5321D07EB000042340 /* UIControl+YYAddWZ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+YYAddWZ.m"; sourceTree = "<group>"; };
-		512ABB5C21D07EF200042340 /* MGAuthorizationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAuthorizationManager.h; sourceTree = "<group>"; };
-		512ABB5D21D07EF200042340 /* MGAuthorizationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGAuthorizationManager.m; sourceTree = "<group>"; };
-		512ABB6221D0817700042340 /* UIView+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Event.m"; sourceTree = "<group>"; };
-		512ABB6321D0817700042340 /* UIResponder+ReverseEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+ReverseEvent.h"; sourceTree = "<group>"; };
-		512ABB6421D0817700042340 /* UIResponder+Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Event.m"; sourceTree = "<group>"; };
-		512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+ReverseEvent.m"; sourceTree = "<group>"; };
-		512ABB6621D0817700042340 /* UIResponder+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Event.h"; sourceTree = "<group>"; };
-		512ABB6721D0817700042340 /* UIView+Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Event.h"; sourceTree = "<group>"; };
-		512ABB6F21D0C56700042340 /* MGSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGSafe.m; sourceTree = "<group>"; };
-		512ABB7021D0C56700042340 /* NSArray+MGSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MGSafe.h"; sourceTree = "<group>"; };
-		512ABB7121D0C56700042340 /* NSDictionary+MGSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+MGSafe.h"; sourceTree = "<group>"; };
-		512ABB7221D0C56700042340 /* MGSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGSafe.h; sourceTree = "<group>"; };
-		512ABB7321D0C56700042340 /* NSArray+MGSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MGSafe.m"; sourceTree = "<group>"; };
-		512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+MGSafe.m"; sourceTree = "<group>"; };
 		5161B9FF21AD3F8A00D2F9F3 /* UIViewController+WZShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+WZShare.h"; sourceTree = "<group>"; };
 		5161BA0021AD3F8A00D2F9F3 /* UIViewController+WZShare.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WZShare.m"; sourceTree = "<group>"; };
 		5161BA0321AD3FB300D2F9F3 /* WZShare.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WZShare.h; sourceTree = "<group>"; };
@@ -350,14 +274,8 @@
 		517D8C5721A2973C004A4744 /* JMCoreDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCoreDataManager.m; sourceTree = "<group>"; };
 		517D8C7D21A2C19A004A4744 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		517D8C7E21A2C19A004A4744 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		5190570521D070F400E9B394 /* MGNotify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGNotify.m; sourceTree = "<group>"; };
-		5190570621D070F400E9B394 /* MGNotify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGNotify.h; sourceTree = "<group>"; };
-		5190576D21D0756D00E9B394 /* UIView+MGPosition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGPosition.h"; sourceTree = "<group>"; };
 		5190576E21D0756D00E9B394 /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
 		5190576F21D0756D00E9B394 /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
-		5190577021D0756E00E9B394 /* UIView+MGPosition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGPosition.m"; sourceTree = "<group>"; };
-		5190577521D075AC00E9B394 /* UIViewController+MGNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MGNavBar.m"; sourceTree = "<group>"; };
-		5190577621D075AC00E9B394 /* UIViewController+MGNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MGNavBar.h"; sourceTree = "<group>"; };
 		5190577721D075AC00E9B394 /* UIViewController+PushAndPop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+PushAndPop.h"; sourceTree = "<group>"; };
 		5190577821D075AD00E9B394 /* UIViewController+PushAndPop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+PushAndPop.m"; sourceTree = "<group>"; };
 		51B31D0A21BE4E8F005C0EAC /* JMVideoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JMVideoModel.xcdatamodel; sourceTree = "<group>"; };
@@ -643,78 +561,8 @@
 		5124988C2199580600C40B18 /* VIews */ = {
 			isa = PBXGroup;
 			children = (
-				5124988D2199580600C40B18 /* MGCarousel */,
 			);
 			path = VIews;
-			sourceTree = "<group>";
-		};
-		5124988D2199580600C40B18 /* MGCarousel */ = {
-			isa = PBXGroup;
-			children = (
-				512498922199580600C40B18 /* CWCarouselProtocol.h */,
-				512498952199580600C40B18 /* CWPageControl.h */,
-				512498902199580600C40B18 /* CWPageControl.m */,
-				512498932199580600C40B18 /* CWCarousel.h */,
-				5124988F2199580600C40B18 /* CWCarousel.m */,
-				512498962199580600C40B18 /* CWFlowLayout.h */,
-				512498912199580600C40B18 /* CWFlowLayout.m */,
-			);
-			path = MGCarousel;
-			sourceTree = "<group>";
-		};
-		512ABB3421D07A7B00042340 /* NSNumber */ = {
-			isa = PBXGroup;
-			children = (
-				512ABB3921D07BCD00042340 /* NSNumber+Category.h */,
-				512ABB3A21D07BCD00042340 /* NSNumber+Category.m */,
-			);
-			path = NSNumber;
-			sourceTree = "<group>";
-		};
-		512ABB3D21D07C4200042340 /* NSObject */ = {
-			isa = PBXGroup;
-			children = (
-				512ABB4621D07E0900042340 /* WZMacro.h */,
-				512ABB4221D07D0100042340 /* NSObject+Object.h */,
-				512ABB4321D07D0100042340 /* NSObject+Object.m */,
-				512ABB4821D07E7200042340 /* NSObject+CurrentNav.h */,
-				512ABB4921D07E7200042340 /* NSObject+CurrentNav.m */,
-				512ABB4E21D07EB000042340 /* NSMutableAttributedString+Chain.h */,
-				512ABB5221D07EB000042340 /* NSMutableAttributedString+Chain.m */,
-				512ABB5021D07EB000042340 /* NSObject+WZModel.h */,
-				512ABB4D21D07EB000042340 /* NSObject+WZModel.m */,
-				512ABB4C21D07EB000042340 /* UIControl+YYAddWZ.h */,
-				512ABB5321D07EB000042340 /* UIControl+YYAddWZ.m */,
-				512ABB5121D07EB000042340 /* UIDevice+RotateRrientation.h */,
-				512ABB4F21D07EB000042340 /* UIDevice+RotateRrientation.m */,
-			);
-			path = NSObject;
-			sourceTree = "<group>";
-		};
-		512ABB6121D0816300042340 /* MGEvent */ = {
-			isa = PBXGroup;
-			children = (
-				512ABB6721D0817700042340 /* UIView+Event.h */,
-				512ABB6221D0817700042340 /* UIView+Event.m */,
-				512ABB6621D0817700042340 /* UIResponder+Event.h */,
-				512ABB6421D0817700042340 /* UIResponder+Event.m */,
-				512ABB6321D0817700042340 /* UIResponder+ReverseEvent.h */,
-				512ABB6521D0817700042340 /* UIResponder+ReverseEvent.m */,
-			);
-			path = MGEvent;
-			sourceTree = "<group>";
-		};
-		512ABB6E21D0C56700042340 /* MGSafe */ = {
-			isa = PBXGroup;
-			children = (
-				512ABB7221D0C56700042340 /* MGSafe.h */,
-				512ABB6F21D0C56700042340 /* MGSafe.m */,
-				512ABB7021D0C56700042340 /* NSArray+MGSafe.h */,
-				512ABB7321D0C56700042340 /* NSArray+MGSafe.m */,
-				512ABB7121D0C56700042340 /* NSDictionary+MGSafe.h */,
-				512ABB7421D0C56700042340 /* NSDictionary+MGSafe.m */,
-			);
-			path = MGSafe;
 			sourceTree = "<group>";
 		};
 		517D8C5521A296FC004A4744 /* JMCoreDataManager */ = {
@@ -729,15 +577,6 @@
 				51B31D0921BE4E8F005C0EAC /* JMVideoModel.xcdatamodeld */,
 			);
 			path = JMCoreDataManager;
-			sourceTree = "<group>";
-		};
-		5190570421D070F400E9B394 /* MGNotify */ = {
-			isa = PBXGroup;
-			children = (
-				5190570621D070F400E9B394 /* MGNotify.h */,
-				5190570521D070F400E9B394 /* MGNotify.m */,
-			);
-			path = MGNotify;
 			sourceTree = "<group>";
 		};
 		51BABC0521B1410B00FE7901 /* Authen */ = {
@@ -844,8 +683,6 @@
 		AEABC1BA213CD0D2009D099E /* JMCategory */ = {
 			isa = PBXGroup;
 			children = (
-				512ABB3D21D07C4200042340 /* NSObject */,
-				512ABB3421D07A7B00042340 /* NSNumber */,
 				AEABC1BB213CD0D2009D099E /* NSString */,
 				AEABC1C0213CD0D2009D099E /* UIButton */,
 				AEABC1C5213CD0D2009D099E /* UIColor */,
@@ -908,8 +745,6 @@
 				AEABC1CE213CD0D2009D099E /* UIViewController+FITAppSettings.m */,
 				5110189B219AB990002E943D /* UIViewController+LoadingHud.h */,
 				5110189C219AB990002E943D /* UIViewController+LoadingHud.m */,
-				5190577621D075AC00E9B394 /* UIViewController+MGNavBar.h */,
-				5190577521D075AC00E9B394 /* UIViewController+MGNavBar.m */,
 				5190577721D075AC00E9B394 /* UIViewController+PushAndPop.h */,
 				5190577821D075AD00E9B394 /* UIViewController+PushAndPop.m */,
 			);
@@ -943,8 +778,6 @@
 			children = (
 				5190576F21D0756D00E9B394 /* UIView+Gradient.h */,
 				5190576E21D0756D00E9B394 /* UIView+Gradient.m */,
-				5190576D21D0756D00E9B394 /* UIView+MGPosition.h */,
-				5190577021D0756E00E9B394 /* UIView+MGPosition.m */,
 				AEABC1DF213CD0D2009D099E /* FITArcView.h */,
 				AEABC1E0213CD0D2009D099E /* FITArcView.m */,
 				AEABC1E1213CD0D2009D099E /* UIView+FITHud.h */,
@@ -1041,9 +874,6 @@
 				F22350972074832E0062C828 /* JMUIManager */,
 				F22350632074832E0062C828 /* JMVedioClip */,
 				F22350A52074832E0062C828 /* JMWebManager */,
-				512ABB6121D0816300042340 /* MGEvent */,
-				5190570421D070F400E9B394 /* MGNotify */,
-				512ABB6E21D0C56700042340 /* MGSafe */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -1107,8 +937,6 @@
 			children = (
 				F22350342074832E0062C828 /* JMPhotosPermission.h */,
 				F22350362074832E0062C828 /* JMPhotosPermission.m */,
-				512ABB5C21D07EF200042340 /* MGAuthorizationManager.h */,
-				512ABB5D21D07EF200042340 /* MGAuthorizationManager.m */,
 			);
 			path = Permission;
 			sourceTree = "<group>";
@@ -1687,7 +1515,6 @@
 				5161BA0121AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */,
 				F2B91ABC214806F6003311A1 /* APPDevice.m in Sources */,
 				F22350EA2074832F0062C828 /* ICGRulerView.m in Sources */,
-				5124989D2199580700C40B18 /* CWFlowLayout.m in Sources */,
 				AEABC201213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F22351062074832F0062C828 /* JMKeyManager.m in Sources */,
 				F22351042074832F0062C828 /* UIColor+JMColor.m in Sources */,
@@ -1699,9 +1526,7 @@
 				AEABC1EF213CD0D2009D099E /* UIViewController+BarButtonItem.m in Sources */,
 				510FD31E21CCD8480018D487 /* DownloadViewController.m in Sources */,
 				AEABC1E9213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
-				512ABB5821D07EB000042340 /* NSMutableAttributedString+Chain.m in Sources */,
 				5190577121D0756E00E9B394 /* UIView+Gradient.m in Sources */,
-				512ABB6C21D0817700042340 /* UIResponder+ReverseEvent.m in Sources */,
 				AE86225C213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F22350EB2074832F0062C828 /* ICGVideoTrimmerView.m in Sources */,
 				F2B91ACA21494E14003311A1 /* HomeTableViewCell.m in Sources */,
@@ -1713,22 +1538,15 @@
 				F22351002074832F0062C828 /* JMUI.m in Sources */,
 				AE862262213CC31D00C93C9E /* FITDownSession.m in Sources */,
 				AE86227A213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
-				512ABB4421D07D0100042340 /* NSObject+Object.m in Sources */,
-				512ABB5E21D07EF200042340 /* MGAuthorizationManager.m in Sources */,
-				512ABB7521D0C56700042340 /* MGSafe.m in Sources */,
 				F22350C62074832F0062C828 /* DatePickerView.m in Sources */,
-				512ABB5A21D07EB000042340 /* UIControl+YYAddWZ.m in Sources */,
 				5161BA0521AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F22350BF2074832F0062C828 /* JMRefreshNormalHeader.m in Sources */,
 				51B31D2021BE5BE0005C0EAC /* AddDataViewController.m in Sources */,
-				512ABB4A21D07E7200042340 /* NSObject+CurrentNav.m in Sources */,
 				F2235126207486770062C828 /* MineViewController.m in Sources */,
 				F2B91AD021495371003311A1 /* HUserManager.m in Sources */,
 				AE862272213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F2235125207486770062C828 /* FindViewController.m in Sources */,
 				F22351022074832F0062C828 /* JMBaseCollectionViewViewController.m in Sources */,
-				512498992199580700C40B18 /* CWCarousel.m in Sources */,
-				512ABB7921D0C56700042340 /* NSDictionary+MGSafe.m in Sources */,
 				51BABC0A21B1410B00FE7901 /* WZLocalAuthentication.m in Sources */,
 				F22350E92074832F0062C828 /* JMLocationNavigation.m in Sources */,
 				AE862278213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
@@ -1736,8 +1554,6 @@
 				AEABC1E3213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
 				510FD32021CCD8480018D487 /* DeletedViewController.m in Sources */,
 				F22351092074832F0062C828 /* UITabBar+RedPoint.m in Sources */,
-				512ABB3B21D07BCD00042340 /* NSNumber+Category.m in Sources */,
-				512ABB5621D07EB000042340 /* UIDevice+RotateRrientation.m in Sources */,
 				AEABC1F7213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225E213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
 				F2B91AC521494ADC003311A1 /* HZPlayerViewController.m in Sources */,
@@ -1756,7 +1572,6 @@
 				F22350D32074832F0062C828 /* JMPhotosPermission.m in Sources */,
 				AE862276213CC31D00C93C9E /* JMAPI.m in Sources */,
 				AE86226A213CC31D00C93C9E /* FITPageNetwork.m in Sources */,
-				5190577921D075AD00E9B394 /* UIViewController+MGNavBar.m in Sources */,
 				F22350C72074832F0062C828 /* JMCityPicker.m in Sources */,
 				AE86226E213CC31D00C93C9E /* FITNetAPI.m in Sources */,
 				AE862260213CC31D00C93C9E /* FITDownManager.m in Sources */,
@@ -1773,32 +1588,25 @@
 				F22350E72074832F0062C828 /* CLLocation+Location.m in Sources */,
 				51101899219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1ED213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
-				512ABB5421D07EB000042340 /* NSObject+WZModel.m in Sources */,
-				512ABB7721D0C56700042340 /* NSArray+MGSafe.m in Sources */,
-				512ABB6821D0817700042340 /* UIView+Event.m in Sources */,
 				F22350FF2074832F0062C828 /* JMBaseTableViewController.m in Sources */,
 				F22350BC2074832F0062C828 /* JMTransitionAnimate.m in Sources */,
 				AEABC1F9213CD0D2009D099E /* UITableViewCell+Nib.m in Sources */,
 				AEABC1F5213CD0D2009D099E /* UIImage+Save.m in Sources */,
-				5190574121D070F400E9B394 /* MGNotify.m in Sources */,
 				AE222479215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */,
 				AE862268213CC31D00C93C9E /* FITNetWorkMonitor.m in Sources */,
 				AE862264213CC31D00C93C9E /* FITAPI.m in Sources */,
 				F22350E22074832F0062C828 /* JMTip.m in Sources */,
-				5190577321D0756E00E9B394 /* UIView+MGPosition.m in Sources */,
 				AE862270213CC31D00C93C9E /* FITNetRequst.m in Sources */,
 				F223510E207484620062C828 /* AppDelegate.m in Sources */,
 				517D8C5821A2973C004A4744 /* JMCoreDataManager.m in Sources */,
 				AEABC20A213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				51BABC0C21B1410B00FE7901 /* WZAuthenView.m in Sources */,
 				F22350E32074832F0062C828 /* JMDateFormat.m in Sources */,
-				5124989B2199580700C40B18 /* CWPageControl.m in Sources */,
 				5110189D219AB990002E943D /* UIViewController+LoadingHud.m in Sources */,
 				AEABC1F1213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC208213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EB213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
 				F2235118207486230062C828 /* HomeViewController.m in Sources */,
-				512ABB6A21D0817700042340 /* UIResponder+Event.m in Sources */,
 				F22351082074832F0062C828 /* JMNavigationViewController.m in Sources */,
 				AEE6A9382160969F0015C9EF /* FTTViewController.m in Sources */,
 				AE52929421491E1000FFF08A /* NSString+VideoSave.m in Sources */,
@@ -1830,7 +1638,6 @@
 				5161BA0221AD3F8A00D2F9F3 /* UIViewController+WZShare.m in Sources */,
 				F2B91ABD214806F6003311A1 /* APPDevice.m in Sources */,
 				F2735788207493CE0029AE78 /* ICGRulerView.m in Sources */,
-				5124989E2199580700C40B18 /* CWFlowLayout.m in Sources */,
 				AEABC202213CD0D2009D099E /* UIView+FITHud.m in Sources */,
 				F2735789207493CE0029AE78 /* JMKeyManager.m in Sources */,
 				F273578A207493CE0029AE78 /* UIColor+JMColor.m in Sources */,
@@ -1842,9 +1649,7 @@
 				AEABC1F0213CD0D2009D099E /* UIViewController+BarButtonItem.m in Sources */,
 				510FD31F21CCD8480018D487 /* DownloadViewController.m in Sources */,
 				AEABC1EA213CD0D2009D099E /* UITabBar+CustomerTabBar.m in Sources */,
-				512ABB5921D07EB000042340 /* NSMutableAttributedString+Chain.m in Sources */,
 				5190577221D0756E00E9B394 /* UIView+Gradient.m in Sources */,
-				512ABB6D21D0817700042340 /* UIResponder+ReverseEvent.m in Sources */,
 				AE86225D213CC31D00C93C9E /* FITDownloadGroupManager.m in Sources */,
 				F2735793207493CE0029AE78 /* ICGVideoTrimmerView.m in Sources */,
 				F2B91ACB21494E14003311A1 /* HomeTableViewCell.m in Sources */,
@@ -1856,22 +1661,15 @@
 				F2735796207493CE0029AE78 /* JMUI.m in Sources */,
 				AE862263213CC31D00C93C9E /* FITDownSession.m in Sources */,
 				AE86227B213CC31D00C93C9E /* JMPageNetModel.m in Sources */,
-				512ABB4521D07D0100042340 /* NSObject+Object.m in Sources */,
-				512ABB5F21D07EF200042340 /* MGAuthorizationManager.m in Sources */,
-				512ABB7621D0C56700042340 /* MGSafe.m in Sources */,
 				F273579A207493CE0029AE78 /* DatePickerView.m in Sources */,
-				512ABB5B21D07EB000042340 /* UIControl+YYAddWZ.m in Sources */,
 				5161BA0621AD3FB300D2F9F3 /* WZShare.m in Sources */,
 				F273579B207493CE0029AE78 /* JMRefreshNormalHeader.m in Sources */,
 				51B31D2121BE5BE0005C0EAC /* AddDataViewController.m in Sources */,
-				512ABB4B21D07E7200042340 /* NSObject+CurrentNav.m in Sources */,
 				F273579E207493CE0029AE78 /* MineViewController.m in Sources */,
 				F2B91AD121495371003311A1 /* HUserManager.m in Sources */,
 				AE862273213CC31D00C93C9E /* FITResponseModel.m in Sources */,
 				F273579F207493CE0029AE78 /* FindViewController.m in Sources */,
 				F27357A1207493CE0029AE78 /* JMBaseCollectionViewViewController.m in Sources */,
-				5124989A2199580700C40B18 /* CWCarousel.m in Sources */,
-				512ABB7A21D0C56700042340 /* NSDictionary+MGSafe.m in Sources */,
 				51BABC0B21B1410B00FE7901 /* WZLocalAuthentication.m in Sources */,
 				F27357A3207493CE0029AE78 /* JMLocationNavigation.m in Sources */,
 				AE862279213CC31D00C93C9E /* JMNetWorkMonitor.m in Sources */,
@@ -1879,8 +1677,6 @@
 				AEABC1E4213CD0D2009D099E /* NSString+ImageURL.m in Sources */,
 				510FD32121CCD8480018D487 /* DeletedViewController.m in Sources */,
 				F27357A4207493CE0029AE78 /* UITabBar+RedPoint.m in Sources */,
-				512ABB3C21D07BCD00042340 /* NSNumber+Category.m in Sources */,
-				512ABB5721D07EB000042340 /* UIDevice+RotateRrientation.m in Sources */,
 				AEABC1F8213CD0D2009D099E /* UICollectionViewCell+Nib.m in Sources */,
 				AE86225F213CC31D00C93C9E /* FITDownLoadResponse.m in Sources */,
 				F2B91AC621494ADC003311A1 /* HZPlayerViewController.m in Sources */,
@@ -1899,7 +1695,6 @@
 				F27357A7207493CE0029AE78 /* JMPhotosPermission.m in Sources */,
 				AE862277213CC31D00C93C9E /* JMAPI.m in Sources */,
 				AE86226B213CC31D00C93C9E /* FITPageNetwork.m in Sources */,
-				5190577A21D075AD00E9B394 /* UIViewController+MGNavBar.m in Sources */,
 				F27357A8207493CE0029AE78 /* JMCityPicker.m in Sources */,
 				AE86226F213CC31D00C93C9E /* FITNetAPI.m in Sources */,
 				AE862261213CC31D00C93C9E /* FITDownManager.m in Sources */,
@@ -1916,32 +1711,25 @@
 				F27357B0207493CE0029AE78 /* CLLocation+Location.m in Sources */,
 				5110189A219AA915002E943D /* UIView+LoadingHud.m in Sources */,
 				AEABC1EE213CD0D2009D099E /* UIViewController+Alert.m in Sources */,
-				512ABB5521D07EB000042340 /* NSObject+WZModel.m in Sources */,
-				512ABB7821D0C56700042340 /* NSArray+MGSafe.m in Sources */,
-				512ABB6921D0817700042340 /* UIView+Event.m in Sources */,
 				F27357B2207493CE0029AE78 /* JMBaseTableViewController.m in Sources */,
 				F27357B3207493CE0029AE78 /* JMTransitionAnimate.m in Sources */,
 				AEABC1FA213CD0D2009D099E /* UITableViewCell+Nib.m in Sources */,
 				AEABC1F6213CD0D2009D099E /* UIImage+Save.m in Sources */,
-				5190574221D070F400E9B394 /* MGNotify.m in Sources */,
 				AE22247A215FA70600B82BBD /* UIView+FITCornerRadiu.m in Sources */,
 				AE862269213CC31D00C93C9E /* FITNetWorkMonitor.m in Sources */,
 				AE862265213CC31D00C93C9E /* FITAPI.m in Sources */,
 				F27357B6207493CE0029AE78 /* JMTip.m in Sources */,
-				5190577421D0756E00E9B394 /* UIView+MGPosition.m in Sources */,
 				AE862271213CC31D00C93C9E /* FITNetRequst.m in Sources */,
 				F27357B9207493CE0029AE78 /* AppDelegate.m in Sources */,
 				517D8C5921A2973C004A4744 /* JMCoreDataManager.m in Sources */,
 				AEABC20B213CD258009D099E /* UITableView+JMRefresh.m in Sources */,
 				51BABC0D21B1410B00FE7901 /* WZAuthenView.m in Sources */,
 				F27357BB207493CE0029AE78 /* JMDateFormat.m in Sources */,
-				5124989C2199580700C40B18 /* CWPageControl.m in Sources */,
 				5110189E219AB990002E943D /* UIViewController+LoadingHud.m in Sources */,
 				AEABC1F2213CD0D2009D099E /* UIViewController+FITAppSettings.m in Sources */,
 				AEABC209213CD258009D099E /* UICollectionView+JMRefresh.m in Sources */,
 				AEABC1EC213CD0D2009D099E /* UIColor+FITColor.m in Sources */,
 				F27357BD207493CE0029AE78 /* HomeViewController.m in Sources */,
-				512ABB6B21D0817700042340 /* UIResponder+Event.m in Sources */,
 				F27357BF207493CE0029AE78 /* JMNavigationViewController.m in Sources */,
 				AEE6A9392160969F0015C9EF /* FTTViewController.m in Sources */,
 				AE52929521491E1000FFF08A /* NSString+VideoSave.m in Sources */,
